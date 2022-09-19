@@ -186,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textMulaiBimb" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewDetailTA"
         android:layout_width="140dp"
         android:layout_height="154dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextMulaiBimb"
@@ -195,7 +195,7 @@
         app:srcCompat="@drawable/detailtaunduh" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewIconList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textNim"
