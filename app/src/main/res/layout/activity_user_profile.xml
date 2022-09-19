@@ -15,12 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@drawable/bg_gradient"
-            android:padding="20dp">>
+            android:padding="20dp">
 
             <ImageView
                 android:id="@+id/profile_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="106dp"
+                android:layout_height="108dp"
                 android:layout_centerVertical="true"
                 app:srcCompat="@drawable/ic_baseline_profile" />
 
@@ -44,13 +44,13 @@
             android:padding="20dp">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/line_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/profile_style" />
 
             <EditText
-                android:id="@+id/nip_profile"
+                android:id="@+id/nip_dosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="NIP"
@@ -58,7 +58,15 @@
                 android:padding="20dp" />
 
             <EditText
-                android:id="@+id/telp_profile"
+                android:id="@+id/email_dosen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-Mail"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/telp_dosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No. Telp"
@@ -66,7 +74,7 @@
                 android:padding="20dp" />
 
             <EditText
-                android:id="@+id/gender_profile"
+                android:id="@+id/gender_dosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jenis Kelamin"
@@ -74,7 +82,7 @@
                 android:padding="20dp" />
 
             <EditText
-                android:id="@+id/studi_profile"
+                android:id="@+id/studi_dosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Program Studi"
