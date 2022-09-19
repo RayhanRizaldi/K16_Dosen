@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/bg_gradient"
+            android:padding="20dp">>
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_baseline_profile" />
+
+            <TextView
+                android:id="@+id/fullname_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="Nama Dosen"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/profile_style" />
+
+            <EditText
+                android:id="@+id/nip_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIP"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/telp_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. Telp"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/gender_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jenis Kelamin"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/studi_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Program Studi"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+            <Button
+                android:id="@+id/update_profile_button"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="30dp"
+                android:text="PERBARUI" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

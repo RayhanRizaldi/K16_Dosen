@@ -7,4 +7,9 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_baseline_profile"
+        android:title="@string/menu_profile"
+        app:showAsAction="ifRoom"/>
 </menu>
