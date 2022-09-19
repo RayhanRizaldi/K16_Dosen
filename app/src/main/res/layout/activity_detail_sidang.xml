@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailSidangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetailSidang"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#E3A211"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textDetailSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Detail Sidang"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarDetailSidang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarDetailSidang" />
+
+    <ImageView
+        android:id="@+id/imageAvatarDetailSid"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/textNama3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nadilla Saraswati"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageAvatarDetailSid"
+        app:layout_constraintStart_toStartOf="@+id/imageAvatarDetailSid"
+        app:layout_constraintTop_toBottomOf="@+id/imageAvatarDetailSid" />
+
+    <TextView
+        android:id="@+id/textNim3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2011521004"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textNama3"
+        app:layout_constraintStart_toStartOf="@+id/textNama3"
+        app:layout_constraintTop_toBottomOf="@+id/textNama3" />
+
+    <TextView
+        android:id="@+id/textJudul3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Judul Tugas Akhir :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNim3" />
+
+    <EditText
+        android:id="@+id/editTextJudul3"
+        android:layout_width="361dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Rancang Bangun Mobile Commerce Berbasis Android Pada Toko Duta Buku Semarang"
+        android:textColor="#373636"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textJudul3"
+        app:layout_constraintTop_toBottomOf="@+id/textJudul3" />
+
+    <TextView
+        android:id="@+id/textDospem3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Dosen Pembimbing :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textJudul3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextJudul3" />
+
+    <EditText
+        android:id="@+id/editTextDospem3"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Husnil Kamil, M.T"
+        android:textColor="#373636"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textDospem3"
+        app:layout_constraintTop_toBottomOf="@+id/textDospem3" />
+
+    <TextView
+        android:id="@+id/textJadwal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Jadwal :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textDospem3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDospem3" />
+
+    <EditText
+        android:id="@+id/editTextJadwal2"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Senin, 05 September 2022"
+        android:textColor="#373636"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textJadwal2"
+        app:layout_constraintTop_toBottomOf="@+id/textJadwal2" />
+
+    <TextView
+        android:id="@+id/textLokasi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Lokasi :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/editTextJadwal2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextJadwal2" />
+
+    <EditText
+        android:id="@+id/editTextLokasi2"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Senin, 05 September 2022"
+        android:textColor="#373636"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textLokasi2"
+        app:layout_constraintTop_toBottomOf="@+id/textLokasi2" />
+
+    <TextView
+        android:id="@+id/textDospeng2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Dosen Penguji :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/editTextLokasi2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLokasi2" />
+
+    <EditText
+        android:id="@+id/editTextDospeng2"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="1. Ricky Akbar, M.Kom   2. Jefril Rahmadoni, M.Kom"
+        android:textColor="#373636"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textDospeng2"
+        app:layout_constraintTop_toBottomOf="@+id/textDospeng2" />
+
+    <TextView
+        android:id="@+id/textDetailTa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Detail Tugas Akhir :"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/editTextDospeng2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDospeng2" />
+
+    <ImageView
+        android:id="@+id/imageViewDetailTA2"
+        android:layout_width="83dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetailTa2"
+        app:srcCompat="@drawable/detailtaunduh" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
