@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/avatar"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailTAActivity">
@@ -48,6 +48,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:text="Nadilla Saraswati"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageAvatar"
@@ -60,6 +61,7 @@
         android:text="2011521004"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textNama"
         app:layout_constraintTop_toBottomOf="@+id/textNama" />
 
@@ -191,5 +193,14 @@
         app:layout_constraintStart_toStartOf="@+id/textDetailTa"
         app:layout_constraintTop_toBottomOf="@+id/textDetailTa"
         app:srcCompat="@drawable/detailtaunduh" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textNim"
+        app:layout_constraintEnd_toEndOf="@+id/editTextJudul"
+        app:layout_constraintTop_toTopOf="@+id/textNama"
+        app:srcCompat="@drawable/iconlist" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
