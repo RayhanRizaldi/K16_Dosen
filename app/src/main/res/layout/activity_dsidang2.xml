@@ -210,6 +210,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Jadwal"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
 
+    //Lokasi
     <TextView
         android:id="@+id/lokasi"
         android:layout_width="wrap_content"
@@ -244,7 +245,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/lokasi"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"  />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
