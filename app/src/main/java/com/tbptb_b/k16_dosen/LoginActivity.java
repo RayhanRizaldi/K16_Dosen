@@ -15,12 +15,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         button = findViewById(R.id.button_login);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMainMenu();
-            }
-        });
+        button.setOnClickListener(view -> openMainMenu());
     }
 
     public void openMainMenu(){

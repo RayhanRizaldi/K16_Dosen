@@ -44,7 +44,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Menunggu Persetujuan Bimbingan"
+                            android:text="@string/wait_persetujuam_bimbingan"
                             android:textColor="@color/white"
                             android:textSize="18dp" />
 
@@ -101,7 +101,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Menunggu Persetujuan Bimbingan"
+                            android:text="@string/list_jadwal"
                             android:textColor="@color/white"
                             android:textSize="18dp" />
 
