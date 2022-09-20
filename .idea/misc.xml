@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/account_logo.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/download_logo.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/gradient_background.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.242" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/logo_download.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/oval_button.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/oval_logo.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/oval_shape.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/persetujuan_foreground.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/drawable/switch_button.xml" value="0.2535" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/detail_seminar_2.xml" value="0.21851851851851853" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/form_pembatalan_ta.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/input_rekomendasi.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/jadwal_seminar.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/persetujuan_seminar.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/mipmap-anydpi-v26/persetujuan.xml" value="0.121" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/mipmap-anydpi-v26/persetujuan_round.xml" value="0.121" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
