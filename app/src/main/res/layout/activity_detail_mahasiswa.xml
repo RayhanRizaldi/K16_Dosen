@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMahasiswa">
+
+    <ImageView
+        android:id="@+id/mahasiswa_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nama_mahasiswa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:text="Nama Mahasiswa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mahasiswa_photo" />
+
+    <TextView
+        android:id="@+id/smtawal_mahasiswa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Ganjil 2020"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_mahasiswa" />
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smtawal_mahasiswa">
+
+        <EditText
+            android:id="@+id/nim_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIP"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/email_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-Mail"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/telp_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No. Telp"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/gender_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jenis Kelamin"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/fakultas_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fakultas"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/studi_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Program Studi"
+            android:orientation="vertical"
+            android:padding="20dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editUsername"
+        app:layout_constraintStart_toStartOf="@+id/editUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/logo_login"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/logo_login"
+        app:layout_constraintTop_toBottomOf="@+id/logo_login" />
+
+    <ImageView
+        android:id="@+id/logo_login"
+        android:layout_width="243dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/logo_unand"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/logo_unand"
+        app:layout_constraintTop_toBottomOf="@+id/logo_unand"
+        app:srcCompat="@drawable/name_color" />
+
+    <ImageView
+        android:id="@+id/logo_unand"
+        android:layout_width="87dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_200px_logo_unand_svg" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="39dp"
+        android:text="LOGIN"
+        app:layout_constraintEnd_toEndOf="@+id/editPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
