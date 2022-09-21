@@ -24,22 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         setupListeners();
 
 
-//        btnLogin = findViewById(R.id.button_login);
-//        btnLogin.setOnClickListener(view -> cekCrededentials());
-
-//        username = editUsername.getEditableText().toString();
-//
-
-//        username = editPassword.getEditableText().toString();
-//
-//        if(password.equals("yeyjadi")){
-//            Intent LoginIntent = new Intent(this, MainMenu.class);
-//            LoginIntent.putExtra("username",username);
-//            LoginIntent.putExtra("cek_login",true);
-//            startActivity(LoginIntent);
-//        }else{
-//            Toast.makeText(this,"Yah Gagal",Toast.LENGTH_SHORT).show();
-//        }
     }
 
     private void setupUI() {
@@ -73,22 +57,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     };
-//    private void cekCrededentials(){
-//        String username = editUsername.getEditableText().toString();
-//        String password = editPassword.getEditableText().toString();
-//
-//        if(password.equals("yeyjadi")){
-//            Intent LoginIntent = new Intent(this, MainMenu.class);
-//            LoginIntent.putExtra("username",username);
-//            LoginIntent.putExtra("cek_login",true);
-//            startActivity(LoginIntent);
-//        }else if(password.isEmpty()){
-//            Toast.makeText(this,"Yah Gagal",Toast.LENGTH_SHORT).show();
-//        }
-//    }
-//    public void openMainMenu(){
-//        Intent LoginIntent = new Intent(this, MainMenu.class);
-//        startActivity(LoginIntent);
-//        finish();
-//    }
+
 }
