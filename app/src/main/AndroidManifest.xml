@@ -24,6 +24,18 @@
             android:exported="false"
             android:label="@string/title_activity_profile" />
         <activity
+            android:name=".LogbookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSidangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSeminarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailTAActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
