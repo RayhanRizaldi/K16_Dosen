@@ -15,5 +15,20 @@
     <string name="menunggu_persetujuan_seminar">Menunggu Persetujuan Seminar</string>
     <string name="list_persetujuan_seminar">List Persetujuan Seminar</string>
 
+    //String Detail Sidang
+    <string name="ds_tittle">Detail Sidang</string>
+    <string name="JudulTA">Judul Tugas Akhir :</string>
+    <string name="Dospem">Dosen Pembimbing :</string>
+    <string name="lokasi">Lokasi :</string>
+    <string name="file_dta">Detail Tugas Akhir :</string>
+    <string name="Mnama">Nadilla saraswati</string>
+    <string name="nim">2011521004</string>
+    <string name="btn_terima">Terima</string>
+    <string name="btn_tolak">Tolak</string>
+    <string name="sjadwal">Jadwal :</string>
+    <string name="dospeng">Dosen Penguji :</string>
+    <string name="btn_innilai">Input Penilaian</string>
+    <string name="tanggal">21/09/2022</string>
+
 </resources>
 

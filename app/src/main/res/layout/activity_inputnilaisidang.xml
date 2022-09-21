@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tittleins"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DSidang2Activity">
-
+    tools:context=".inputnilaisidangActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarDS2"
@@ -29,14 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarDS2"
         app:layout_constraintEnd_toEndOf="@+id/toolbarDS2"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
         android:id="@+id/tittleDS2"
@@ -55,79 +55,58 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-
     <ImageView
         android:id="@+id/profilins"
         android:layout_width="64dp"
         android:layout_height="54dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="@+id/toolbarDS2"
         app:layout_constraintTop_toBottomOf="@+id/toolbarDS2"
-        app:srcCompat="@drawable/ic_baseline_person_24"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <TextView
         android:id="@+id/namains"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
         android:text="@string/Mnama"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profilins"
-        app:layout_constraintStart_toStartOf="@+id/profilins"
-        app:layout_constraintTop_toBottomOf="@+id/profilins" />
+        app:layout_constraintStart_toEndOf="@+id/profilins"
+        app:layout_constraintTop_toTopOf="@+id/profilins" />
 
     <TextView
         android:id="@+id/nimins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/nim"
         android:textColor="#000000"
         android:textColorHint="#FFFFFF"
         android:textIsSelectable="false"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/namains"
+        app:layout_constraintStart_toEndOf="@+id/profilins"
         app:layout_constraintTop_toBottomOf="@+id/namains" />
 
-
     <Button
-        android:id="@+id/Bterima"
-        android:layout_width="70dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/button"
+        android:layout_width="149dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/oren"
-        android:text="@string/btn_terima"
+        android:drawableLeft="@drawable/input"
+        android:text="@string/btn_innilai"
         android:textSize="8sp"
-        app:layout_constraintEnd_toStartOf="@+id/Btolak"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/namains"
+        app:layout_constraintStart_toStartOf="@+id/nimins"
         app:layout_constraintTop_toBottomOf="@+id/nimins"
-        tools:ignore="SmallSp,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/Btolak"
-        android:layout_width="70dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="3dp"
-        android:background="@drawable/button"
-        android:backgroundTint="#E3A211"
-        android:text="@string/btn_tolak"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="@+id/namains"
-        app:layout_constraintTop_toBottomOf="@+id/nimins"
-        tools:ignore="SmallSp,TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     //Judul Tugas Akhir
 
@@ -142,7 +121,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bterima" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <EditText
         android:id="@+id/isiJTAins"
@@ -210,12 +189,14 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:ems="10"
+        android:enabled="false"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="none"
         android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/jadwalins"
         app:layout_constraintTop_toBottomOf="@+id/jadwalins"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     //Lokasi
 
@@ -238,12 +219,38 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:ems="10"
+        android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/lokasiins"
         app:layout_constraintTop_toBottomOf="@+id/lokasiins"
-        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dospeng"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lokasiins"
+        app:layout_constraintTop_toBottomOf="@+id/isiLokasiins" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="15dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     //Detail TA
 
@@ -256,8 +263,8 @@
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/lokasiins"
-        app:layout_constraintTop_toBottomOf="@+id/isiLokasiins" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
 
     <ImageView
         android:id="@+id/fileins"
@@ -284,6 +291,9 @@
         app:layout_constraintStart_toStartOf="@+id/fileins"
         app:layout_constraintTop_toTopOf="@+id/fileins"
         app:srcCompat="@drawable/unduh" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,36 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".JSeminarActivity">
+    tools:context=".JseminarActivity">
 
+    <ImageView
+        android:id="@+id/btn_bgSS"
+        android:layout_width="357dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_seminarof" />
+
+    <ImageView
+        android:id="@+id/btn_sidangOn"
+        android:layout_width="158dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_bgSS"
+        app:layout_constraintEnd_toEndOf="@+id/btn_bgSS"
+        app:layout_constraintStart_toEndOf="@+id/btn_seminarOff"
+        app:layout_constraintTop_toTopOf="@+id/btn_bgSS"
+        app:srcCompat="@drawable/btn_sidangon" />
+
+    <ImageView
+        android:id="@+id/btn_seminarOff"
+        android:layout_width="146dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_bgSS"
+        app:layout_constraintStart_toStartOf="@+id/btn_bgSS"
+        app:layout_constraintTop_toTopOf="@+id/btn_bgSS"
+        app:layout_constraintVertical_bias="0.536"
+        app:srcCompat="@drawable/btn_seminarklik" />
 
     <Button
-        android:id="@+id/PSeminar"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="100dp"
-        android:background="#17B43A"
-        android:backgroundTint="#17B43A"
+        android:id="@+id/button2"
+        android:layout_width="356dp"
+        android:layout_height="49dp"
         android:drawableLeft="@drawable/ic_baseline_push_pin_24"
         android:drawableRight="@drawable/ic_baseline_arrow_right_24"
-        android:text="@string/menunggu_persetujuan_seminar"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Menunggu Persetujuan Sidang"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_bgSS"
+        app:layout_constraintStart_toStartOf="@+id/btn_bgSS"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bgSS" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/tanggaljs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/tanggal"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/namajs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/Mnama"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/tanggaljs"
+        app:layout_constraintTop_toBottomOf="@+id/tanggaljs" />
+
+    <TextView
+        android:id="@+id/nimjs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/nim"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/namajs"
+        app:layout_constraintTop_toBottomOf="@+id/namajs" />
+
+    <EditText
+        android:id="@+id/judultajs"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbarDS2"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarDS2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nimjs"
+        app:layout_constraintTop_toBottomOf="@+id/nimjs"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvData"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
