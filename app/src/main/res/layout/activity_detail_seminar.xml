@@ -6,39 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".DetailSeminarActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDetailSeminar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="#E3A211"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?attr/actionModeCloseDrawable" />
-
-    <TextView
-        android:id="@+id/textDetailSeminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="Detail Seminar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbarDetailSeminar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarDetailSeminar" />
-
     <ImageView
         android:id="@+id/imageAvatarDetailSem"
         android:layout_width="83dp"
         android:layout_height="83dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/avatar"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/textNama2"
@@ -195,8 +172,8 @@
 
     <ImageView
         android:id="@+id/imageViewDetailTA2"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
+        android:layout_width="97dp"
+        android:layout_height="136dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDetailTa2"
