@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tbptb_b.k16_dosen" >
+    package="com.tbptb_b.k16_dosen">
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.K16_Dosen"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K16_Dosen.NoActionBar."/>
         <activity
             android:name=".MainMenu"
             android:exported="false" />
@@ -39,9 +43,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.K16_Dosen.NoActionBar." >
+            android:theme="@style/Theme.K16_Dosen.NoActionBar.">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

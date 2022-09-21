@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainMenu extends AppCompatActivity {
 
 //    private Boolean isLoggedIn = false;
-
+    ImageButton dpbtt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,14 @@ public class MainMenu extends AppCompatActivity {
 //            startActivity(loginintent);
 //        }
 
+        dpbtt = findViewById(R.id.detailprofile);
+        dpbtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detailIn = new Intent(MainMenu.this, DetailMahasiswa .class);
+                startActivity(detailIn);
+            }
+        });
 
     }
 
