@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailLogbookActivity">
+
+    <TextView
+        android:id="@+id/textViewTanggalLogbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Senin, 02 September 2022"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSetujuiLogbook"
+        android:layout_width="101dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Setujui"
+        android:textSize="8dp"
+        android:backgroundTint="@color/oren"
+        app:icon="@drawable/betul"
+        app:layout_constraintStart_toStartOf="@+id/textViewTanggalLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTanggalLogbook" />
+
+    <Button
+        android:id="@+id/buttonUlasanLogbook"
+        android:layout_width="101dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:text="Ulasan"
+        android:textSize="8dp"
+        app:icon="@drawable/ulasan"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSetujuiLogbook"
+        app:layout_constraintStart_toEndOf="@+id/buttonSetujuiLogbook"
+        app:layout_constraintTop_toTopOf="@+id/buttonSetujuiLogbook"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textKegiatanLogbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Kegiatan :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSetujuiLogbook" />
+
+    <EditText
+        android:id="@+id/editTextKegiatanLogbook"
+        android:layout_width="381dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:text="Pendahulan"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/textKegiatanLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/textKegiatanLogbook" />
+
+    <TextView
+        android:id="@+id/textRincianKegiatanLogbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Rincian Kegiatan :"
+        app:layout_constraintStart_toStartOf="@+id/editTextKegiatanLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/editTextKegiatanLogbook" />
+
+    <EditText
+        android:id="@+id/editTextRincianKegiatanLogbook"
+        android:layout_width="381dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:text="Membuat Pendahuluan sampai selesai................"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/textRincianKegiatanLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/textRincianKegiatanLogbook" />
+
+    <TextView
+        android:id="@+id/textHasilLogbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Hasil :"
+        app:layout_constraintStart_toStartOf="@+id/editTextRincianKegiatanLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRincianKegiatanLogbook" />
+
+    <EditText
+        android:id="@+id/editTextHasilLogbook"
+        android:layout_width="381dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:text="Bab pendahuluan selesai................"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/textHasilLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/textHasilLogbook" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
