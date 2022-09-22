@@ -21,6 +21,8 @@
             android:exported="false" />
         <activity
             android:name=".DSidang2Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainMenu"
             android:exported="false" />
         <activity
