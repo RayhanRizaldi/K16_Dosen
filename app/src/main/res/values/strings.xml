@@ -32,4 +32,6 @@
     <string name="tanggal">03/09/2022</string>
     <string name="alasan_batal">Alasan Membatalkan Tugas Akhir :</string>
     <string name="persetujuan_seminar">Persetujuan Seminar</string>
+    <string name="jadwal_seminar_title">List Jadwal Seminar</string>
+    <string name="menunggu_persetujuan_sidang">Menunggu Persetujuan Sidang</string>
 </resources>
