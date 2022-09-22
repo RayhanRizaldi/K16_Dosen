@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/btn_seminarklik" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonjusi"
         android:layout_width="356dp"
         android:layout_height="49dp"
         android:drawableLeft="@drawable/ic_baseline_push_pin_24"
@@ -63,7 +63,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonjusi"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <TextView

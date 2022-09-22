@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.25" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_dsidang2.xml" value="0.25" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_inputnilaisidang.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_jseminar.xml" value="0.25" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_logbook.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main_menu.xml" value="0.2" />
       </map>
     </option>
   </component>

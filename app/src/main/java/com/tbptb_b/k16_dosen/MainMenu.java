@@ -13,9 +13,9 @@ import android.widget.ImageButton;
 
 
 public class MainMenu extends AppCompatActivity {
-Button buttondetailta;
+ImageButton buttondetailta, dpbtt;
+Button buttonsesi;
 //    private Boolean isLoggedIn = false;
-    ImageButton dpbtt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +27,29 @@ Button buttondetailta;
 //        }
 
 
-        buttondetailta = findViewById(R.id.more_bimbingan);
+        buttondetailta = findViewById(R.id.detailprofile);
         buttondetailta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openDetailta();
+            }
+        });
+
+        dpbtt = findViewById(R.id.detailprofile);
+        dpbtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detailIn = new Intent(MainMenu.this, DetailMahasiswa .class);
+                startActivity(detailIn);
+            }
+        });
+
+        buttonsesi = findViewById(R.id.more_seminar);
+        buttonsesi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sesiIn = new Intent(MainMenu.this,JseminarActivity.class);
+                startActivity(sesiIn);
             }
         });
     }
