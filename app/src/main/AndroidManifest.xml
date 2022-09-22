@@ -20,8 +20,10 @@
             android:name=".inputnilaisidangActivity"
             android:exported="false" />
         <activity
-            android:name=".DSidang2Activity"
             android:name=".MainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".DSidang2Activity"
             android:exported="false" />
         <activity
             android:name=".DetailMahasiswa"
