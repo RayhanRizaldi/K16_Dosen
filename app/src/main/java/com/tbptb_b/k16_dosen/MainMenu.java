@@ -9,10 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.ImageButton;
+
+
 public class MainMenu extends AppCompatActivity {
 Button buttondetailta;
 //    private Boolean isLoggedIn = false;
-
+    ImageButton dpbtt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ Button buttondetailta;
 //            Intent loginintent = new Intent(this, LoginActivity.class);
 //            startActivity(loginintent);
 //        }
+
 
         buttondetailta = findViewById(R.id.more_bimbingan);
         buttondetailta.setOnClickListener(new View.OnClickListener() {

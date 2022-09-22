@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
-    TextView btn;
     EditText editUsername,editPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
