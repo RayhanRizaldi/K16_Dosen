@@ -21,12 +21,34 @@
             android:exported="false" />
         <activity
             android:name=".DSidang2Activity"
+            android:name=".MainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".DetailMahasiswa"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name=".LogbookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSidangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSeminarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailTAActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.K16_Dosen.NoActionBar" >
+            android:theme="@style/Theme.K16_Dosen.NoActionBar." >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
