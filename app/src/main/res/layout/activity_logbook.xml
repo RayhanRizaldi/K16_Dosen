@@ -5,18 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogbookActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
 
-        <androidx.recyclerview.widget.RecyclerView
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="parent"-->
+        <!--            tools:listitem="@layout/listlogbook" />-->
+
+
+        <TextView
+            android:id="@+id/textTglLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="02/09/2022"
+            android:textColor="@color/black" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            tools:listitem="@layout/listlogbook" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextKegiatan"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:enabled="false"
+                android:gravity="start|top"
+                android:inputType="none"
+                android:text="Pendahulan"
+                android:textColor="#373636"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textTglLogbook"
+                app:layout_constraintTop_toBottomOf="@+id/textTglLogbook" />
+
+            <Button
+                android:id="@+id/buttondetaillogbook"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:text="Detail"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textTglLogbook2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="02/09/2022"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextKegiatan2"
+                android:layout_width="322dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:enabled="false"
+                android:gravity="start|top"
+                android:inputType="none"
+                android:text="Pembahasan"
+                android:textColor="#373636"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textTglLogbook2"
+                app:layout_constraintTop_toBottomOf="@+id/textTglLogbook2" />
+
+            <Button
+                android:id="@+id/buttondetaillogbook2"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:text="Detail"
+                android:textSize="10dp" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".DetailLogbookActivity">-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="TextView"-->
+    <!--        tools:layout_editor_absoluteX="16dp"-->
+    <!--        tools:layout_editor_absoluteY="16dp" />-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
