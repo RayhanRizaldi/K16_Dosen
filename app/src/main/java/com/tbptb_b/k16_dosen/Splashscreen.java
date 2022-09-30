@@ -20,6 +20,6 @@ public class Splashscreen extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
             }
-        }, 500L);
+        }, 3000L);
     }
 }

@@ -17,10 +17,14 @@ import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 import java.util.ArrayList;
 
 public class MainMenu extends AppCompatActivity {
-ImageButton buttondetailta;
+
 Button setujubbmTA;
 //    private Boolean isLoggedIn = false;
     private RecyclerView rvListmaba;
+ImageButton buttondetailta, dpbtt;
+Button buttonsesi;
+//    private Boolean isLoggedIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,9 @@ Button setujubbmTA;
         rvListmaba.setLayoutManager(layoutManager);
         rvListmaba.setAdapter(adapter);
 
+
         buttondetailta = findViewById(R.id.imageButtonListDetailMabim2);
+
         buttondetailta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +95,23 @@ Button setujubbmTA;
         ));
         return listnamamhs;
 
+        dpbtt = findViewById(R.id.detailprofile);
+        dpbtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detailIn = new Intent(MainMenu.this, DetailMahasiswa .class);
+                startActivity(detailIn);
+            }
+        });
+
+        buttonsesi = findViewById(R.id.more_seminar);
+        buttonsesi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sesiIn = new Intent(MainMenu.this,JseminarActivity.class);
+                startActivity(sesiIn);
+            }
+        });
 
     }
 
