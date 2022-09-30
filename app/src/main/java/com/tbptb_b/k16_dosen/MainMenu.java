@@ -21,7 +21,7 @@ public class MainMenu extends AppCompatActivity {
 Button setujubbmTA;
 //    private Boolean isLoggedIn = false;
     private RecyclerView rvListmaba;
-ImageButton buttondetailta, dpbtt;
+ImageButton buttondetailta;
 Button buttonsesi;
 //    private Boolean isLoggedIn = false;
 
@@ -95,23 +95,8 @@ Button buttonsesi;
         ));
         return listnamamhs;
 
-        dpbtt = findViewById(R.id.detailprofile);
-        dpbtt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent detailIn = new Intent(MainMenu.this, DetailMahasiswa .class);
-                startActivity(detailIn);
-            }
-        });
 
-        buttonsesi = findViewById(R.id.more_seminar);
-        buttonsesi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent sesiIn = new Intent(MainMenu.this,JseminarActivity.class);
-                startActivity(sesiIn);
-            }
-        });
+
 
     }
 
