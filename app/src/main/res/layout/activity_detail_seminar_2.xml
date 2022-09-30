@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textNamaMahasiswaDs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nadilla Saraswati"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textNimMahasiswaDs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2011521004"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textNamaMahasiswaDs2"
+        app:layout_constraintStart_toStartOf="@+id/textNamaMahasiswaDs2"
+        app:layout_constraintTop_toBottomOf="@+id/textNamaMahasiswaDs2" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="89dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <Button
+        android:id="@+id/BterimaDs2"
+        android:layout_width="70dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/oren"
+        android:text="@string/btn_terima"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/BtolakDs2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textNamaMahasiswaDs2"
+        app:layout_constraintTop_toBottomOf="@+id/textNimMahasiswaDs2"
+        tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/BtolakDs2"
+        android:layout_width="70dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/button"
+        android:backgroundTint="#E3A211"
+        android:text="@string/btn_tolak"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/textNamaMahasiswaDs2"
+        app:layout_constraintTop_toBottomOf="@+id/textNimMahasiswaDs2"
+        tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
