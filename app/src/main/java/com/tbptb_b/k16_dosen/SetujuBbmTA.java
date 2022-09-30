@@ -8,65 +8,89 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-import android.widget.ImageButton;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
 
-public class MainMenu extends AppCompatActivity {
-ImageButton buttondetailta;
-Button setujubbmTA;
-//    private Boolean isLoggedIn = false;
+public class SetujuBbmTA extends AppCompatActivity {
+
     private RecyclerView rvListmaba;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_setuju_bbm_ta);
 
         rvListmaba = findViewById(R.id.rv_listbbm);
 
-        Adapter adapter = new Adapter(getListNamaMahasiswa());
+        Adapter2 adapter = new Adapter2(getListNamaMahasiswa());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvListmaba.setLayoutManager(layoutManager);
         rvListmaba.setAdapter(adapter);
-
-        buttondetailta = findViewById(R.id.imageButtonListDetailMabim2);
-        buttondetailta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDetailta();
-            }
-        });
-
-        setujubbmTA = findViewById(R.id.more_bimbingan);
-        setujubbmTA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openBimbinganta();
-            }
-        });
-//        if(isLoggedIn == false){
-//            Intent loginintent = new Intent(this, LoginActivity.class);
-//            startActivity(loginintent);
-//        }
-
-//        dpbtt = findViewById(R.id.imageButtonListDetailMabim);
-//        dpbtt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent detailIn = new Intent(MainMenu.this, DetailMahasiswa .class);
-//                startActivity(detailIn);
-//            }
-//        });
-
     }
-
     public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa(){
         ArrayList<ListNamaMahasiswa> listnamamhs = new ArrayList<>();
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Budy Bahahahaha",
+                2011623912
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Alfred Alfonso",
+                98303928
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Xavier the Third",
+                33333333
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Nadila Saraswati",
+                2011521004
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Budy Bahahahaha",
+                2011623912
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Alfred Alfonso",
+                98303928
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Xavier the Third",
+                33333333
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Nadila Saraswati",
+                2011521004
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Budy Bahahahaha",
+                2011623912
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Alfred Alfonso",
+                98303928
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Xavier the Third",
+                33333333
+        ));
+        listnamamhs.add(new ListNamaMahasiswa(
+                null,
+                "Nadila Saraswati",
+                2011521004
+        ));
         listnamamhs.add(new ListNamaMahasiswa(
                 null,
                 "Budy Bahahahaha",
@@ -93,7 +117,7 @@ Button setujubbmTA;
     }
 
     public void openDetailta(){
-        Intent intentdetailta = new Intent(this,DetailTAActivity.class);
+        Intent intentdetailta = new Intent(this,SetujuBbmTA.class);
         startActivity(intentdetailta);
     }
     public void openBimbinganta(){

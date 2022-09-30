@@ -14,17 +14,20 @@
         android:theme="@style/Theme.K16_Dosen"
         tools:targetApi="31">
         <activity
+            android:name=".SetujuBbmTA"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.K16_Dosen.NoActionBar."/>
+            android:theme="@style/Theme.K16_Dosen.NoActionBar." />
         <activity
             android:name=".PilihanActivity"
             android:exported="false"
-            android:label="Menu Pilihan"/>
+            android:label="Menu Pilihan" />
         <activity
             android:name=".DetailLogbookActivity"
             android:exported="false"
-            android:label="Detail Logbook"/>
+            android:label="Detail Logbook" />
         <activity
             android:name=".JseminarActivity"
             android:exported="false" />

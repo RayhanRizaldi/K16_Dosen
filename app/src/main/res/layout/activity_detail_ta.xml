@@ -182,6 +182,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/textNim"
         app:layout_constraintEnd_toEndOf="@+id/editTextJudul"
         app:layout_constraintTop_toTopOf="@+id/textNama"
-        app:srcCompat="@drawable/iconlist" />
+        app:srcCompat="@drawable/iconlist"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
