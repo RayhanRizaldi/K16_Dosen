@@ -12,17 +12,19 @@ import android.view.View;
 import android.widget.Button;
 
 import android.widget.ImageButton;
+import android.widget.Toast;
+
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganClickListener {
 
-Button setujubbmTA;
-//    private Boolean isLoggedIn = false;
+    Button setujubbmTA;
+    //    private Boolean isLoggedIn = false;
     private RecyclerView rvListmaba;
-ImageButton buttondetailta;
-Button buttonsesi;
+    ImageButton buttondetailta;
+    Button buttonsesi;
 //    private Boolean isLoggedIn = false;
 
     @Override
@@ -33,6 +35,7 @@ Button buttonsesi;
         rvListmaba = findViewById(R.id.rv_listbbm);
 
         Adapter adapter = new Adapter(getListNamaMahasiswa());
+        adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvListmaba.setLayoutManager(layoutManager);
@@ -71,7 +74,7 @@ Button buttonsesi;
 
     }
 
-    public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa(){
+    public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa() {
         ArrayList<ListNamaMahasiswa> listnamamhs = new ArrayList<>();
         listnamamhs.add(new ListNamaMahasiswa(
                 null,
@@ -96,16 +99,15 @@ Button buttonsesi;
         return listnamamhs;
 
 
-
-
     }
 
-    public void openDetailta(){
-        Intent intentdetailta = new Intent(this,DetailTAActivity.class);
+    public void openDetailta() {
+        Intent intentdetailta = new Intent(this, DetailTAActivity.class);
         startActivity(intentdetailta);
     }
-    public void openBimbinganta(){
-        Intent intentbbmta = new Intent(this,SetujuBbmTA.class);
+
+    public void openBimbinganta() {
+        Intent intentbbmta = new Intent(this, SetujuBbmTA.class);
         startActivity(intentbbmta);
     }
 
@@ -127,11 +129,21 @@ Button buttonsesi;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.menu_profile){
+        if (id == R.id.menu_profile) {
             Intent MProfileIntent = new Intent(this, UserProfile.class);
             startActivity(MProfileIntent);
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void ClickMhsBimbingan(ListNamaMahasiswa mhsbb) {
+        Intent intentdetailta = new Intent(this, DetailTAActivity.class);
+        intentdetailta.putExtra("NMHSBB", mhsbb.getNamamhs());
+        intentdetailta.putExtra("NIMMHSBB", Integer.toString(mhsbb.getNimmhs()));
+        intentdetailta.putExtra("FMHS", mhsbb.getFotomhs());
+        startActivity(intentdetailta);
+    }
+
 }

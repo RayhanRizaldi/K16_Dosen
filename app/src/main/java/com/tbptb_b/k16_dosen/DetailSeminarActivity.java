@@ -6,13 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DetailSeminarActivity extends AppCompatActivity {
+    TextView textNim,textNama;
+    ImageView imageAvatar;
+    String namaMhs, nimMhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_seminar);
+
+//        Intent intentdetailta = getIntent();
+//        if (intentdetailta != null) {
+//            namaMhs = intentdetailta.getStringExtra("NMHSBB");
+//            nimMhs = intentdetailta.getStringExtra("NIMMHSBB");
+//            textNama = findViewById(R.id.textNama2);
+//            textNama.setText(namaMhs);
+//            textNim = findViewById(R.id.textNim2);
+//            textNim.setText(nimMhs);
+//        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

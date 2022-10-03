@@ -18,13 +18,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ListMahasiswa> {
 
 
     ArrayList<ListNamaMahasiswa> listnmmhs = new ArrayList<>();
+    MhsBimbinganClickListener listener ;
 
     public Adapter(ArrayList<ListNamaMahasiswa> listnmmhs) {
         this.listnmmhs = listnmmhs;
     }
 
+
+
+    public Adapter(ArrayList<ListNamaMahasiswa> listnmmhs, MhsBimbinganClickListener listener) {
+        this.listnmmhs = listnmmhs;
+        this.listener = listener;
+    }
+
     public void setListnmmhs(ArrayList<ListNamaMahasiswa> listnmmhs) {
         this.listnmmhs = listnmmhs;
+    }
+    public void setListener(MhsBimbinganClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -47,18 +58,29 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ListMahasiswa> {
     public int getItemCount() {
         return listnmmhs.size();
     }
-    public class ListMahasiswa extends RecyclerView.ViewHolder{
+
+    public interface MhsBimbinganClickListener{
+        void ClickMhsBimbingan(ListNamaMahasiswa mhsbb);
+    }
+
+    public class ListMahasiswa extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageAvatarListmabim;
         public TextView textNamaListMabimb,textNimListMabimb;
-        public ImageButton imageButtonListDetailMabim;
 
         public ListMahasiswa(@NonNull View itemView) {
             super(itemView);
             imageAvatarListmabim = itemView.findViewById(R.id.imageAvatarListmabim);
             textNamaListMabimb = itemView.findViewById(R.id.textNamaListMabimb);
             textNimListMabimb = itemView.findViewById(R.id.textNimListMabimb);
-            imageButtonListDetailMabim = itemView.findViewById(R.id.imageButtonListDetailMabim);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            ListNamaMahasiswa namamhs = listnmmhs.get(getAdapterPosition());
+            listener.ClickMhsBimbingan(namamhs);
         }
     }
 }
