@@ -13,7 +13,7 @@
         android:layout_width="87dp"
         android:layout_height="78dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar" />
@@ -47,7 +47,7 @@
         android:id="@+id/textJudul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="24dp"
         android:text="Judul Tugas Akhir :"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/imageAvatar"
@@ -171,6 +171,7 @@
         android:id="@+id/imageViewDetailTA"
         android:layout_width="140dp"
         android:layout_height="154dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextMulaiBimb"
         app:layout_constraintStart_toStartOf="@+id/textDetailTa"
         app:layout_constraintTop_toBottomOf="@+id/textDetailTa"
@@ -186,5 +187,56 @@
         app:srcCompat="@drawable/iconlist"
         android:onClick="popUpDetailTA"
         />
+
+    <ImageView
+        android:id="@+id/imageViewunduhta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailTA"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDetailTA"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDetailTA"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDetailTA"
+        app:srcCompat="@drawable/unduh" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Inputnilaifinal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nilai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textDetailTa"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDetailTA">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Inputnilaifinalta"
+            android:layout_width="118dp"
+            android:layout_height="41dp"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewinstruksi"
+        android:layout_width="161dp"
+        android:layout_height="16dp"
+        android:text="*Input nilai dengan angka"
+        android:textSize="9dp"
+        app:layout_constraintStart_toStartOf="@+id/Inputnilaifinal"
+        app:layout_constraintTop_toBottomOf="@+id/Inputnilaifinal" />
+
+    <Button
+        android:id="@+id/buttoninputnilaita"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:text="input"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewinstruksi"
+        app:layout_constraintStart_toEndOf="@+id/Inputnilaifinal"
+        app:layout_constraintTop_toTopOf="@+id/Inputnilaifinal"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
