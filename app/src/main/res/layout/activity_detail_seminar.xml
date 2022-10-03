@@ -184,4 +184,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textDetailTa2"
         app:srcCompat="@drawable/detailtaunduh" />
 
+    <ImageView
+        android:id="@+id/imageViewunduhds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailTA2"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDetailTA2"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDetailTA2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDetailTA2"
+        app:srcCompat="@drawable/unduh" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
