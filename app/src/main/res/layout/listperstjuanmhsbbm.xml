@@ -3,64 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-             android:layout_height="wrap_content">
+    android:layout_height="80dp">
 
-    <ImageView
-        android:id="@+id/imageAvatarSetujuBbm"
-        android:layout_width="58dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/avatar" />
-
-    <TextView
-        android:id="@+id/textNamaSetujuBbm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Nadilla Saraswati"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageAvatarSetujuBbm"
-        app:layout_constraintTop_toTopOf="@+id/imageAvatarSetujuBbm" />
-
-    <TextView
-        android:id="@+id/textNimSetujuBbm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="359dp"
+        android:layout_height="71dp"
         android:layout_marginTop="4dp"
-        android:text="2011521004"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textNamaSetujuBbm"
-        app:layout_constraintTop_toBottomOf="@+id/textNamaSetujuBbm" />
-
-    <Button
-        android:id="@+id/ButtonpersetujuanBbm"
-        android:layout_width="97dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="31dp"
-        android:text="Setujui"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.992"
-        app:layout_constraintStart_toEndOf="@+id/textNimSetujuBbm"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="420dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/editTextBackground" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageAvatarSetujuBbm"
+            android:layout_width="58dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/textNamaSetujuBbm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:text="Nadilla Saraswati"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageAvatarSetujuBbm"
+            app:layout_constraintTop_toTopOf="@+id/imageAvatarSetujuBbm" />
+
+        <TextView
+            android:id="@+id/textNimSetujuBbm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:text="2011521004"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textNamaSetujuBbm"
+            app:layout_constraintTop_toBottomOf="@+id/textNamaSetujuBbm" />
+
+        <Button
+            android:id="@+id/ButtonpersetujuanBbm"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:text="Setujui"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.992"
+            app:layout_constraintStart_toEndOf="@+id/textNimSetujuBbm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.542" />
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

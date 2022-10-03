@@ -21,10 +21,6 @@
             android:exported="false"
             android:theme="@style/Theme.K16_Dosen.NoActionBar." />
         <activity
-            android:name=".PilihanActivity"
-            android:exported="false"
-            android:label="Menu Pilihan" />
-        <activity
             android:name=".DetailLogbookActivity"
             android:exported="false"
             android:label="Detail Logbook" />

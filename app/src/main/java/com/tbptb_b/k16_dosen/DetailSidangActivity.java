@@ -6,13 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class DetailSidangActivity extends AppCompatActivity {
+public class DetailSidangActivity extends AppCompatActivity  {
+    TextView textNim3,textNama3;
+    ImageView imageAvatar;
+    String namaMhs, nimMhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_sidang);
+
+//        Intent intentdetailta = getIntent();
+//        if (intentdetailta != null) {
+//            namaMhs = intentdetailta.getStringExtra("NMHSBB");
+//            nimMhs = intentdetailta.getStringExtra("NIMMHSBB");
+//            textNama3 = findViewById(R.id.textNama3);
+//            textNama3.setText(namaMhs);
+//            textNim3 = findViewById(R.id.textNim3);
+//            textNim3.setText(nimMhs);
+//        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -19,28 +19,29 @@
         app:srcCompat="@drawable/avatar" />
 
     <TextView
-        android:id="@+id/textNama"
+        android:id="@+id/textNamaMhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:text="Nadilla Saraswati"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageAvatar"
         app:layout_constraintTop_toTopOf="@+id/imageAvatar" />
 
     <TextView
-        android:id="@+id/textNim"
+        android:id="@+id/textNimMhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2011521004"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textNama"
-        app:layout_constraintTop_toBottomOf="@+id/textNama" />
+        app:layout_constraintStart_toStartOf="@+id/textNamaMhs"
+        app:layout_constraintTop_toBottomOf="@+id/textNamaMhs" />
 
     <TextView
         android:id="@+id/textJudul"
@@ -179,11 +180,11 @@
         android:id="@+id/iconList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textNim"
+        app:layout_constraintBottom_toBottomOf="@+id/textNimMhs"
         app:layout_constraintEnd_toEndOf="@+id/editTextJudul"
-        app:layout_constraintTop_toTopOf="@+id/textNama"
+        app:layout_constraintTop_toTopOf="@+id/textNamaMhs"
         app:srcCompat="@drawable/iconlist"
-
+        android:onClick="popUpDetailTA"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
