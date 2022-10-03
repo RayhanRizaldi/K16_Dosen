@@ -4,12 +4,15 @@ public class Listlogbook {
 
     String tanggallb;
     String deskripsilb;
+    Integer statuslb;
+
 
     public Listlogbook(){}
 
-    public Listlogbook(String tanggallb, String deskripsilb) {
+    public Listlogbook(String tanggallb, String deskripsilb, Integer statuslb) {
         this.tanggallb = tanggallb;
         this.deskripsilb = deskripsilb;
+        this.statuslb = statuslb;
     }
 
     public String getTanggallb(){return tanggallb;}
@@ -24,4 +27,9 @@ public class Listlogbook {
         this.deskripsilb = deskripsilb;
     }
 
+    public Integer getStatuslb(){return statuslb;}
+
+    public void setStatuslb(Integer statuslb) {
+        this.statuslb = statuslb;
+    }
 }

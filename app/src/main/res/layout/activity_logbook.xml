@@ -13,9 +13,9 @@
         android:focusableInTouchMode="true">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvLogbook"
+            android:id="@+id/rv_lb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="736dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
