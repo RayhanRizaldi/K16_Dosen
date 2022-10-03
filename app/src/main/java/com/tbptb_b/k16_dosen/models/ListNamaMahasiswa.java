@@ -38,3 +38,4 @@ public class ListNamaMahasiswa {
         this.nimmhs = nimmhs;
     }
 }
+

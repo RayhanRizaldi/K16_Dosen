@@ -16,19 +16,19 @@ Button buttondetaillb;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook);
 
-        buttondetaillb = findViewById(R.id.buttondetaillogbook);
-        buttondetaillb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDetailLogbook();
-            }
-        });
+//        buttondetaillb = findViewById(R.id.buttondetaillogbook);
+//        buttondetaillb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openDetailLogbook();
+//            }
+//        });
     }
 
-    public void openDetailLogbook(){
-        Intent intentdetaillogbook = new Intent(this,DetailLogbookActivity.class);
-        startActivity(intentdetaillogbook);
-    }
+//    public void openDetailLogbook(){
+//        Intent intentdetaillogbook = new Intent(this,DetailLogbookActivity.class);
+//        startActivity(intentdetaillogbook);
+//    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();

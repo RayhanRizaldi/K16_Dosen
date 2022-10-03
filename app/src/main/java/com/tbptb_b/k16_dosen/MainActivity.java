@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     @Override
-    //test sarasss
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
