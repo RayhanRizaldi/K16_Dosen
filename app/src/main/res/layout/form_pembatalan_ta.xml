@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titlebatal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".formpembatalanTAActivity">
+
+    //Judul Tugas Akhir
+
+    <TextView
+        android:id="@+id/detailmhsbatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/detailmhs"
+        android:textAllCaps="true"
+        android:textColor="@color/texthijau"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/namamahasiswabatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/Mnama"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailmhsbatalta" />
+
+    <TextView
+        android:id="@+id/nimmahasiswabatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/nim"
+        android:textColor="#000000"
+        android:textColorHint="#FFFFFF"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/namamahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/namamahasiswabatalta" />
+
+    <TextView
+        android:id="@+id/JudulTAmahasiswabatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/JudulTA"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nimmahasiswabatalta" />
+
+    <EditText
+        android:id="@+id/isiJTAmahasiswabatalta"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="@+id/JudulTAmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/JudulTAmahasiswabatalta"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    //Dosen pembimbing
+
+    <TextView
+        android:id="@+id/Dospemmahasiswabatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Dospem"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/JudulTAmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/isiJTAmahasiswabatalta" />
+
+    <EditText
+        android:id="@+id/isiDPmahasiswabatalta"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:enabled="false"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="@+id/Dospemmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/Dospemmahasiswabatalta"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+
+    // Jadwal
+
+    <TextView
+        android:id="@+id/jadwalmahasiswabatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/akademikdospem"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Dospemmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/isiDPmahasiswabatalta" />
+
+    <EditText
+        android:id="@+id/isijadwalmahasiswabatalta"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/jadwalmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/jadwalmahasiswabatalta"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    //Mulai Bimbingan
+
+    <TextView
+        android:id="@+id/mulaibimbbatalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/startbimbingan"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/jadwalmahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/isijadwalmahasiswabatalta" />
+
+    <EditText
+        android:id="@+id/isiLokasimahasiswabatalta"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mulaibimbbatalta"
+        app:layout_constraintTop_toBottomOf="@+id/mulaibimbbatalta"
+        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    //form pembatalan
+
+    <TextView
+        android:id="@+id/pembatalanta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pembatalanTa"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/texthijau"
+        app:layout_constraintBottom_toBottomOf="@+id/isipembatalanta"
+        app:layout_constraintEnd_toEndOf="@+id/isipembatalanta"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/isipembatalanta"
+        app:layout_constraintTop_toTopOf="@+id/isipembatalanta"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/isipembatalanta"
+        android:layout_width="326dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/isiLokasimahasiswabatalta"
+        app:layout_constraintStart_toStartOf="@+id/isiLokasimahasiswabatalta"
+        app:layout_constraintTop_toBottomOf="@+id/isiLokasimahasiswabatalta" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:text="@string/btn_batal"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/isipembatalanta"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/isipembatalanta"
+        app:layout_constraintTop_toBottomOf="@+id/isipembatalanta" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
