@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import com.tbptb_b.k16_dosen.models.Listlogbook;
 
 import java.util.ArrayList;
 
-public class LogbookActivity extends AppCompatActivity {
+public class LogbookActivity extends AppCompatActivity implements Adapter3.ListLogbookClickListener{
 Button buttondetaillb;
 
 private RecyclerView rvLogbook;
@@ -25,6 +26,7 @@ private RecyclerView rvLogbook;
         rvLogbook = findViewById(R.id.rv_lb);
 
         Adapter3 adapter = new Adapter3(getLislogbook());
+        adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvLogbook.setLayoutManager(layoutManager);
@@ -111,6 +113,14 @@ private RecyclerView rvLogbook;
         return ListLogbook;
      }
 
+    @Override
+    public void onListLogbookClick(Listlogbook listlogbook) {
+        Intent intentdetaillb = new Intent(this,DetailLogbookActivity.class);
+        intentdetaillb.putExtra("TGLLB",listlogbook.getTanggallb());
+        intentdetaillb.putExtra("DSKRLB",listlogbook.getDeskripsilb());
+        startActivity(intentdetaillb);
+    }
+
 //    public void openDetailLogbook(){
 //        Intent intentdetaillogbook = new Intent(this,DetailLogbookActivity.class);
 //        startActivity(intentdetaillogbook);
@@ -124,4 +134,6 @@ private RecyclerView rvLogbook;
         getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
     }
+
+
 }

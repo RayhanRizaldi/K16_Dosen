@@ -20,13 +20,23 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ListLogbook> {
 
 
     ArrayList<Listlogbook> listlb = new ArrayList<>();
+    ListLogbookClickListener listener;
 
     public Adapter3(ArrayList<Listlogbook> listlb) {
         this.listlb = listlb;
     }
 
+    public Adapter3(ArrayList<Listlogbook> listlb, ListLogbookClickListener listener) {
+        this.listlb = listlb;
+        this.listener = listener;
+    }
+
     public void setListlb(ArrayList<Listlogbook> listlb) {
         this.listlb = listlb;
+    }
+
+    public void setListener(ListLogbookClickListener listener){
+        this.listener = listener;
     }
 
     @NonNull
@@ -47,14 +57,17 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ListLogbook> {
         } else {
             holder.imageViewCheklb.setImageResource(R.drawable.bx_nonesquare);
         }
+    }
 
+    public interface ListLogbookClickListener{
+        void onListLogbookClick(Listlogbook listlogbook);
     }
 
     @Override
     public int getItemCount() {
         return listlb.size();
     }
-    public class ListLogbook extends RecyclerView.ViewHolder{
+    public class ListLogbook extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView textTglListLb, textDeskripsiListLb;
         public ImageView imageViewCheklb;
@@ -64,6 +77,16 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ListLogbook> {
             textDeskripsiListLb = itemView.findViewById(R.id.textDeskripsiListLb);
             textTglListLb = itemView.findViewById(R.id.textTglListLb);
             imageViewCheklb = itemView.findViewById(R.id.imageViewCheklb);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Listlogbook listlogbook = listlb.get(getAdapterPosition());
+            listener.onListLogbookClick(listlogbook);
         }
     }
+
+
 }
