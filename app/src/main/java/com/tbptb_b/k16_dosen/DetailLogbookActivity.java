@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class DetailLogbookActivity extends AppCompatActivity {
+
+    Button buttonUlasanLogbook;
 
     TextView textViewTanggalLogbook;
     EditText editTextKegiatanLogbook;
@@ -27,10 +31,21 @@ public class DetailLogbookActivity extends AppCompatActivity {
             textViewTanggalLogbook.setText(tanggallb);
             editTextKegiatanLogbook = findViewById(R.id.editTextKegiatanLogbook);
             editTextKegiatanLogbook.setText(deskripsilb);
-
         }
+
+        buttonUlasanLogbook = findViewById(R.id.buttonUlasanLogbook);
+        buttonUlasanLogbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openUlasan();
+            }
+        });
     }
 
+    public void openUlasan(){
+        Intent intentulasan = new Intent(this,UlasanLbActivity.class);
+        startActivity(intentulasan);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
