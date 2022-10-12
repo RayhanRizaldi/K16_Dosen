@@ -15,7 +15,7 @@
 
 
         <ImageView
-            android:id="@+id/prof_jsem"
+            android:id="@+id/profil_jsem"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_person_24"
@@ -25,9 +25,9 @@
             android:layout_marginTop="16dp" />
 
         <TextView
-            android:id="@+id/jadwalsem"
-            app:layout_constraintStart_toEndOf="@+id/prof_jsem"
-            app:layout_constraintTop_toTopOf="@+id/prof_jsem"
+            android:id="@+id/jadwal_jsem"
+            app:layout_constraintStart_toEndOf="@+id/profil_jsem"
+            app:layout_constraintTop_toTopOf="@+id/profil_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -37,9 +37,9 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/Mnama_jseminar"
-            app:layout_constraintStart_toStartOf="@+id/jadwalsem"
-            app:layout_constraintTop_toBottomOf="@+id/jadwalsem"
+            android:id="@+id/Mnama_jsem"
+            app:layout_constraintStart_toStartOf="@+id/jadwal_jsem"
+            app:layout_constraintTop_toBottomOf="@+id/jadwal_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -48,9 +48,9 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/nim_jseminar"
-            app:layout_constraintStart_toStartOf="@+id/Mnama_jseminar"
-            app:layout_constraintTop_toBottomOf="@+id/Mnama_jseminar"
+            android:id="@+id/nim_jsem"
+            app:layout_constraintStart_toStartOf="@+id/Mnama_jsem"
+            app:layout_constraintTop_toBottomOf="@+id/Mnama_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -59,7 +59,7 @@
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/JTA_jseminar"
+            android:id="@+id/JTA_jsem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -71,8 +71,8 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/Mnama_jseminar"
-            app:layout_constraintTop_toBottomOf="@+id/nim_jseminar"
+            app:layout_constraintStart_toStartOf="@+id/Mnama_jsem"
+            app:layout_constraintTop_toBottomOf="@+id/nim_jsem"
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

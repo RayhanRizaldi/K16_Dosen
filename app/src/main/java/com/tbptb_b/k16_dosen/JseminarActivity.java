@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.tbptb_b.k16_dosen.models.jadwal_seminar;
+import com.tbptb_b.k16_dosen.adapter.jsem_adapter;
+import com.tbptb_b.k16_dosen.models.jsem_model;
 
 import java.util.ArrayList;
+//4.tambahkan implementasi
+public class JseminarActivity extends AppCompatActivity implements jsem_adapter.ItemjsemClickListener{
 
-public class JseminarActivity extends AppCompatActivity {
+    //1.
     private RecyclerView rvjsem;
 
     @Override
@@ -18,35 +22,60 @@ public class JseminarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jseminar);
 
-        rvjsem = findViewById(R.id. rv_jseminar);
+        //2.
+        rvjsem = findViewById(R.id.rv_jsem);
 
-        AdapterJSem adapter = new AdapterJSem (getjadwal_seminar());
+        //2.1
+        jsem_adapter jsemadapter = new jsem_adapter(getjsem_model());
+        //5.
+        jsemadapter.setListner(this);
+        //2.2
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
+        //2.3
         rvjsem.setLayoutManager(layoutManager);
-        rvjsem.setAdapter(adapter);
+        rvjsem.setAdapter(jsemadapter);
+
     }
 
-    public ArrayList<jadwal_seminar> getjadwal_seminar(){
-        ArrayList<jadwal_seminar> listjsem = new ArrayList<>();
-        listjsem.add(new jadwal_seminar(
+    //3. tambahkan method untuk membuat arraylist-> ganti ner arraylist... pada oncreat dengan getjsem_model()
+    public ArrayList<jsem_model> getjsem_model(){
+        ArrayList<jsem_model> listjsem_model = new ArrayList<>();
+
+        //3.1 tambahkan data yang akan dimasukkan pada list ->lanjut ke adapter
+        listjsem_model.add(new jsem_model(
                 null,
-                "senin, 10 oktober 2022",
-                "winanda afrilia harisya",
+                "selasa, 11 oktober 2022",
+                "Winanda afrilia harisya",
                 "2011522016",
-                "Perancangan sistem informasi Bank Soal FTI"
+                "Perancangan SPK pemilihan cafe terbaik disekitar unand"
 
         ));
 
-        listjsem.add(new jadwal_seminar(
+        listjsem_model.add(new jsem_model(
                 null,
-                "senin, 17 oktober 2022",
-                "nadilla saraswati",
+                "rabu, 12 oktober 2022",
+                "Nadilla sarawati",
                 "2011523012",
-                "Perancangan Sistem Pengambilan Keputusan"
+                "Perancangan Sistem informasi TA"
 
         ));
 
-        return listjsem;
+        listjsem_model.add(new jsem_model(
+                null,
+                "kamis, 13 oktober 2022",
+                "Yupiko",
+                "2011521001",
+                "Perancangan SPK pemilihan makanan kucing terbaik"
+
+        ));
+
+        return listjsem_model;
+    }
+
+    @Override
+    public void onItemjsemClick(jsem_model jsemmodel) {
+        //6.membuat Intent
+//        Intent dsemIntent = new Intent(this, DetailSeminarActivity.class);
+//        startActivity(dsemIntent);
     }
 }
