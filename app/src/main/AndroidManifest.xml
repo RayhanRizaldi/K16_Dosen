@@ -14,6 +14,10 @@
         android:theme="@style/Theme.K16_Dosen"
         tools:targetApi="31">
         <activity
+            android:name=".UlasanLbActivity"
+            android:exported="false"
+            android:label="Ulasan"/>
+        <activity
             android:name=".SetujuBbmTA"
             android:exported="false" />
         <activity
