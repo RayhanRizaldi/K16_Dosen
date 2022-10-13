@@ -14,6 +14,9 @@
         android:theme="@style/Theme.K16_Dosen"
         tools:targetApi="31">
         <activity
+            android:name=".JsidangActivity"
+            android:exported="false" />
+        <activity
             android:name=".UlasanLbActivity"
             android:exported="false"
             android:label="Ulasan"/>
