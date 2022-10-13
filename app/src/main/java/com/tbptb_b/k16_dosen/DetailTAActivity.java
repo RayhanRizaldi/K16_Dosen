@@ -69,6 +69,12 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
                 intentdetailsidang.putExtra("NIMMHSBB", nimMhs);
                 startActivity(intentdetailsidang);
                 return true;
+            case R.id.buttonPilihanPembatalan:
+                Intent intentpembatalanTa = new Intent(this, PembatalanTaActivity.class);
+                intentpembatalanTa.putExtra("NMHSBB", namaMhs);
+                intentpembatalanTa.putExtra("NIMMHSBB", nimMhs);
+                startActivity(intentpembatalanTa);
+                return true;
             default:
                 return false;
         }
