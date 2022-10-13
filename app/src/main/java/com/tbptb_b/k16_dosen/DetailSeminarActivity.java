@@ -19,15 +19,15 @@ public class DetailSeminarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_seminar);
 
-//        Intent intentdetailta = getIntent();
-//        if (intentdetailta != null) {
-//            namaMhs = intentdetailta.getStringExtra("NMHSBB");
-//            nimMhs = intentdetailta.getStringExtra("NIMMHSBB");
-//            textNama = findViewById(R.id.textNama2);
-//            textNama.setText(namaMhs);
-//            textNim = findViewById(R.id.textNim2);
-//            textNim.setText(nimMhs);
-//        }
+        Intent intentdetailsmr = getIntent();
+        if (intentdetailsmr != null) {
+            namaMhs = intentdetailsmr.getStringExtra("NMHSBB");
+            nimMhs = intentdetailsmr.getStringExtra("NIMMHSBB");
+            textNama = findViewById(R.id.textNama2);
+            textNama.setText(namaMhs);
+            textNim = findViewById(R.id.textNim2);
+            textNim.setText(nimMhs);
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

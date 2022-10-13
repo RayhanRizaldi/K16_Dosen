@@ -59,10 +59,14 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
                 return true;
             case R.id.buttonPilihanDetailSeminar:
                 Intent intentdetailseminar = new Intent(this, DetailSeminarActivity.class);
+                intentdetailseminar.putExtra("NMHSBB", namaMhs);
+                intentdetailseminar.putExtra("NIMMHSBB", nimMhs);
                 startActivity(intentdetailseminar);
                 return true;
             case R.id.buttonPilihanDetailSidang:
                 Intent intentdetailsidang = new Intent(this, DetailSidangActivity.class);
+                intentdetailsidang.putExtra("NMHSBB", namaMhs);
+                intentdetailsidang.putExtra("NIMMHSBB", nimMhs);
                 startActivity(intentdetailsidang);
                 return true;
             default:

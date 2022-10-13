@@ -19,15 +19,15 @@ public class DetailSidangActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_sidang);
 
-//        Intent intentdetailta = getIntent();
-//        if (intentdetailta != null) {
-//            namaMhs = intentdetailta.getStringExtra("NMHSBB");
-//            nimMhs = intentdetailta.getStringExtra("NIMMHSBB");
-//            textNama3 = findViewById(R.id.textNama3);
-//            textNama3.setText(namaMhs);
-//            textNim3 = findViewById(R.id.textNim3);
-//            textNim3.setText(nimMhs);
-//        }
+        Intent intentdetailsdng = getIntent();
+        if (intentdetailsdng != null) {
+            namaMhs = intentdetailsdng.getStringExtra("NMHSBB");
+            nimMhs = intentdetailsdng.getStringExtra("NIMMHSBB");
+            textNama3 = findViewById(R.id.textNama3);
+            textNama3.setText(namaMhs);
+            textNim3 = findViewById(R.id.textNim3);
+            textNim3.setText(nimMhs);
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
