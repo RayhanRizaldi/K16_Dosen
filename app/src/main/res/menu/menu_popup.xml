@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/buttonPilihanLogbook"
+        android:title="Logbook"/>
+    <item android:id="@+id/buttonPilihanDetailSeminar"
+        android:title="Detail Seminar"/>
+    <item android:id="@+id/buttonPilihanDetailSidang"
+        android:title="Detail Sidang"/>
+    <item android:id="@+id/buttonPilihanPembatalan"
+        android:title="Pembatalan Tugas Akhir"/>
+</menu>

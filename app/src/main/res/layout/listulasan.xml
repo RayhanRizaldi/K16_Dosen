@@ -22,19 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageViewCheklb"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.488"
-                app:srcCompat="@drawable/bx_checksquare" />
-
             <TextView
-                android:id="@+id/textTglListLb"
+                android:id="@+id/textTglListUlasan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -46,17 +35,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textDeskripsiListLb"
+                android:id="@+id/textCatatanUlasan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="12dp"
-                android:text="Melakukan Riset"
+                android:text="Catatan.................................."
                 android:textSize="10sp"
+                android:maxLines="10"
+                android:minLines="1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textTglListLb" />
+                app:layout_constraintTop_toBottomOf="@+id/textTglListUlasan" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

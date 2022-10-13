@@ -41,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nama_mahasiswa" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="412dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -99,6 +100,16 @@
             android:orientation="vertical"
             android:padding="20dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttondetailta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Detail Tugas Akhir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

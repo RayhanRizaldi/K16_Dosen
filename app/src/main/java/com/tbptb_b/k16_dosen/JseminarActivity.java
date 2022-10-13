@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.tbptb_b.k16_dosen.adapter.jsem_adapter;
 import com.tbptb_b.k16_dosen.models.jsem_model;
@@ -77,5 +79,6 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
         //6.membuat Intent
 //        Intent dsemIntent = new Intent(this, DetailSeminarActivity.class);
 //        startActivity(dsemIntent);
+
     }
 }

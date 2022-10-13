@@ -17,6 +17,21 @@
             android:name=".JsidangActivity"
             android:exported="false" />
         <activity
+            android:name=".UlasanLbActivity"
+            android:exported="false"
+            android:label="Ulasan"/>
+        <activity
+            android:name=".SetujuBbmTA"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K16_Dosen.NoActionBar." />
+        <activity
+            android:name=".DetailLogbookActivity"
+            android:exported="false"
+            android:label="Detail Logbook" />
+        <activity
             android:name=".JseminarActivity"
             android:exported="false" />
         <activity
@@ -37,21 +52,25 @@
             android:label="@string/title_activity_profile" />
         <activity
             android:name=".LogbookActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Logbook" />
         <activity
             android:name=".DetailSidangActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Detail Sidang" />
         <activity
             android:name=".DetailSeminarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Detail Seminar" />
         <activity
             android:name=".DetailTAActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Detail Tugas Akhir" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Splashscreen"
             android:exported="true"
             android:theme="@style/Theme.K16_Dosen.NoActionBar.">
             <intent-filter>
