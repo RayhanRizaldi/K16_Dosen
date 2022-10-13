@@ -18,6 +18,9 @@
     <string name="jseminar_tittle">List Jadwal Seminar</string>
     <string name="menunggu_persetujuan_seminar">Menunggu Persetujuan Seminar</string>
     <string name="list_persetujuan_seminar">List Persetujuan Seminar</string>
+    <string name="jadwalSem">Selasa, 05-09-2022</string>
+    <string name="isiTA">Rancang Bangun Mobile Commerce Berbasis Android Pada Toko Duta Buku Semarang</string>
+
 
     //String Detail Sidang
     <string name="ds_tittle">Detail Sidang</string>
