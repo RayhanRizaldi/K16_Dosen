@@ -23,8 +23,6 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
     Button setujubbmTA;
     //    private Boolean isLoggedIn = false;
     private RecyclerView rvListmaba;
-    ImageButton buttondetailta;
-    Button buttonsesi;
 //    private Boolean isLoggedIn = false;
 
     @Override
@@ -41,15 +39,6 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         rvListmaba.setLayoutManager(layoutManager);
         rvListmaba.setAdapter(adapter);
 
-
-        buttondetailta = findViewById(R.id.imageButtonListDetailMabim2);
-
-        buttondetailta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDetailta();
-            }
-        });
 
         setujubbmTA = findViewById(R.id.more_bimbingan);
         setujubbmTA.setOnClickListener(new View.OnClickListener() {
@@ -101,10 +90,6 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
 
     }
 
-    public void openDetailta() {
-        Intent intentdetailta = new Intent(this, DetailTAActivity.class);
-        startActivity(intentdetailta);
-    }
 
     public void openBimbinganta() {
         Intent intentbbmta = new Intent(this, SetujuBbmTA.class);

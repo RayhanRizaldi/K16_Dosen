@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailSidangActivity extends AppCompatActivity  {
+public class PembatalanTaActivity extends AppCompatActivity {
     TextView textNim3,textNama3;
     ImageView imageAvatar;
     String namaMhs, nimMhs;
@@ -17,15 +17,15 @@ public class DetailSidangActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_sidang);
+        setContentView(R.layout.activity_pembatalan_ta);
 
         Intent intentdetailsdng = getIntent();
         if (intentdetailsdng != null) {
             namaMhs = intentdetailsdng.getStringExtra("NMHSBB");
             nimMhs = intentdetailsdng.getStringExtra("NIMMHSBB");
-            textNama3 = findViewById(R.id.textNama3);
+            textNama3 = findViewById(R.id.namamahasiswabatalta);
             textNama3.setText(namaMhs);
-            textNim3 = findViewById(R.id.textNim3);
+            textNim3 = findViewById(R.id.nimmahasiswabatalta);
             textNim3.setText(nimMhs);
         }
     }
@@ -35,7 +35,7 @@ public class DetailSidangActivity extends AppCompatActivity  {
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
