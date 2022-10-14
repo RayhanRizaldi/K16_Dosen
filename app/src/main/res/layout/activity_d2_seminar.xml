@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DSeminar2Activity">
-
+    tools:context=".D2SeminarActivity">
 
     <ImageView
         android:id="@+id/profilins"
@@ -101,15 +100,15 @@
         android:layout_height="43dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:autofillHints=""
         android:ems="10"
+        android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        android:enabled="false"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="@+id/JudulTAds2"
         app:layout_constraintTop_toBottomOf="@+id/JudulTAds2"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     //Dosen pembimbing
 
@@ -132,13 +131,13 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:ems="10"
+        android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        android:enabled="false"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="@+id/Dospemds2"
         app:layout_constraintTop_toBottomOf="@+id/Dospemds2"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     // Jadwal
 
@@ -166,7 +165,7 @@
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="@+id/jadwalds2"
         app:layout_constraintTop_toBottomOf="@+id/jadwalds2"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     //Lokasi
 
@@ -189,12 +188,12 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:ems="10"
+        android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        android:enabled="false"
         app:layout_constraintStart_toStartOf="@+id/lokasids2"
         app:layout_constraintTop_toBottomOf="@+id/lokasids2"
-        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     //Detail TA
 
@@ -234,6 +233,5 @@
         app:layout_constraintStart_toStartOf="@+id/fileds2"
         app:layout_constraintTop_toTopOf="@+id/fileds2"
         app:srcCompat="@drawable/unduh" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

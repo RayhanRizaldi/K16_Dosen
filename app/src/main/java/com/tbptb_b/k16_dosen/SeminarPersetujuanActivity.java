@@ -58,15 +58,61 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements js
                 "2011521001"
 
         ));
+        listjsid_model.add(new jsid_model(
+                null,
+                "selasa, 11 oktober 2022",
+                "Winanda afrilia harisya",
+                "2011522016"
+
+        ));
+
+        listjsid_model.add(new jsid_model(
+                null,
+                "rabu, 12 oktober 2022",
+                "Nadilla saraswati",
+                "2011523012"
+
+        ));
+
+        listjsid_model.add(new jsid_model(
+                null,
+                "kamis, 13 oktober 2022",
+                "Yupiko",
+                "2011521001"
+
+        ));
+        listjsid_model.add(new jsid_model(
+                null,
+                "selasa, 11 oktober 2022",
+                "Winanda afrilia harisya",
+                "2011522016"
+
+        ));
+
+        listjsid_model.add(new jsid_model(
+                null,
+                "rabu, 12 oktober 2022",
+                "Nadilla saraswati",
+                "2011523012"
+
+        ));
+
+        listjsid_model.add(new jsid_model(
+                null,
+                "kamis, 13 oktober 2022",
+                "Yupiko",
+                "2011521001"
+
+        ));
 
         return listjsid_model;
     }
 
     @Override
     public void onitemjsidClick(jsid_model jsidmodel) {
-        Intent dsemIntent = new Intent(this, DSeminar2Activity.class);
-
-        startActivity(dsemIntent);
+//        Intent dsemIntent = new Intent(this, DSeminar2Activity.class);
+//
+//        startActivity(dsemIntent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -74,7 +120,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements js
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
     }
 }

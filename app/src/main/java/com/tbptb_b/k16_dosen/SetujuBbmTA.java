@@ -131,23 +131,7 @@ public class SetujuBbmTA extends AppCompatActivity {
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.menu_profile){
-            Intent MProfileIntent = new Intent(this, UserProfile.class);
-            startActivity(MProfileIntent);
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
