@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 
-public class DSidang2Activity extends AppCompatActivity {
+public class D2SeminarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dsidang2);
-
+        setContentView(R.layout.activity_d2_seminar);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

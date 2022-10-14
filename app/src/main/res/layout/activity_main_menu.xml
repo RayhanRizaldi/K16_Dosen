@@ -117,13 +117,27 @@
 
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/more_seminar"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/hijau"
-                    android:stateListAnimator="@null"
-                    android:text="MORE" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/more_seminar"
+                        android:layout_width="174.5dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/hijau"
+                        android:stateListAnimator="@null"
+                        android:text="Seminar" />
+                    <Button
+                        android:id="@+id/more_sidang"
+                        android:layout_width="174.5dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/hijau"
+                        android:stateListAnimator="@null"
+                        android:text="Sidang" />
+                </LinearLayout>
+
 
 
             </LinearLayout>
@@ -144,19 +158,6 @@
                 android:text="Mahasiswa Bimbingan"
                 android:textSize="14dp" />
 
-            <ImageButton
-                android:id="@+id/imageButtonListDetailMabim2"
-                android:layout_width="26dp"
-                android:layout_height="17dp"
-                android:layout_marginTop="19sp"
-                android:layout_marginEnd="44dp"
-                app:layout_constraintBottom_toBottomOf="@+id/textNimListMabimb"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.918"
-                app:layout_constraintStart_toEndOf="@+id/textNimListMabimb"
-                app:layout_constraintTop_toTopOf="@+id/textNamaListMabimb"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/dropdown" />
         </LinearLayout>
 
 

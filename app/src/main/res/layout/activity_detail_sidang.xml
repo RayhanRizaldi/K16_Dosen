@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageAvatarDetailSid"
-        android:layout_width="83dp"
-        android:layout_height="83dp"
+        android:layout_width="89dp"
+        android:layout_height="79dp"
         android:layout_marginTop="28dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"

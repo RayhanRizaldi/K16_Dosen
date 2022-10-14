@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailSidangActivity extends AppCompatActivity  {
+public class PembatalanTaActivity extends AppCompatActivity {
     TextView textNim3,textNama3;
     ImageView imageAvatar;
     String namaMhs, nimMhs;
@@ -17,18 +17,19 @@ public class DetailSidangActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_sidang);
+        setContentView(R.layout.activity_pembatalan_ta);
 
         Intent intentdetailsdng = getIntent();
         if (intentdetailsdng != null) {
             namaMhs = intentdetailsdng.getStringExtra("NMHSBB");
             nimMhs = intentdetailsdng.getStringExtra("NIMMHSBB");
-            textNama3 = findViewById(R.id.textNama3);
+            textNama3 = findViewById(R.id.namamahasiswabatalta);
             textNama3.setText(namaMhs);
-            textNim3 = findViewById(R.id.textNim3);
+            textNim3 = findViewById(R.id.nimmahasiswabatalta);
             textNim3.setText(nimMhs);
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();

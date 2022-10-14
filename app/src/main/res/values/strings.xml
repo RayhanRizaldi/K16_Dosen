@@ -18,6 +18,9 @@
     <string name="jseminar_tittle">List Jadwal Seminar</string>
     <string name="menunggu_persetujuan_seminar">Menunggu Persetujuan Seminar</string>
     <string name="list_persetujuan_seminar">List Persetujuan Seminar</string>
+    <string name="jadwalSem">Selasa, 05-09-2022</string>
+    <string name="isiTA">Rancang Bangun Mobile Commerce Berbasis Android Pada Toko Duta Buku Semarang</string>
+
 
     //String Detail Sidang
     <string name="ds_tittle">Detail Sidang</string>
@@ -25,15 +28,21 @@
     <string name="Dospem">Dosen Pembimbing :</string>
     <string name="lokasi">Lokasi :</string>
     <string name="file_dta">Detail Tugas Akhir :</string>
+    <string name="detailmhs">Detail Mahasiswa</string>
     <string name="Mnama">Nadilla saraswati</string>
     <string name="nim">2011521004</string>
     <string name="btn_terima">Terima</string>
+    <string name="pembatalanTa">Alasan Membatalkan Tugas Akhir :</string>
     <string name="btn_tolak">Tolak</string>
+    <string name="btn_batal">Batalkan</string>
     <string name="sjadwal">Jadwal :</string>
     <string name="dospeng">Dosen Penguji :</string>
     <string name="btn_innilai">Input Penilaian</string>
+    <string name="btn_rekomendasi">Rekomendasi</string>
     <string name="tanggal">21/09/2022</string>
+    <string name="akademikdospem">Dosen Pembimbing Akademik :</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="startbimbingan">Mulai Bimbingan :</string>
     <string name="wait_persetujuam_bimbingan">Menunggu Persetujuan Bimbingan</string>
     <string name="list_jadwal">List Jadwal Seminar dan Sidang</string>
     <string name="large_text">
