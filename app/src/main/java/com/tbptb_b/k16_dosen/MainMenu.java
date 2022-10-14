@@ -82,7 +82,7 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         startActivity(intentbbmta);
     }
     private void openSidang() {
-        Intent intentsidang = new Intent(this, JsidangActivity.class);
+        Intent intentsidang = new Intent(this, SidangjActivity.class);
         startActivity(intentsidang);
     }
 

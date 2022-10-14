@@ -4,37 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 
-import com.tbptb_b.k16_dosen.adapter.psem_adapter;
-import com.tbptb_b.k16_dosen.models.psem_model;
+import com.tbptb_b.k16_dosen.adapter.psid_adapter;
+import com.tbptb_b.k16_dosen.models.psid_model;
 
 import java.util.ArrayList;
 
-public class SeminarPersetujuanActivity extends AppCompatActivity  implements psem_adapter.ItemjsidClickListener {
-    private RecyclerView rvssem;
+public class SidangPersetujuanActivity extends AppCompatActivity implements psid_adapter.ItempsidClickListener{
+
+    private RecyclerView rvpsid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seminar_persetujuan);
-        rvssem = findViewById(R.id.rv_persetujuansem);
+        setContentView(R.layout.activity_sidang_persetujuan);
 
-        psem_adapter jsidadapter = new psem_adapter(getpersetujuanseminar_model());
-        jsidadapter.setListener(this);
+        rvpsid = findViewById(R.id.rv_psid);
+
+        psid_adapter psidadapter = new psid_adapter(getpsid_model());
+        psidadapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
-        rvssem.setLayoutManager(layoutManager);
-        rvssem.setAdapter(jsidadapter);
-
+        rvpsid.setLayoutManager(layoutManager);
+        rvpsid.setAdapter(psidadapter);
 
     }
 
-    public ArrayList<psem_model> getpersetujuanseminar_model() {
-        ArrayList<psem_model> listjsid_model = new ArrayList<>();
+    public ArrayList<psid_model> getpsid_model(){
+        ArrayList<psid_model> listpsid_model = new ArrayList<>();
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -42,7 +44,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -50,14 +52,14 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
                 "2011521001"
 
         ));
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -65,7 +67,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -73,14 +75,14 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
                 "2011521001"
 
         ));
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -88,7 +90,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -96,7 +98,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listpsid_model.add(new psid_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
@@ -104,14 +106,15 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        return listjsid_model;
+        return listpsid_model;
     }
+
 
     @Override
-    public void onitemjsidClick(psem_model jsidmodel) {
-//        Intent dsemIntent = new Intent(this, DSeminar2Activity.class);
+    public void onitempsidClick(psid_model psidmodel) {
+//        Intent dpsidIntent = new Intent(this, DSidang2Activity.class);
 //
-//        startActivity(dsemIntent);
+//        startActivity(dpsidIntent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
