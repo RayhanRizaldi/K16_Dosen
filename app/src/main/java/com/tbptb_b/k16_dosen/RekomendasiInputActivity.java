@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 
-public class inputnilaisidangActivity extends AppCompatActivity {
+public class RekomendasiInputActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inputnilaisidang);
+        setContentView(R.layout.activity_rekomendasi_input);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
