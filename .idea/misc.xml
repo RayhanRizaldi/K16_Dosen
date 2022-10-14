@@ -3,7 +3,49 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/drawable/bg_gradient.xml" value="0.2555" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/drawable/btn_green.xml" value="0.121" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_d2_seminar.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_detail_logbook.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_detail_seminar.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_detail_sidang.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_detail_ta.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_dseminar2.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_dsidang2.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_inputnilaisidang.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_inputrekomendasi.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_jseminar.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_jsidang.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_logbook.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_main.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_main_menu.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_pembatalan_ta.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_pilihan.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_rekomendasi_input.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_seminar_persetujuan.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_setuju_bbm_ta.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_ulasan_lb.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/content_main.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/form_pembatalan_ta.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/fragment_first.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/fragment_scroll.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/fragment_scrollSetujui.xml" value="0.13703703703703704" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/fragment_scrollsetujuibbm.xml" value="0.44321329639889195" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/item_rv.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/list_jadwalseminar.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/list_jadwalsidang.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/list_setujuseminar.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/listlogbook.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/listmahasiswabimb.xml" value="0.2246376811594203" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/listpersetujuanseminar.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/layout/listperstjuanmhsbbm.xml" value="0.4" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_main.xml" value="0.25" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_popup.xml" value="0.5975" />
+        <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_profile.xml" value="0.25" />
       </map>
     </option>
   </component>

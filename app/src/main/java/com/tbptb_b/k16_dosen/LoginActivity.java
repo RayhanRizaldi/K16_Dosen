@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         if(valid){
             String username = editUsername.getEditableText().toString();
             String password = editPassword.getEditableText().toString();
-            if(password.equals("yeyjadi") && username.equals("dengankekuatanbulan")){
+            if(password.equals("a") && username.equals("a")){
                 Intent LoginIntent = new Intent(this, MainMenu.class);
                 LoginIntent.putExtra("username",username);
                 LoginIntent.putExtra("cek_login",true);

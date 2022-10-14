@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="16dp">
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,47 +16,47 @@
 
         <ImageView
             android:id="@+id/profil_jsem"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_person_24"
             android:layout_width="52dp"
             android:layout_height="49dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <TextView
             android:id="@+id/jadwal_jsem"
-            app:layout_constraintStart_toEndOf="@+id/profil_jsem"
-            app:layout_constraintTop_toTopOf="@+id/profil_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/jadwalSem"
             android:textColor="#000000"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/profil_jsem"
+            app:layout_constraintTop_toTopOf="@+id/profil_jsem" />
 
         <TextView
             android:id="@+id/Mnama_jsem"
-            app:layout_constraintStart_toStartOf="@+id/jadwal_jsem"
-            app:layout_constraintTop_toBottomOf="@+id/jadwal_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/Mnama"
             android:textColor="#000000"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/jadwal_jsem"
+            app:layout_constraintTop_toBottomOf="@+id/jadwal_jsem" />
 
         <TextView
             android:id="@+id/nim_jsem"
-            app:layout_constraintStart_toStartOf="@+id/Mnama_jsem"
-            app:layout_constraintTop_toBottomOf="@+id/Mnama_jsem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/nim"
             android:textColor="#000000"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/Mnama_jsem"
+            app:layout_constraintTop_toBottomOf="@+id/Mnama_jsem" />
 
         <EditText
             android:id="@+id/JTA_jsem"

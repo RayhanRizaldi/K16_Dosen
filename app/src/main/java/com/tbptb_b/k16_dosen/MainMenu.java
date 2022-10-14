@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganClickListener {
 
-    Button setujubbmTA;
+    Button setujubbmTA, JadwalSem, JadwalSid;
     //    private Boolean isLoggedIn = false;
     private RecyclerView rvListmaba;
 //    private Boolean isLoggedIn = false;
@@ -47,6 +47,20 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
                 openBimbinganta();
             }
         });
+        JadwalSem = findViewById(R.id.more_seminar);
+        JadwalSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSeminar();
+            }
+        });
+        JadwalSid = findViewById(R.id.more_sidang);
+        JadwalSid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSidang();
+            }
+        });
 //        if(isLoggedIn == false){
 //            Intent loginintent = new Intent(this, LoginActivity.class);
 //            startActivity(loginintent);
@@ -61,6 +75,20 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
 //            }
 //        });
 
+    }
+
+    public void openBimbinganta() {
+        Intent intentbbmta = new Intent(this, SetujuBbmTA.class);
+        startActivity(intentbbmta);
+    }
+    private void openSidang() {
+        Intent intentsidang = new Intent(this, JsidangActivity.class);
+        startActivity(intentsidang);
+    }
+
+    private void openSeminar() {
+        Intent intentseminar = new Intent(this, JseminarActivity.class);
+        startActivity(intentseminar);
     }
 
     public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa() {
@@ -91,10 +119,6 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
     }
 
 
-    public void openBimbinganta() {
-        Intent intentbbmta = new Intent(this, SetujuBbmTA.class);
-        startActivity(intentbbmta);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

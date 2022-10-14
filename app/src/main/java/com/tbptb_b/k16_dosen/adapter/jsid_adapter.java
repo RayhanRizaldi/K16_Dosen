@@ -41,7 +41,7 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
     @Override
     public jsid_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_jadwalsidang, parent, false);
+                .inflate(R.layout.list_setujuseminar, parent, false);
         
         return new jsid_adapter.jsid_viewholder(view);
     }
