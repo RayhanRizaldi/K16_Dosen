@@ -15,14 +15,14 @@ import java.util.ArrayList;
 
 public class Adapter4 extends RecyclerView.Adapter<Adapter4.Listulasan>{
 
-    ArrayList<ListUlasan> listulasan = new ArrayList<>();
+    ArrayList<ListUlasan> listulsn = new ArrayList<>();
 
     public Adapter4(ArrayList<ListUlasan> listulsn) {
-        this.listulasan = listulasan;
+        this.listulsn = listulsn;
     }
 
-    public void setListnmmhs(ArrayList<ListUlasan> listulsn) {
-        this.listulasan = listulasan;
+    public void setListulsn(ArrayList<ListUlasan> listulsn) {
+        this.listulsn = listulsn;
     }
 
     @NonNull
@@ -34,17 +34,17 @@ public class Adapter4 extends RecyclerView.Adapter<Adapter4.Listulasan>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter4.Listulasan holder, int position) {
+    public void onBindViewHolder(@NonNull Listulasan holder, int position) {
 
-        ListUlasan listul= listulasan.get(position);
-        holder.textTglListUl.setText(listul.getTglulasan());
-        holder.textDeskripsiListUl.setText(listul.getCttulasan());
+        ListUlasan Listulsn= listulsn.get(position);
+        holder.textTglListUl.setText(Listulsn.getTglulasan());
+        holder.textDeskripsiListUl.setText(Listulsn.getCttulasan());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listulsn.size();
     }
 
     public class Listulasan extends RecyclerView.ViewHolder {
