@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JsidangActivity">
+    tools:context=".SeminarPersetujuanActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jsid"
+        android:id="@+id/rv_persetujuansem"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"

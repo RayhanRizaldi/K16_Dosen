@@ -17,6 +17,12 @@
             android:name=".PembatalanTaActivity"
             android:exported="false" />
         <activity
+            android:name=".SeminarPersetujuanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RekomendasiInputActivity"
+            android:exported="false" />
+        <activity
             android:name=".JsidangActivity"
             android:exported="false" />
         <activity
