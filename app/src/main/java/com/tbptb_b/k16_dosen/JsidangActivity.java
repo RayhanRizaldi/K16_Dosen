@@ -78,6 +78,12 @@ public class JsidangActivity extends AppCompatActivity implements jsid_adapter.I
 
     @Override
     public void onItemjsidClick(jsid_model jsidmodel) {
+        Intent detailIntentJsidang = new  Intent (this, inputnilaisidangActivity.class);
+        detailIntentJsidang.putExtra("Mnama_jsid",jsidmodel.getMnama_jsid());
+        detailIntentJsidang.putExtra("nim_jsid", jsidmodel.getNim_jsid());
+        detailIntentJsidang.putExtra("jadwal_jsid", jsidmodel.getJadwal_jsid());
+        detailIntentJsidang.putExtra("JTA_jsid", jsidmodel.getJTA_jsid());
+        startActivity(detailIntentJsidang);
 
     }
 }

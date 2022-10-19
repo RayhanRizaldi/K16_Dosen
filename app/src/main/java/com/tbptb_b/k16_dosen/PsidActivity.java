@@ -67,8 +67,10 @@ public class PsidActivity extends AppCompatActivity implements psid_adapter.Item
 
     @Override
     public void onitempsidClick(psid_model psidmodel) {
-        Intent dpsidIntent = new Intent(this, DSidang2Activity.class);
-
-        startActivity(dpsidIntent);
+        Intent detailIntentpsid = new  Intent (this, DSidang2Activity.class);
+        detailIntentpsid.putExtra("Mnama_psid",psidmodel.getMnama_psid());
+        detailIntentpsid.putExtra("nim_psid", psidmodel.getNim_psid());
+        detailIntentpsid.putExtra("jadwal_psid", psidmodel.getJadwal_psid());
+        startActivity(detailIntentpsid);
     }
 }

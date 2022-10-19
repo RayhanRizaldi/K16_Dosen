@@ -2,58 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tittleins"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".inputnilaisidangActivity">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDS2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gradientbackground"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbarDS2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbarDS2"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-    <TextView
-        android:id="@+id/tittleDS2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/ds_tittle"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbarDS2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbarDS2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/profilins"
@@ -62,8 +13,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="@+id/toolbarDS2"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarDS2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <TextView
@@ -95,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/namains" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonins"
         android:layout_width="149dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -111,7 +62,7 @@
     //Judul Tugas Akhir
 
     <TextView
-        android:id="@+id/JudulTAins"
+        android:id="@+id/JTAins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -121,7 +72,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonins" />
 
     <EditText
         android:id="@+id/isiJTAins"
@@ -134,8 +85,8 @@
         android:inputType="none"
         android:enabled="false"
         android:minHeight="?attr/actionBarSize"
-        app:layout_constraintStart_toStartOf="@+id/JudulTAins"
-        app:layout_constraintTop_toBottomOf="@+id/JudulTAins"
+        app:layout_constraintStart_toStartOf="@+id/JTAins"
+        app:layout_constraintTop_toBottomOf="@+id/JTAins"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
         android:autofillHints="" />
 
@@ -150,11 +101,11 @@
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/JudulTAins"
+        app:layout_constraintStart_toStartOf="@+id/JTAins"
         app:layout_constraintTop_toBottomOf="@+id/isiJTAins" />
 
     <EditText
-        android:id="@+id/isiDPins"
+        android:id="@+id/isiDPemins"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginLeft="15dp"
@@ -180,7 +131,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/Dospemins"
-        app:layout_constraintTop_toBottomOf="@+id/isiDPins" />
+        app:layout_constraintTop_toBottomOf="@+id/isiDPemins" />
 
     <EditText
         android:id="@+id/isijadwalins"
@@ -228,7 +179,7 @@
         tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Dospengins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -240,7 +191,7 @@
         app:layout_constraintTop_toBottomOf="@+id/isiLokasiins" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/isiDpengins"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginLeft="15dp"
@@ -248,8 +199,8 @@
         android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/Dospengins"
+        app:layout_constraintTop_toBottomOf="@+id/Dospengins"
         tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     //Detail TA
@@ -263,8 +214,8 @@
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintStart_toStartOf="@+id/Dospengins"
+        app:layout_constraintTop_toBottomOf="@+id/isiDpengins" />
 
     <ImageView
         android:id="@+id/fileins"
@@ -279,7 +230,7 @@
         app:srcCompat="@drawable/pdf" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/tdfileins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
