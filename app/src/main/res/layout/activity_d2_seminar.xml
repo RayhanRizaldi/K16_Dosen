@@ -38,7 +38,6 @@
         android:id="@+id/textnimDs2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:text="@string/nim"
         android:textColor="#000000"
@@ -46,6 +45,7 @@
         android:textIsSelectable="false"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TextnamaDs2"
         app:layout_constraintStart_toStartOf="@+id/TextnamaDs2"
         app:layout_constraintTop_toBottomOf="@+id/TextnamaDs2" />
 
@@ -55,7 +55,6 @@
         android:layout_width="70dp"
         android:layout_height="31dp"
         android:layout_marginTop="3dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/oren"
         android:text="@string/btn_terima"
