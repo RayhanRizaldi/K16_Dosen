@@ -1,11 +1,14 @@
 package com.tbptb_b.k16_dosen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 import com.tbptb_b.k16_dosen.adapter.psem_adapter;
 import com.tbptb_b.k16_dosen.models.psem_model;
@@ -14,6 +17,8 @@ import java.util.ArrayList;
 
 public class SeminarPersetujuanActivity extends AppCompatActivity  implements psem_adapter.ItemjsidClickListener {
     private RecyclerView rvssem;
+
+    CardView CrdJsid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +33,20 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
         rvssem.setLayoutManager(layoutManager);
         rvssem.setAdapter(jsidadapter);
 
+        CrdJsid = findViewById(R.id.card_jsid);
+        CrdJsid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SetujuSeminar();
+            }
+        });
 
+
+    }
+
+    private void SetujuSeminar() {
+        Intent intentssem = new Intent(this, D2SeminarActivity.class);
+        startActivity(intentssem);
     }
 
     public ArrayList<psem_model> getpersetujuanseminar_model() {

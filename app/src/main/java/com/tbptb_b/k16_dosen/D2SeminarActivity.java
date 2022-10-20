@@ -18,10 +18,10 @@ public class D2SeminarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_d2_seminar);
 
-        Intent intentdetailta = getIntent();
-        if (intentdetailta != null) {
-            namaMhs = intentdetailta.getStringExtra("NMHSJSEM");
-            nimMhs = intentdetailta.getStringExtra("NIMMHSJSEM");
+        Intent intentRekomSem = getIntent();
+        if (intentRekomSem != null) {
+            namaMhs = intentRekomSem.getStringExtra("NMHSJSEM");
+            nimMhs = intentRekomSem.getStringExtra("NIMMHSJSEM");
             TextnamaDs2 = findViewById(R.id.TextnamaDs2);
             TextnamaDs2.setText(namaMhs);
             textnimDs2 = findViewById(R.id.textnimDs2);

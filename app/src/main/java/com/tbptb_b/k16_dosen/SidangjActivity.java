@@ -50,7 +50,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
     }
 
     private void SidangApprove() {
-        Intent intentssid = new Intent(this, SidangPersetujuanActivity.class);
+        Intent intentssid = new Intent(this, DSidang2Activity.class);
         startActivity(intentssid);
     }
 
@@ -143,7 +143,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
     @Override
     public void onItemjsidClick(jsid_model jsidmodel) {
-        Intent intentdesid2 = new Intent(this, DSidang2Activity.class);
+        Intent intentdesid2 = new Intent(this, inputnilaisidangActivity.class);
         intentdesid2.putExtra("NMHSJSID", jsidmodel.getMnama_jsid());
         intentdesid2.putExtra("NIMMHSJSID", jsidmodel.getNim_jsid());
         startActivity(intentdesid2);

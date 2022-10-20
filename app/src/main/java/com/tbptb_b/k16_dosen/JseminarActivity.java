@@ -156,10 +156,10 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
     @Override
     public void onItemjsemClick(jsem_model jsemmodel) {
         //6.membuat Intent
-        Intent intentdesem2 = new Intent(this, D2SeminarActivity.class);
-        intentdesem2.putExtra("NMHSJSEM", jsemmodel.getMnama_sem());
-        intentdesem2.putExtra("NIMMHSJSEM", jsemmodel.getNim_sem());
-        startActivity(intentdesem2);
+        Intent intentRekomSem = new Intent(this, RekomendasiInputActivity.class);
+        intentRekomSem.putExtra("NMHSJSEM", jsemmodel.getMnama_sem());
+        intentRekomSem.putExtra("NIMMHSJSEM", jsemmodel.getNim_sem());
+        startActivity(intentRekomSem);
 
     }
 }

@@ -1,19 +1,64 @@
 package com.tbptb_b.k16_dosen;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class UserProfile extends AppCompatActivity {
+
+    private ImageView pict_dosen;
+    private static final int PICK_IMAGE=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+//        pict_dosen = (ImageView) findViewById(R.id.pict_dosen);
+//        pict_dosen.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent gallery = new Intent();
+//                gallery.setType("image/*");
+//                gallery.setAction(Intent.ACTION_GET_CONTENT);
+//
+//                startActivityForResult(Intent.createChooser(gallery, "Pilih Gambar"), PICK_IMAGE);
+//            }
+//        });
+
+        Button button = findViewById(R.id.update_profile_button);
+        pict_dosen = findViewById(R.id.pict_dosen);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mGetContent.launch("image/*");
+
+            }
+        });
     }
+
+    ActivityResultLauncher<String> mGetContent = registerForActivityResult(
+            new ActivityResultContracts.GetContent(),
+            new ActivityResultCallback<Uri>() {
+                @Override
+                public void onActivityResult(Uri result) {
+                    if (result != null){
+                        pict_dosen.setImageURI(result);
+                    }
+                }
+            }
+    );
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

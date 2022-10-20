@@ -1,12 +1,14 @@
 package com.tbptb_b.k16_dosen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 import com.tbptb_b.k16_dosen.adapter.psid_adapter;
 import com.tbptb_b.k16_dosen.models.psid_model;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 public class SidangPersetujuanActivity extends AppCompatActivity implements psid_adapter.ItempsidClickListener{
 
     private RecyclerView rvpsid;
+    CardView CrdJsem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,18 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
         rvpsid.setLayoutManager(layoutManager);
         rvpsid.setAdapter(psidadapter);
 
+        CrdJsem = findViewById(R.id.card_jsid);
+        CrdJsem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SetujuSidang();
+            }
+        });
+    }
+
+    private void SetujuSidang() {
+        Intent intentssem = new Intent(this, DSidang2Activity.class);
+        startActivity(intentssem);
     }
 
     public ArrayList<psid_model> getpsid_model(){
