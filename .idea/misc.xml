@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/drawable/gradientbackground.xml" value="0.1855" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_d2_seminar.xml" value="0.264" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_logbook.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_ta.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_dsidang2.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_jseminar.xml" value="0.2" />
-        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_logbook.xml" value="0.14719202898550723" />
+        <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_logbook.xml" value="0.2" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main_menu.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/HP/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_rekomendasi_input.xml" value="0.22826086956521738" />
