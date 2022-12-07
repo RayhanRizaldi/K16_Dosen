@@ -10,56 +10,57 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import com.tbptb_b.k16_dosen.adapter.jsid_adapter;
-import com.tbptb_b.k16_dosen.models.jsid_model;
+import com.tbptb_b.k16_dosen.adapter.jsem_adapter;
+import com.tbptb_b.k16_dosen.models.jsem_model;
 
 import java.util.ArrayList;
 
-public class SidangjActivity extends AppCompatActivity implements jsid_adapter.ItemjsidClickListener{
+//4.tambahkan implementasi
+public class JadwalSeminarActivity extends AppCompatActivity implements jsem_adapter.ItemjsemClickListener{
 
     //1.
-    private RecyclerView rvjsid;
-    Button SetujuSid;
+    private RecyclerView rvjsem;
+    Button SetujuSem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sidangj);
+        setContentView(R.layout.activity_jadwal_seminar);
 
         //2.
-        rvjsid = findViewById(R.id.rv_jsid);
+        rvjsem = findViewById(R.id.rv_jsem);
 
         //2.1
-        jsid_adapter jsidadapter = new jsid_adapter(getjsid_model());
+        jsem_adapter jsemadapter = new jsem_adapter(getjsem_model());
         //5.
-        jsidadapter.setListner(this);
+        jsemadapter.setListner(this);
         //2.2
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         //2.3
-        rvjsid.setLayoutManager(layoutManager);
-        rvjsid.setAdapter(jsidadapter);
+        rvjsem.setLayoutManager(layoutManager);
+        rvjsem.setAdapter(jsemadapter);
 
-        SetujuSid = findViewById(R.id.button_jsid);
-        SetujuSid.setOnClickListener(new View.OnClickListener() {
+        SetujuSem = findViewById(R.id.button_jsem);
+        SetujuSem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SidangApprove();
+                SeminarApprove();
             }
         });
 
     }
 
-    private void SidangApprove() {
-        Intent intentssid = new Intent(this, DSidang2Activity.class);
-        startActivity(intentssid);
+    private void SeminarApprove() {
+        Intent intentssem = new Intent(this, SeminarPersetujuanActivity.class);
+        startActivity(intentssem);
     }
 
     //3. tambahkan method untuk membuat arraylist-> ganti ner arraylist... pada oncreat dengan getjsem_model()
-    public ArrayList<jsid_model> getjsid_model(){
-        ArrayList<jsid_model> listjsid_model = new ArrayList<>();
+    public ArrayList<jsem_model> getjsem_model(){
+        ArrayList<jsem_model> listjsem_model = new ArrayList<>();
 
         //3.1 tambahkan data yang akan dimasukkan pada list ->lanjut ke adapter
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -68,7 +69,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla sarawati",
@@ -77,7 +78,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
@@ -85,7 +86,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
                 "Perancangan SPK pemilihan makanan kucing terbaik"
 
         ));
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -94,7 +95,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla sarawati",
@@ -103,7 +104,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
@@ -111,7 +112,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
                 "Perancangan SPK pemilihan makanan kucing terbaik"
 
         ));
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -120,7 +121,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla sarawati",
@@ -129,7 +130,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        listjsid_model.add(new jsid_model(
+        listjsem_model.add(new jsem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
@@ -138,16 +139,9 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         ));
 
-        return listjsid_model;
+        return listjsem_model;
     }
 
-    @Override
-    public void onItemjsidClick(jsid_model jsidmodel) {
-        Intent intentdesid2 = new Intent(this, inputnilaisidangActivity.class);
-        intentdesid2.putExtra("NMHSJSID", jsidmodel.getMnama_jsid());
-        intentdesid2.putExtra("NIMMHSJSID", jsidmodel.getNim_jsid());
-        startActivity(intentdesid2);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
@@ -156,5 +150,15 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
+    }
+
+    @Override
+    public void onItemjsemClick(jsem_model jsemmodel) {
+        //6.membuat Intent
+        Intent intentRekomSem = new Intent(this, RekomendasiInputActivity.class);
+        intentRekomSem.putExtra("NMHSJSEM", jsemmodel.getMnama_sem());
+        intentRekomSem.putExtra("NIMMHSJSEM", jsemmodel.getNim_sem());
+        startActivity(intentRekomSem);
+
     }
 }

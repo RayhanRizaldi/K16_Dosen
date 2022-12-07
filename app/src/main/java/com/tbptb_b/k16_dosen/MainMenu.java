@@ -11,14 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import android.widget.ImageButton;
-import android.widget.Toast;
-
+import com.tbptb_b.k16_dosen.adapter.mhsbimbingan_adapter;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
 
-public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganClickListener {
+public class MainMenu extends AppCompatActivity implements mhsbimbingan_adapter.MhsBimbinganClickListener {
 
     Button setujubbmTA, JadwalSem, JadwalSid;
     //    private Boolean isLoggedIn = false;
@@ -32,7 +30,7 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
 
         rvListmaba = findViewById(R.id.rv_listbbm);
 
-        Adapter adapter = new Adapter(getListNamaMahasiswa());
+        mhsbimbingan_adapter adapter = new mhsbimbingan_adapter(getListNamaMahasiswa());
         adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
@@ -82,12 +80,12 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         startActivity(intentbbmta);
     }
     private void openSidang() {
-        Intent intentsidang = new Intent(this, SidangjActivity.class);
+        Intent intentsidang = new Intent(this, JadwalSidangActivity.class);
         startActivity(intentsidang);
     }
 
     private void openSeminar() {
-        Intent intentseminar = new Intent(this, JseminarActivity.class);
+        Intent intentseminar = new Intent(this, JadwalSeminarActivity.class);
         startActivity(intentseminar);
     }
 

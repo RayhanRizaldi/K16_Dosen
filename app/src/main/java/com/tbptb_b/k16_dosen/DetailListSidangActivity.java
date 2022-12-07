@@ -5,28 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class D2SeminarActivity extends AppCompatActivity {
+public class DetailListSidangActivity extends AppCompatActivity {
 
-    TextView TextnamaDs2, textnimDs2;
+    TextView namains, nimins;
     String namaMhs, nimMhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_d2_seminar);
+        setContentView(R.layout.activity_detail_listsidang);
 
-        Intent intentRekomSem = getIntent();
-        if (intentRekomSem != null) {
-            namaMhs = intentRekomSem.getStringExtra("NMHSJSEM");
-            nimMhs = intentRekomSem.getStringExtra("NIMMHSJSEM");
-            TextnamaDs2 = findViewById(R.id.TextnamaDs2);
-            TextnamaDs2.setText(namaMhs);
-            textnimDs2 = findViewById(R.id.textnimDs2);
-            textnimDs2.setText(nimMhs);
+        Intent intentdetailta = getIntent();
+        if (intentdetailta != null) {
+            namaMhs = intentdetailta.getStringExtra("NMHSJSID");
+            nimMhs = intentdetailta.getStringExtra("NIMMHSJSID");
+            namains = findViewById(R.id.namains);
+            namains.setText(namaMhs);
+            nimins = findViewById(R.id.nimins);
+            nimins.setText(nimMhs);
         }
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

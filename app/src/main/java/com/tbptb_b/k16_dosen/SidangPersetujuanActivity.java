@@ -44,7 +44,7 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
     }
 
     private void SetujuSidang() {
-        Intent intentssem = new Intent(this, DSidang2Activity.class);
+        Intent intentssem = new Intent(this, DetailListSidangActivity.class);
         startActivity(intentssem);
     }
 

@@ -9,11 +9,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Button;
 
+import com.tbptb_b.k16_dosen.adapter.listlogbook_adapter;
 import com.tbptb_b.k16_dosen.models.Listlogbook;
 
 import java.util.ArrayList;
 
-public class LogbookActivity extends AppCompatActivity implements Adapter3.ListLogbookClickListener{
+public class LogbookActivity extends AppCompatActivity implements listlogbook_adapter.ListLogbookClickListener{
 Button buttondetaillb;
 
 private RecyclerView rvLogbook;
@@ -25,7 +26,7 @@ private RecyclerView rvLogbook;
 
         rvLogbook = findViewById(R.id.rv_lb);
 
-        Adapter3 adapter = new Adapter3(getLislogbook());
+        listlogbook_adapter adapter = new listlogbook_adapter(getLislogbook());
         adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 

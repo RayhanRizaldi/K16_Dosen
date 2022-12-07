@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 
+import com.tbptb_b.k16_dosen.adapter.setujubimbingan_adapter;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class SetujuBbmTA extends AppCompatActivity {
 
         rvListmaba = findViewById(R.id.rv_listbbm);
 
-        Adapter2 adapter = new Adapter2(getListNamaMahasiswa());
+        setujubimbingan_adapter adapter = new setujubimbingan_adapter(getListNamaMahasiswa());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvListmaba.setLayoutManager(layoutManager);

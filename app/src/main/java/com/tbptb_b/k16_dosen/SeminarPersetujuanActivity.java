@@ -45,7 +45,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
     }
 
     private void SetujuSeminar() {
-        Intent intentssem = new Intent(this, D2SeminarActivity.class);
+        Intent intentssem = new Intent(this, DetailListSeminarActivity.class);
         startActivity(intentssem);
     }
 

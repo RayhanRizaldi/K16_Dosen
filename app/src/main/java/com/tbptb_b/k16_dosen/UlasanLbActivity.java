@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 
+import com.tbptb_b.k16_dosen.adapter.listulasan_adapter;
 import com.tbptb_b.k16_dosen.models.ListUlasan;
-import com.tbptb_b.k16_dosen.models.Listlogbook;
 
 import java.util.ArrayList;
 
@@ -23,7 +23,7 @@ public class UlasanLbActivity extends AppCompatActivity{
 
         rv_ulasanlb = findViewById(R.id.rv_ulasanmhs);
 
-        Adapter4 adapter4 = new Adapter4(getListUlasan());
+        listulasan_adapter adapter4 = new listulasan_adapter(getListUlasan());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rv_ulasanlb.setLayoutManager(layoutManager);

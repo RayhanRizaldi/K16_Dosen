@@ -1,4 +1,4 @@
-package com.tbptb_b.k16_dosen;
+package com.tbptb_b.k16_dosen.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,16 +8,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tbptb_b.k16_dosen.R;
 import com.tbptb_b.k16_dosen.models.ListUlasan;
-import com.tbptb_b.k16_dosen.models.Listlogbook;
 
 import java.util.ArrayList;
 
-public class Adapter4 extends RecyclerView.Adapter<Adapter4.Listulasan>{
+public class listulasan_adapter extends RecyclerView.Adapter<listulasan_adapter.Listulasan>{
 
     ArrayList<ListUlasan> listulsn = new ArrayList<>();
 
-    public Adapter4(ArrayList<ListUlasan> listulsn) {
+    public listulasan_adapter(ArrayList<ListUlasan> listulsn) {
         this.listulsn = listulsn;
     }
 
@@ -27,10 +27,10 @@ public class Adapter4 extends RecyclerView.Adapter<Adapter4.Listulasan>{
 
     @NonNull
     @Override
-    public Adapter4.Listulasan onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public listulasan_adapter.Listulasan onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.listulasan, parent, false);
-        return new Adapter4.Listulasan(view);
+        return new listulasan_adapter.Listulasan(view);
     }
 
     @Override

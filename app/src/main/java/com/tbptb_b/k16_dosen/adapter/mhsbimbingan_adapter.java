@@ -1,32 +1,32 @@
-package com.tbptb_b.k16_dosen;
+package com.tbptb_b.k16_dosen.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tbptb_b.k16_dosen.R;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ListMahasiswa> {
+public class mhsbimbingan_adapter extends RecyclerView.Adapter<mhsbimbingan_adapter.ListMahasiswa> {
 
 
     ArrayList<ListNamaMahasiswa> listnmmhs = new ArrayList<>();
     MhsBimbinganClickListener listener ;
 
-    public Adapter(ArrayList<ListNamaMahasiswa> listnmmhs) {
+    public mhsbimbingan_adapter(ArrayList<ListNamaMahasiswa> listnmmhs) {
         this.listnmmhs = listnmmhs;
     }
 
 
 
-    public Adapter(ArrayList<ListNamaMahasiswa> listnmmhs, MhsBimbinganClickListener listener) {
+    public mhsbimbingan_adapter(ArrayList<ListNamaMahasiswa> listnmmhs, MhsBimbinganClickListener listener) {
         this.listnmmhs = listnmmhs;
         this.listener = listener;
     }
@@ -40,14 +40,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ListMahasiswa> {
 
     @NonNull
     @Override
-    public Adapter.ListMahasiswa onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public mhsbimbingan_adapter.ListMahasiswa onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.listmahasiswabimb, parent, false);
-        return new Adapter.ListMahasiswa(view);
+        return new mhsbimbingan_adapter.ListMahasiswa(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter.ListMahasiswa holder, int position) {
+    public void onBindViewHolder(@NonNull mhsbimbingan_adapter.ListMahasiswa holder, int position) {
         ListNamaMahasiswa listNamamhs = listnmmhs.get(position);
         holder.textNamaListMabimb.setText(listNamamhs.getNamamhs());
         holder.textNimListMabimb.setText(Integer.toString(listNamamhs.getNimmhs()));

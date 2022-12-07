@@ -1,26 +1,26 @@
-package com.tbptb_b.k16_dosen;
+package com.tbptb_b.k16_dosen.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tbptb_b.k16_dosen.R;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
 
-public class Adapter2 extends RecyclerView.Adapter<Adapter2.ListMahasiswa> {
+public class setujubimbingan_adapter extends RecyclerView.Adapter<setujubimbingan_adapter.ListMahasiswa> {
 
 
     ArrayList<ListNamaMahasiswa> listnmmhs = new ArrayList<>();
 
-    public Adapter2(ArrayList<ListNamaMahasiswa> listnmmhs) {
+    public setujubimbingan_adapter(ArrayList<ListNamaMahasiswa> listnmmhs) {
         this.listnmmhs = listnmmhs;
     }
 
@@ -30,14 +30,14 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ListMahasiswa> {
 
     @NonNull
     @Override
-    public Adapter2.ListMahasiswa onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public setujubimbingan_adapter.ListMahasiswa onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.listperstjuanmhsbbm, parent, false);
-        return new Adapter2.ListMahasiswa(view);
+        return new setujubimbingan_adapter.ListMahasiswa(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter2.ListMahasiswa holder, int position) {
+    public void onBindViewHolder(@NonNull setujubimbingan_adapter.ListMahasiswa holder, int position) {
         ListNamaMahasiswa listNamamhs = listnmmhs.get(position);
         holder.textNamaSetujuBbm.setText(listNamamhs.getNamamhs());
         holder.textNimSetujuBbm.setText(Integer.toString(listNamamhs.getNimmhs()));

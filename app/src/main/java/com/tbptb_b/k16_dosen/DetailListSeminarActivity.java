@@ -7,26 +7,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class DSidang2Activity extends AppCompatActivity {
+public class DetailListSeminarActivity extends AppCompatActivity {
 
-    TextView namains, nimins;
+    TextView TextnamaDs2, textnimDs2;
     String namaMhs, nimMhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dsidang2);
+        setContentView(R.layout.activity_detail_listseminar);
 
-        Intent intentdetailta = getIntent();
-        if (intentdetailta != null) {
-            namaMhs = intentdetailta.getStringExtra("NMHSJSID");
-            nimMhs = intentdetailta.getStringExtra("NIMMHSJSID");
-            namains = findViewById(R.id.namains);
-            namains.setText(namaMhs);
-            nimins = findViewById(R.id.nimins);
-            nimins.setText(nimMhs);
+        Intent intentRekomSem = getIntent();
+        if (intentRekomSem != null) {
+            namaMhs = intentRekomSem.getStringExtra("NMHSJSEM");
+            nimMhs = intentRekomSem.getStringExtra("NIMMHSJSEM");
+            TextnamaDs2 = findViewById(R.id.TextnamaDs2);
+            TextnamaDs2.setText(namaMhs);
+            textnimDs2 = findViewById(R.id.textnimDs2);
+            textnimDs2.setText(nimMhs);
         }
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
