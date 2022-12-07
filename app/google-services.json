@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "719396945940",
+    "project_id": "k16-dosen-ptb-b",
+    "storage_bucket": "k16-dosen-ptb-b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719396945940:android:f90b51f219530bc9692701",
+        "android_client_info": {
+          "package_name": "com.tbptb_b.k16_dosen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719396945940-spf14vs6809n6paiso1ulkspu0rpj1aa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsighRkz9D5OvgyY2gLY_TNrIhYytnSWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719396945940-spf14vs6809n6paiso1ulkspu0rpj1aa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
