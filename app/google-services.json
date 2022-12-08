@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "954941224153",
+    "project_id": "saras-90ef3",
+    "storage_bucket": "saras-90ef3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954941224153:android:731b2a35fe9ac44445fac8",
+        "android_client_info": {
+          "package_name": "com.tbptb_b.k16_dosen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954941224153-90io3qa0s6srmll2a3k3olll0hqnrm60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlINnf7RHdB3L846EgTIHPoxtPZ3Vlfzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954941224153-90io3qa0s6srmll2a3k3olll0hqnrm60.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

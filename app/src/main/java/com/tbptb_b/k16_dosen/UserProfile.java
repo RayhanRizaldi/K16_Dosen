@@ -4,9 +4,17 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +26,9 @@ public class UserProfile extends AppCompatActivity {
 
     private ImageView pict_dosen;
     private static final int PICK_IMAGE=1;
+    private static final String CHANNEL_ID = "test_kanal";
+    private Button buttonnotif;
+    private NotificationManagerCompat notificationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +47,57 @@ public class UserProfile extends AppCompatActivity {
 //            }
 //        });
 
-        Button button = findViewById(R.id.update_profile_button);
-        pict_dosen = findViewById(R.id.pict_dosen);
+        notificationManager = NotificationManagerCompat.from(this);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        createNotificationChannel();
+        buttonnotif = findViewById(R.id.update_profile_button);
+        buttonnotif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mGetContent.launch("image/*");
+                Intent resultIntent = new Intent(UserProfile.this, UserProfile.class);
 
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(UserProfile.this);
+                stackBuilder.addNextIntentWithParentStack(resultIntent);
+                PendingIntent resultPendingIntent =
+                        stackBuilder.getPendingIntent(0,
+                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(UserProfile.this, CHANNEL_ID)
+                        .setSmallIcon(R.drawable.app_logo)
+                        .setContentTitle("Profile Update")
+                        .setContentText("Profile anda telah berhasil diperbarui")
+                        .setContentIntent(resultPendingIntent)
+                        .addAction(R.drawable.app_logo, "CEK", resultPendingIntent)
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                Notification notification = builder.build();
+                notificationManager.notify(101,notification);
             }
         });
+
+
+
+//        Button button = findViewById(R.id.update_profile_button);
+////        pict_dosen = findViewById(R.id.pict_dosen);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mGetContent.launch("image/*");
+//
+//            }
+//        });
+
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "notifikasi profile";
+            String description = "Update profile";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "profile", NotificationManager.IMPORTANCE_HIGH);
+            channel.setDescription("notifikasi profile");
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 
     ActivityResultLauncher<String> mGetContent = registerForActivityResult(
