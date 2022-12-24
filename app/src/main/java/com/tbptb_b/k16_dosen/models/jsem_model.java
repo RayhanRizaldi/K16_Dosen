@@ -4,61 +4,60 @@ public class jsem_model {
 
     public String[] getNamaJsemmodel;
     //1. buat kemudian generate constructor dan getter setter
-    String profil_sem;
-    String jadwal_sem;
-    String Mnama_sem;
-    String nim_sem;
-    String JTA_sem;
+    String profil_jsem;
+    String jadwal_jsem;
+    String Mnama_jsem;
+    String nim_jsem;
+    String JTA_jsem;
 
     //2. buat class kosong -> dilanjutkan ke bagian adapter
-    public jsem_model(){}
-
-    public jsem_model(String profil, String jadwal_sem, String mnama_sem, String nim_sem, String judulTA_sem) {
-        this.profil_sem = profil;
-        this.jadwal_sem = jadwal_sem;
-        Mnama_sem = mnama_sem;
-        this.nim_sem = nim_sem;
-        this.JTA_sem = judulTA_sem;
+    public jsem_model() {
     }
 
-    public String getProfil() {
-        return profil_sem;
+    public jsem_model(String profil_jsem, String jadwal_jsem, String mnama_jsem, String nim_jsem, String judulTA_jsem) {
+        this.profil_jsem = profil_jsem;
+        this.jadwal_jsem = jadwal_jsem;
+        Mnama_jsem = mnama_jsem;
+        this.nim_jsem = nim_jsem;
+        this.JTA_jsem = judulTA_jsem;
     }
 
-    public void setProfil(String profil) {
-        this.profil_sem = profil;
+    public String getProfil_jsem() { return profil_jsem; }
+
+    public void setProfil_jsem(String profil_jsem) {
+        this.profil_jsem = profil_jsem;
     }
 
-    public String getJadwal_sem() {
-        return jadwal_sem;
+    public String getJadwal_jsem() {
+        return jadwal_jsem;
     }
 
-    public void setJadwal_sem(String jadwal_sem) {
-        this.jadwal_sem = jadwal_sem;
+    public void setJadwal_jsem(String jadwal_jsem) {
+        this.jadwal_jsem = jadwal_jsem;
     }
 
-    public String getMnama_sem() {
-        return Mnama_sem;
+    public String getMnama_jsem() {
+        return Mnama_jsem;
     }
 
-    public void setMnama_sem(String mnama_sem) {
-        Mnama_sem = mnama_sem;
+    public void setMnama_jsem(String mnama_jsem) {
+        Mnama_jsem = mnama_jsem;
     }
 
-    public String getNim_sem() {
-        return nim_sem;
+    public String getNim_jsem() {
+        return nim_jsem;
     }
 
-    public void setNim_sem(String nim_sem) {
-        this.nim_sem = nim_sem;
+    public void setNim_jsem(String nim_jsem) {
+        this.nim_jsem = nim_jsem;
     }
 
-    public String getJudulTA_sem() {
-        return JTA_sem;
+    public String getJudulTA_jsem() {
+        return JTA_jsem;
     }
 
-    public void setJudulTA_sem(String judulTA_sem) {
-        this.JTA_sem = judulTA_sem;
+    public void setJudulTA_jsem(String judulTA_jsem) {
+        this.JTA_jsem = judulTA_jsem;
     }
 
 }

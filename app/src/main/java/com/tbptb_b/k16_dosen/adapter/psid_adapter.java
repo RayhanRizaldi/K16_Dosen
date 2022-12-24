@@ -27,7 +27,7 @@ public class psid_adapter extends RecyclerView.Adapter <psid_adapter.psid_viewho
         this.listener = listener;
     }
 
-    public void setListpsid(ArrayList<psid_model> listjsid) {
+    public void setListpsid(ArrayList<psid_model> listpsid) {
         this.listpsid = listpsid;
     }
 
@@ -54,8 +54,6 @@ public class psid_adapter extends RecyclerView.Adapter <psid_adapter.psid_viewho
         holder.jadwal_psid.setText(psidmodel.getJadwal_psid());
         holder.Mnama_psid.setText(psidmodel.getMnama_psid());
         holder.nim_psid.setText(psidmodel.getNim_psid());
-//        holder.Bterima_jsid.setText(jsidmodel.getBterima_sid());
-//        holder.Btolak_jsid.setText(jsidmodel.getBtolak_sid());
 
     }
 
@@ -73,7 +71,6 @@ public class psid_adapter extends RecyclerView.Adapter <psid_adapter.psid_viewho
 
         public ImageView profil_psid;
         public TextView jadwal_psid, Mnama_psid,nim_psid;
-//        public Button Bterima_jsid, Btolak_jsid;
 
         public psid_viewholder(@NonNull View itemView) {
             super(itemView);
@@ -82,8 +79,6 @@ public class psid_adapter extends RecyclerView.Adapter <psid_adapter.psid_viewho
             jadwal_psid = itemView.findViewById(R.id.jadwal_psid);
             Mnama_psid = itemView.findViewById(R.id.Mnama_psid);
             nim_psid = itemView.findViewById(R.id.nim_psid);
-//            Bterima_jsid = itemView.findViewById(R.id.Bterima_jsid);
-//            Btolak_jsid = itemView.findViewById(R.id.Btolak_jsid);
 
             itemView.setOnClickListener(this);
         }
