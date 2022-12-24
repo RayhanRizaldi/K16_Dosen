@@ -2,67 +2,49 @@ package com.tbptb_b.k16_dosen.models;
 
 public class psem_model {
 
-    String profil_sid;
-    String jadwal_sid;
-    String Mnama_sid;
-    String nim_sid;
-//    int Bterima_sid;
-//    int Btolak_sid;
+    String profil_sem;
+    String jadwal_sem;
+    String Mnama_sem;
+    String nim_sem;
 
     public psem_model(){}
 
-    public psem_model(String profil_sid, String jadwal_sid, String mnama_sid, String nim_sid) {
-        this.profil_sid = profil_sid;
-        this.jadwal_sid = jadwal_sid;
-        Mnama_sid = mnama_sid;
-        this.nim_sid = nim_sid;
+    public psem_model(String profil_sem, String jadwal_sem, String mnama_sem, String nim_sem) {
+        this.profil_sem = profil_sem;
+        this.jadwal_sem = jadwal_sem;
+        Mnama_sem = mnama_sem;
+        this.nim_sem = nim_sem;
     }
 
-    public String getProfil_sid() {
-        return profil_sid;
+    public String getProfil_sem() {
+        return profil_sem;
     }
 
-    public void setProfil_sid(String profil_sid) {
-        this.profil_sid = profil_sid;
+    public void setProfil_sem(String profil_sem) {
+        this.profil_sem = profil_sem;
     }
 
-    public String getJadwal_sid() {
-        return jadwal_sid;
+    public String getJadwal_sem() {
+        return jadwal_sem;
     }
 
-    public void setJadwal_sid(String jadwal_sid) {
-        this.jadwal_sid = jadwal_sid;
+    public void setJadwal_sem(String jadwal_sem) {
+        this.jadwal_sem = jadwal_sem;
     }
 
-    public String getMnama_sid() {
-        return Mnama_sid;
+    public String getMnama_sem() {
+        return Mnama_sem;
     }
 
-    public void setMnama_sid(String mnama_sid) {
-        Mnama_sid = mnama_sid;
+    public void setMnama_sem(String mnama_sem) {
+        Mnama_sem = mnama_sem;
     }
 
-    public String getNim_sid() {
-        return nim_sid;
+    public String getNim_sem() {
+        return nim_sem;
     }
 
-    public void setNim_sid(String nim_sid) {
-        this.nim_sid = nim_sid;
+    public void setNim_sem(String nim_sem) {
+        this.nim_sem = nim_sem;
     }
-
-    //    public int getBterima_sid() {
-//        return Bterima_sid;
-//    }
-//
-//    public void setBterima_sid(int bterima_sid) {
-//        Bterima_sid = bterima_sid;
-//    }
-//
-//    public int getBtolak_sid() {
-//        return Btolak_sid;
-//    }
-//
-//    public void setBtolak_sid(int btolak_sid) {
-//        Btolak_sid = btolak_sid;
-//    }
 }

@@ -1,10 +1,17 @@
 package com.tbptb_b.k16_dosen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,39 +25,60 @@ import java.util.ArrayList;
 public class SidangjActivity extends AppCompatActivity implements jsid_adapter.ItemjsidClickListener{
 
     //1.
+    private static final String CHANNEL_ID = "notif_jsid";
+    private Button buttonjsid;
+    private NotificationManagerCompat notificationManagerJsid;
+
     private RecyclerView rvjsid;
-    Button SetujuSid;
+//    Button SetujuSid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sidangj);
 
-        //2.
+        //recycle view
         rvjsid = findViewById(R.id.rv_jsid);
-
-        //2.1
         jsid_adapter jsidadapter = new jsid_adapter(getjsid_model());
-        //5.
         jsidadapter.setListner(this);
-        //2.2
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        //2.3
         rvjsid.setLayoutManager(layoutManager);
         rvjsid.setAdapter(jsidadapter);
+//
+        notificationManagerJsid = NotificationManagerCompat.from(this);
+        createNotificationChannel();
 
-        SetujuSid = findViewById(R.id.button_jsid);
-        SetujuSid.setOnClickListener(new View.OnClickListener() {
+        buttonjsid = findViewById(R.id.button_jsid);
+        buttonjsid.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view) {
+                Intent resultIntent = new Intent(SidangjActivity.this,JseminarActivity.class);
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(SidangjActivity.this);
+                stackBuilder.addNextIntentWithParentStack(resultIntent);
+                PendingIntent resultPendingIntent =
+                        stackBuilder.getPendingIntent(0,
+                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+                //intentnya
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(SidangjActivity.this, CHANNEL_ID)
+                        .setSmallIcon(R.drawable.ic_baseline_arrow_back_24)
+                        .setContentTitle("Info Persetujuan Seminar TA")
+                        .setStyle(new NotificationCompat.BigTextStyle()
+                                .bigText("Penambahan Seminar TA disetujui"))
+                        .setContentIntent(resultPendingIntent)
+                        .addAction(R.drawable.ic_baseline_arrow_back_24, "Lihat", resultPendingIntent)
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                notificationManagerJsid.notify(111, builder.build());
                 SidangApprove();
             }
         });
-
+        notificationManagerJsid = NotificationManagerCompat.from(this);
+        createNotificationChannel();
     }
-
+    //Tinggal intent
     private void SidangApprove() {
-        Intent intentssid = new Intent(this, DSidang2Activity.class);
+        Intent intentssid = new Intent(SidangjActivity.this, DetailSidangActivity.class);
         startActivity(intentssid);
     }
 
@@ -156,5 +184,16 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Notifikasi";
+            String description = "Notifikasi Seminar TA Bertambah";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            notificationManagerJsid.createNotificationChannel(channel);
+        }
     }
 }

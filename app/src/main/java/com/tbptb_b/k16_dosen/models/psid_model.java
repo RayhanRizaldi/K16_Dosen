@@ -6,15 +6,13 @@ public class psid_model {
     String jadwal_psid;
     String Mnama_psid;
     String nim_psid;
-//    int Bterima_sid;
-//    int Btolak_sid;
 
     public psid_model(){}
 
     public psid_model(String profil_psid, String jadwal_psid, String mnama_psid, String nim_psid) {
         this.profil_psid = profil_psid;
         this.jadwal_psid = jadwal_psid;
-        Mnama_psid = mnama_psid;
+        this.Mnama_psid = mnama_psid;
         this.nim_psid = nim_psid;
     }
 
@@ -50,19 +48,4 @@ public class psid_model {
         this.nim_psid = nim_psid;
     }
 
-    //    public int getBterima_sid() {
-//        return Bterima_sid;
-//    }
-//
-//    public void setBterima_sid(int bterima_sid) {
-//        Bterima_sid = bterima_sid;
-//    }
-//
-//    public int getBtolak_sid() {
-//        return Btolak_sid;
-//    }
-//
-//    public void setBtolak_sid(int btolak_sid) {
-//        Btolak_sid = btolak_sid;
-//    }
 }

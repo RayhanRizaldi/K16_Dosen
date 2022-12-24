@@ -61,10 +61,10 @@ public class jsem_adapter extends RecyclerView.Adapter <jsem_adapter.jsem_viewho
         //6. setelah semua holder selesai -> dilanjutkan ke file JseminarActivity
         jsem_model jsemmodel = listjsem.get(position);
         holder.profil_jsem.setImageResource(R.drawable.avatar);
-        holder.jadwal_jsem.setText(jsemmodel.getJadwal_sem());
-        holder.Mnama_jsem.setText(jsemmodel.getMnama_sem());
-        holder.nim_jsem.setText(jsemmodel.getNim_sem());
-        holder.JTA_jsem.setText(jsemmodel.getJudulTA_sem());
+        holder.jadwal_jsem.setText(jsemmodel.getJadwal_jsem());
+        holder.Mnama_jsem.setText(jsemmodel.getMnama_jsem());
+        holder.nim_jsem.setText(jsemmodel.getNim_jsem());
+        holder.JTA_jsem.setText(jsemmodel.getJudulTA_jsem());
 
     }
 

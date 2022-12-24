@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tbptb_b.k16_dosen.R;
-import com.tbptb_b.k16_dosen.models.jsem_model;
 import com.tbptb_b.k16_dosen.models.jsid_model;
 
 import java.util.ArrayList;

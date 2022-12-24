@@ -18,14 +18,14 @@ import java.util.ArrayList;
 public class SidangPersetujuanActivity extends AppCompatActivity implements psid_adapter.ItempsidClickListener{
 
     private RecyclerView rvpsid;
-    CardView CrdJsem;
+    CardView card_psid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sidang_persetujuan);
 
-        rvpsid = findViewById(R.id.rv_psid);
+        rvpsid = findViewById(R.id.rvpsid);
 
         psid_adapter psidadapter = new psid_adapter(getpsid_model());
         psidadapter.setListener(this);
@@ -34,8 +34,8 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
         rvpsid.setLayoutManager(layoutManager);
         rvpsid.setAdapter(psidadapter);
 
-        CrdJsem = findViewById(R.id.card_jsid);
-        CrdJsem.setOnClickListener(new View.OnClickListener() {
+        card_psid = findViewById(R.id.card_psid);
+        card_psid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SetujuSidang();
@@ -44,8 +44,8 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
     }
 
     private void SetujuSidang() {
-        Intent intentssem = new Intent(this, DSidang2Activity.class);
-        startActivity(intentssem);
+        Intent intentpsid = new Intent(this, DSidang2Activity.class);
+        startActivity(intentpsid);
     }
 
     public ArrayList<psid_model> getpsid_model(){
@@ -131,13 +131,13 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
 //
 //        startActivity(dpsidIntent);
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_profile, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
+//        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_profile, menu);
+//        return true;
+//    }
 }
