@@ -16,7 +16,7 @@ import com.tbptb_b.k16_dosen.models.psem_model;
 import java.util.ArrayList;
 
 public class psem_adapter extends RecyclerView.Adapter <psem_adapter.psem_viewholder>{
-    
+
     ArrayList <psem_model> listsem  = new ArrayList<>();
     itempsemClickListener listener;
 
@@ -38,7 +38,7 @@ public class psem_adapter extends RecyclerView.Adapter <psem_adapter.psem_viewho
     public psem_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_setujuseminar, parent, false);
-        
+
         return new psem_adapter.psem_viewholder(view);
     }
 
@@ -51,12 +51,12 @@ public class psem_adapter extends RecyclerView.Adapter <psem_adapter.psem_viewho
         holder.jadwal_sem.setText(psemmodel.getJadwal_sem());
         holder.Mnama_sem.setText(psemmodel.getMnama_sem());
         holder.nim_sem.setText(psemmodel.getNim_sem());
-        
+
     }
 
     @Override
     public int getItemCount() {
-        
+
         return listsem .size();
     }
 
@@ -70,7 +70,7 @@ public class psem_adapter extends RecyclerView.Adapter <psem_adapter.psem_viewho
 
         public ImageView profil_sem;
         public TextView jadwal_sem, Mnama_sem,nim_sem;
-        
+
         public psem_viewholder(@NonNull View itemView) {
             super(itemView);
 

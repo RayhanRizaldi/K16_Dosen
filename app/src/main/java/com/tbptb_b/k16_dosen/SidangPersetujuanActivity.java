@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class SidangPersetujuanActivity extends AppCompatActivity implements psid_adapter.ItempsidClickListener{
 
     private RecyclerView rvpsid;
-    CardView card_psid;
+//    CardView card_psid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,13 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
         rvpsid.setLayoutManager(layoutManager);
         rvpsid.setAdapter(psidadapter);
 
-        card_psid = findViewById(R.id.card_psid);
-        card_psid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SetujuSidang();
-            }
-        });
+//        card_psid = findViewById(R.id.card_psid);
+//        card_psid.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SetujuSidang();
+//            }
+//        });
     }
 
     private void SetujuSidang() {
@@ -53,7 +53,7 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
 
         listpsid_model.add(new psid_model(
                 null,
-                "selasa, 11 oktober 2022",
+                "Kamis, 22 Desember 2022",
                 "Winanda afrilia harisya",
                 "2011522016"
 

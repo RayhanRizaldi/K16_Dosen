@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class SeminarPersetujuanActivity extends AppCompatActivity  implements psem_adapter.itempsemClickListener {
     private RecyclerView rvssem;
 
-    CardView Crdsem;
+//    CardView Crdsem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +32,14 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         rvssem.setLayoutManager(layoutManager);
         rvssem.setAdapter(psem_adapter);
-
-        Crdsem = findViewById(R.id.card_psem);
-        Crdsem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SetujuSeminar();
-            }
-        });
+//
+//        Crdsem = findViewById(R.id.card_psem);
+//        Crdsem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SetujuSeminar();
+//            }
+//        });
 
 
     }
@@ -55,7 +55,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         listsem_model.add(new psem_model(
                 null,
-                "selasa, 11 oktober 2022",
+                "selasa, 20 Desember 2022",
                 "Winanda afrilia harisya",
                 "2011522016"
 

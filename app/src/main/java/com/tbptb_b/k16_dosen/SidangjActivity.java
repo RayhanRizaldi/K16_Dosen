@@ -53,7 +53,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         buttonjsid.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view) {
-                Intent resultIntent = new Intent(SidangjActivity.this,JseminarActivity.class);
+                Intent resultIntent = new Intent(SidangjActivity.this,SidangPersetujuanActivity.class);
                 TaskStackBuilder stackBuilder = TaskStackBuilder.create(SidangjActivity.this);
                 stackBuilder.addNextIntentWithParentStack(resultIntent);
                 PendingIntent resultPendingIntent =
@@ -61,10 +61,11 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
                                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                 //intentnya
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(SidangjActivity.this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_baseline_arrow_back_24)
-                        .setContentTitle("Info Persetujuan Seminar TA")
-                        .setStyle(new NotificationCompat.BigTextStyle()
-                                .bigText("Penambahan Seminar TA disetujui"))
+                        .setSmallIcon(R.drawable._200px_logo_unand_svg)
+                        .setContentTitle("PERMINTAAN SIDANG")
+                        .setContentText("Winanda Afrilia Harisya 2011522016, Mengirim Permintaan Sidang")
+//                        .setStyle(new NotificationCompat.BigTextStyle()
+//                                .bigText("Winanda Afrilia Harisya 2011522016, Mengirim Permintaan Sidang"))
                         .setContentIntent(resultPendingIntent)
                         .addAction(R.drawable.ic_baseline_arrow_back_24, "Lihat", resultPendingIntent)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
@@ -78,7 +79,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
     }
     //Tinggal intent
     private void SidangApprove() {
-        Intent intentssid = new Intent(SidangjActivity.this, DetailSidangActivity.class);
+        Intent intentssid = new Intent(SidangjActivity.this, SidangPersetujuanActivity.class);
         startActivity(intentssid);
     }
 
@@ -89,7 +90,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         //3.1 tambahkan data yang akan dimasukkan pada list ->lanjut ke adapter
         listjsid_model.add(new jsid_model(
                 null,
-                "selasa, 11 oktober 2022",
+                "Rabu, 21 Desember 2022",
                 "Winanda afrilia harisya",
                 "2011522016",
                 "Perancangan SPK pemilihan cafe terbaik disekitar unand"

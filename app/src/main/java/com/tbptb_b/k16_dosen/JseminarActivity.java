@@ -51,7 +51,7 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
     }
 
     private void SeminarApprove() {
-        Intent intentsem = new Intent(this, SidangjActivity.class);
+        Intent intentsem = new Intent(this, SeminarPersetujuanActivity.class);
         startActivity(intentsem);
     }
 
