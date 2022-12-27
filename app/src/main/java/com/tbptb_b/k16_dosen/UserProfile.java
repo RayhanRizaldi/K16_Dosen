@@ -65,7 +65,7 @@ public class UserProfile extends AppCompatActivity {
                 StoryClient mainInterface = RetrofitClient.getService();
                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
                 tokenboi = sharedPreferences.getString("token","");
-                token = "Bearer " + tokenboi;
+                token = "SAMPAI JUMPA!!" + tokenboi;
                 Toast.makeText(UserProfile.this, token, Toast.LENGTH_SHORT).show();
 
                 Call<LogoutResponse> call = mainInterface.logout(token);
