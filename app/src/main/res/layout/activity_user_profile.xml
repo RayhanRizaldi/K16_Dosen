@@ -95,12 +95,24 @@
                 android:orientation="vertical"
                 android:padding="20dp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
             <Button
                 android:id="@+id/update_profile_button"
-                android:layout_width="match_parent"
+                android:layout_width="180dp"
                 android:layout_height="69dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginRight="3dp"
                 android:text="PERBARUI" />
+
+            <Button
+                android:id="@+id/logout_bro"
+                android:layout_width="180dp"
+                android:layout_height="69dp"
+                android:layout_marginLeft="3dp"
+                android:text="KELUAR" />
+            </LinearLayout>
         </LinearLayout>
 
 

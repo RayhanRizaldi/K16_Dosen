@@ -8,4 +8,5 @@
         android:icon="@drawable/ic_baseline_profile"
         android:title="@string/menu_profile"
         app:showAsAction="ifRoom"/>
+
 </menu>
