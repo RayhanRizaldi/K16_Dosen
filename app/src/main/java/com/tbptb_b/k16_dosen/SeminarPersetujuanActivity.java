@@ -15,34 +15,35 @@ import com.tbptb_b.k16_dosen.models.psem_model;
 
 import java.util.ArrayList;
 
-public class SeminarPersetujuanActivity extends AppCompatActivity  implements psem_adapter.ItemjsidClickListener {
+public class SeminarPersetujuanActivity extends AppCompatActivity  implements psem_adapter.itempsemClickListener {
     private RecyclerView rvssem;
 
-    CardView CrdJsid;
+//    CardView Crdsem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seminar_persetujuan);
-        rvssem = findViewById(R.id.rv_persetujuansem);
+        rvssem = findViewById(R.id.rvssem);
 
-        psem_adapter jsidadapter = new psem_adapter(getpersetujuanseminar_model());
-        jsidadapter.setListener(this);
+        psem_adapter psem_adapter = new psem_adapter(getpersetujuanseminar_model());
+        psem_adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvssem.setLayoutManager(layoutManager);
-        rvssem.setAdapter(jsidadapter);
-
-        CrdJsid = findViewById(R.id.card_jsid);
-        CrdJsid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SetujuSeminar();
-            }
-        });
+        rvssem.setAdapter(psem_adapter);
+//
+//        Crdsem = findViewById(R.id.card_psem);
+//        Crdsem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SetujuSeminar();
+//            }
+//        });
 
 
     }
+
 
     private void SetujuSeminar() {
         Intent intentssem = new Intent(this, D2SeminarActivity.class);
@@ -50,17 +51,17 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
     }
 
     public ArrayList<psem_model> getpersetujuanseminar_model() {
-        ArrayList<psem_model> listjsid_model = new ArrayList<>();
+        ArrayList<psem_model> listsem_model = new ArrayList<>();
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
-                "selasa, 11 oktober 2022",
+                "selasa, 20 Desember 2022",
                 "Winanda afrilia harisya",
                 "2011522016"
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -68,14 +69,14 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
                 "2011521001"
 
         ));
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -83,7 +84,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -91,14 +92,14 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
                 "2011521001"
 
         ));
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "selasa, 11 oktober 2022",
                 "Winanda afrilia harisya",
@@ -106,7 +107,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "rabu, 12 oktober 2022",
                 "Nadilla saraswati",
@@ -114,7 +115,7 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        listjsid_model.add(new psem_model(
+        listsem_model.add(new psem_model(
                 null,
                 "kamis, 13 oktober 2022",
                 "Yupiko",
@@ -122,15 +123,9 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
 
         ));
 
-        return listjsid_model;
+        return listsem_model;
     }
 
-    @Override
-    public void onitemjsidClick(psem_model jsidmodel) {
-//        Intent dsemIntent = new Intent(this, DSeminar2Activity.class);
-//
-//        startActivity(dsemIntent);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
@@ -140,4 +135,23 @@ public class SeminarPersetujuanActivity extends AppCompatActivity  implements ps
         getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
     }
+
+    @Override
+    public void onitempsemClick(psem_model psemmodel) {
+
+    }
 }
+
+
+//    private void CrdJsemetOnClickListener(View.OnClickListener onClickListener) {
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
+//        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_profile, menu);
+//        return true;
+//    }
+//}

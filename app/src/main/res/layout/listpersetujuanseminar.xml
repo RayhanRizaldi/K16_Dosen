@@ -3,101 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="80dp">
 
-    <ImageView
-        android:id="@+id/profilesetujuseminar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="359dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/avatar"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/texttanggalseminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="8dp"
-        android:text="Senin, 05/09/2022"
-        android:textColor="@color/black"
-        android:textSize="6pt"
-        app:layout_constraintBottom_toTopOf="@+id/textnamamahasiswaseminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/profilesetujuseminar" />
+        <ImageView
+            android:id="@+id/imageAvatarSetujuBbm"
+            android:layout_width="58dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar" />
 
-    <TextView
-        android:id="@+id/textnamamahasiswaseminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Nadilla Saraswati"
-        android:textColor="@color/black"
-        android:textSize="5pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/profilesetujuseminar"
-        app:layout_constraintTop_toBottomOf="@+id/texttanggalseminar"
-        app:layout_goneMarginLeft="20dp" />
+        <TextView
+            android:id="@+id/textNamaSetujuBbm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:text="Nadilla Saraswati"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageAvatarSetujuBbm"
+            app:layout_constraintTop_toTopOf="@+id/imageAvatarSetujuBbm" />
 
-    <TextView
-        android:id="@+id/textnimmahasiswaseminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2011521004"
-        android:textColor="@color/black"
-        android:textSize="4pt"
-        app:layout_constraintBottom_toTopOf="@+id/textjudulseminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textnamamahasiswaseminar"
-        app:layout_constraintTop_toTopOf="@+id/textnamamahasiswaseminar"
-        app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/textNimSetujuBbm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:text="2011521004"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textNamaSetujuBbm"
+            app:layout_constraintTop_toBottomOf="@+id/textNamaSetujuBbm" />
 
+        <Button
+            android:id="@+id/ButtonpersetujuanBbm"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:text="Setujui"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.992"
+            app:layout_constraintStart_toEndOf="@+id/textNimSetujuBbm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.542" />
 
-    <TextView
-        android:id="@+id/textjudulseminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Rancang Bangun Mobile Commerce Berbasis Android Pada Toko Duta Buku Semarang"
-        android:textColor="@color/black"
-        android:textSize="4pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toEndOf="@+id/profilesetujuseminar"
-        app:layout_constraintTop_toBottomOf="@+id/textnimmahasiswaseminar" />
-
-    <Button
-        android:id="@+id/buttonnterimaseminar"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/button"
-        android:text="Terima"
-        android:textSize="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttontolakseminar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textjudulseminar"
-        app:layout_constraintVertical_bias="0.025" />
-
-    <Button
-        android:id="@+id/buttontolakseminar"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="180dp"
-        android:background="@drawable/button"
-        android:text="Tolak"
-        android:textSize="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonnterimaseminar"
-        app:layout_constraintTop_toBottomOf="@+id/textjudulseminar"
-        app:layout_constraintVertical_bias="0.025" />
-
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

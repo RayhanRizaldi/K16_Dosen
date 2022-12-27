@@ -14,14 +14,13 @@ import com.tbptb_b.k16_dosen.adapter.jsem_adapter;
 import com.tbptb_b.k16_dosen.models.jsem_model;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 //4.tambahkan implementasi
 public class JseminarActivity extends AppCompatActivity implements jsem_adapter.ItemjsemClickListener{
 
     //1.
     private RecyclerView rvjsem;
-    Button SetujuSem;
+    Button button_jsem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
         setContentView(R.layout.activity_jseminar);
 
         //2.
-        rvjsem = findViewById(R.id.rv_jsem);
+        rvjsem = findViewById(R.id.rvjsem);
 
         //2.1
         jsem_adapter jsemadapter = new jsem_adapter(getjsem_model());
@@ -41,8 +40,8 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
         rvjsem.setLayoutManager(layoutManager);
         rvjsem.setAdapter(jsemadapter);
 
-        SetujuSem = findViewById(R.id.button_jsem);
-        SetujuSem.setOnClickListener(new View.OnClickListener() {
+        button_jsem = findViewById(R.id.button_jsem);
+        button_jsem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SeminarApprove();
@@ -52,8 +51,8 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
     }
 
     private void SeminarApprove() {
-        Intent intentssem = new Intent(this, SeminarPersetujuanActivity.class);
-        startActivity(intentssem);
+        Intent intentsem = new Intent(this, SeminarPersetujuanActivity.class);
+        startActivity(intentsem);
     }
 
     //3. tambahkan method untuk membuat arraylist-> ganti ner arraylist... pada oncreat dengan getjsem_model()
@@ -63,7 +62,7 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
         //3.1 tambahkan data yang akan dimasukkan pada list ->lanjut ke adapter
         listjsem_model.add(new jsem_model(
                 null,
-                "selasa, 11 oktober 2022",
+                "jumat, 23 Desember 2022",
                 "Winanda afrilia harisya",
                 "2011522016",
                 "Perancangan SPK pemilihan cafe terbaik disekitar unand"
@@ -157,8 +156,8 @@ public class JseminarActivity extends AppCompatActivity implements jsem_adapter.
     public void onItemjsemClick(jsem_model jsemmodel) {
         //6.membuat Intent
         Intent intentRekomSem = new Intent(this, RekomendasiInputActivity.class);
-        intentRekomSem.putExtra("NMHSJSEM", jsemmodel.getMnama_sem());
-        intentRekomSem.putExtra("NIMMHSJSEM", jsemmodel.getNim_sem());
+        intentRekomSem.putExtra("NMHSJSEM", jsemmodel.getMnama_jsem());
+        intentRekomSem.putExtra("NIMMHSJSEM", jsemmodel.getNim_jsem());
         startActivity(intentRekomSem);
 
     }
