@@ -1,5 +1,7 @@
 package com.tbptb_b.k16_dosen.models;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Authorisation{
@@ -8,6 +10,7 @@ public class Authorisation{
 	private String type;
 
 	@SerializedName("token")
+	@Nullable
 	private String token;
 
 	public String getType(){
