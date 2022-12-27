@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class inputnilaisidangActivity extends AppCompatActivity {
+    TextView jadwalinNSid,namainNSid, niminNSid;
+    String jadwalSid,namaMhs, nimMhs;
+//
 
-    TextView namainNSid, niminNSid;
-    String namaMhs, nimMhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +22,16 @@ public class inputnilaisidangActivity extends AppCompatActivity {
 
         Intent intentinNSid = getIntent();
         if (intentinNSid != null) {
+            jadwalSid = intentinNSid.getStringExtra("jadwalsid");
             namaMhs = intentinNSid.getStringExtra("NMHSJSID");
             nimMhs = intentinNSid.getStringExtra("NIMMHSJSID");
+
+            jadwalinNSid = findViewById(R.id.isijadwalins);
+            jadwalinNSid.setText (jadwalSid);
+
             namainNSid = findViewById(R.id.namains);
             namainNSid.setText(namaMhs);
+
             niminNSid = findViewById(R.id.nimins);
             niminNSid.setText(nimMhs);
         }
@@ -36,4 +45,10 @@ public class inputnilaisidangActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    public void buttonINS(View view){
+        Intent buttonINS = new Intent(inputnilaisidangActivity.this, TambahnilaiSidangActivity.class);
+        startActivity(buttonINS);
+    }
+
 }

@@ -29,9 +29,9 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="294dp"
+                    android:layout_width="match_parent"
                     android:layout_height="129dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
@@ -53,7 +53,7 @@
 
                     <ImageView
                         android:id="@+id/photo_bimbingan"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/photo_bimbingan" />
 
@@ -87,9 +87,9 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="294dp"
+                    android:layout_width="match_parent"
                     android:layout_height="129dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
@@ -111,32 +111,59 @@
 
                     <ImageView
                         android:id="@+id/photo_seminar"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/photo_bimbingan" />
 
                 </LinearLayout>
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content">
 
                     <Button
                         android:id="@+id/more_seminar"
-                        android:layout_width="174.5dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
                         android:backgroundTint="@color/hijau"
                         android:stateListAnimator="@null"
-                        android:text="Seminar" />
+                        android:text="Seminar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <Button
                         android:id="@+id/more_sidang"
-                        android:layout_width="174.5dp"
+                        android:layout_width="90dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
                         android:backgroundTint="@color/hijau"
                         android:stateListAnimator="@null"
-                        android:text="Sidang" />
-                </LinearLayout>
+                        android:text="Sidang"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/more_seminar"-->
+<!--                        android:layout_width="174.5dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:backgroundTint="@color/hijau"-->
+<!--                        android:stateListAnimator="@null"-->
+<!--                        android:text="Seminar" />-->
+<!--                    <Button-->
+<!--                        android:id="@+id/more_sidang"-->
+<!--                        android:layout_width="174.5dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:backgroundTint="@color/hijau"-->
+<!--                        android:stateListAnimator="@null"-->
+<!--                        android:text="Sidang" />-->
+<!--                </LinearLayout>-->
 
 
 
@@ -149,7 +176,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/dospengins"
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -159,14 +186,10 @@
                 android:textSize="14dp" />
 
         </LinearLayout>
-
-
         <!--        <ListView-->
         <!--            android:layout_width="match_parent"-->
         <!--            android:layout_height="match_parent"-->
         <!--            />-->
-
-
     </LinearLayout>
     <!--<include layout="@layout/listmahasiswabimb"></include>-->
 
@@ -192,7 +215,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_listbbm"
-                android:layout_width="421dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/listmahasiswabimb" />
         </LinearLayout>

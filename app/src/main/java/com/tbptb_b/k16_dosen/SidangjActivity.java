@@ -77,7 +77,7 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         notificationManagerJsid = NotificationManagerCompat.from(this);
         createNotificationChannel();
     }
-    //Tinggal intent
+
     private void SidangApprove() {
         Intent intentssid = new Intent(SidangjActivity.this, SidangPersetujuanActivity.class);
         startActivity(intentssid);
@@ -172,10 +172,12 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
     @Override
     public void onItemjsidClick(jsid_model jsidmodel) {
-        Intent intentdesid2 = new Intent(this, inputnilaisidangActivity.class);
-        intentdesid2.putExtra("NMHSJSID", jsidmodel.getMnama_jsid());
-        intentdesid2.putExtra("NIMMHSJSID", jsidmodel.getNim_jsid());
-        startActivity(intentdesid2);
+        Intent intentins = new Intent(this, inputnilaisidangActivity.class);
+        intentins.putExtra("jadwalsid",jsidmodel.getJadwal_jsid());
+        intentins.putExtra("NMHSJSID", jsidmodel.getMnama_jsid());
+        intentins.putExtra("NIMMHSJSID", jsidmodel.getNim_jsid());
+
+        startActivity(intentins);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -197,4 +199,9 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
             notificationManagerJsid.createNotificationChannel(channel);
         }
     }
+
+//    public void profil_jsid(View view){
+//        Intent profil_jsid = new Intent(SidangjActivity.this, TambahnilaiSidangActivity.class);
+//        startActivity(profil_jsid);
+//    }
 }

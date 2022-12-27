@@ -127,17 +127,9 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
 
     @Override
     public void onitempsidClick(psid_model psidmodel) {
-//        Intent dpsidIntent = new Intent(this, DSidang2Activity.class);
-//
-//        startActivity(dpsidIntent);
+        Intent dpsidIntent = new Intent(this, DSidang2Activity.class);
+        startActivity(dpsidIntent);
     }
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
-//        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
-//        getSupportActionBar().setDisplayShowTitleEnabled(true);
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_profile, menu);
-//        return true;
-//    }
+
+
 }

@@ -16,7 +16,7 @@
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/namains"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/namains" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonINS"
         android:layout_width="149dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -61,7 +61,8 @@
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/nimins"
         app:layout_constraintTop_toBottomOf="@+id/nimins"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:onClick="buttonINS"/>
 
     //Judul Tugas Akhir
 
@@ -72,11 +73,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/JudulTA"
-        android:textColor="@color/black"
+        android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonINS" />
 
     <EditText
         android:id="@+id/isiJTAins"
@@ -148,6 +149,7 @@
         android:gravity="start|top"
         android:inputType="none"
         android:minHeight="?attr/actionBarSize"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/jadwalins"
         app:layout_constraintTop_toBottomOf="@+id/jadwalins"
@@ -177,13 +179,14 @@
         android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/lokasiins"
         app:layout_constraintTop_toBottomOf="@+id/lokasiins"
         tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/dospengins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -195,7 +198,7 @@
         app:layout_constraintTop_toBottomOf="@+id/isiLokasiins" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/isidospengins"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginLeft="15dp"
@@ -203,8 +206,8 @@
         android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/dospengins"
+        app:layout_constraintTop_toBottomOf="@+id/dospengins"
         tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     //Detail TA
@@ -218,8 +221,8 @@
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintStart_toStartOf="@+id/dospengins"
+        app:layout_constraintTop_toBottomOf="@+id/isidospengins" />
 
     <ImageView
         android:id="@+id/fileins"
