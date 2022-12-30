@@ -48,12 +48,12 @@ public class LoginActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.editPassword);
         btnLogin = findViewById(R.id.button_login);
 
-//        notificationManager = NotificationManagerCompat.from(this);
-//
-//        createNotificationChannel();
+        notificationManager = NotificationManagerCompat.from(this);
 
-//        setupUI();
-//        setupListeners();
+        createNotificationChannel();
+
+        setupUI();
+        setupListeners();
         cekLogin();
 
 
@@ -162,28 +162,28 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-//    private void setupUI() {
-//        Username = (EditText) findViewById(R.id.editUsername);
-//        Password = (EditText) findViewById(R.id.editPassword);
-//        btnLogin = findViewById(R.id.button_login);
-//    }
+    private void setupUI() {
+        Username = (EditText) findViewById(R.id.editUsername);
+        Password = (EditText) findViewById(R.id.editPassword);
+        btnLogin = findViewById(R.id.button_login);
+    }
 
-//    private void setupListeners() {
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                checkUsername();
-//                NotificationCompat.Builder builder = new NotificationCompat.Builder(LoginActivity.this, CHANNEL_ID)
-//                        .setSmallIcon(R.drawable._200px_logo_unand_svg)
-//                        .setContentTitle("Selamat Datang")
-//                        .setContentText("Deskripsi Tambahan")
-//                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-//
-//                notificationManager.notify(001,builder.build());
-//            }
-//        });
-//
-//    }
+    private void setupListeners() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(LoginActivity.this, CHANNEL_ID)
+                        .setSmallIcon(R.drawable._200px_logo_unand_svg)
+                        .setContentTitle("Selamat Datang")
+                        .setContentText("Deskripsi Tambahan")
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                notificationManager.notify(001,builder.build());
+            }
+        });
+
+    }
 
 //    void checkUsername(){
 //        boolean valid=true;

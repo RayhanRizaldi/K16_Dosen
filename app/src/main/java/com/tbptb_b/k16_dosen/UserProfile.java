@@ -35,6 +35,8 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
+
+
 //        pict_dosen = (ImageView) findViewById(R.id.pict_dosen);
 //        pict_dosen.setOnClickListener(new View.OnClickListener() {
 //            @Override
