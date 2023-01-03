@@ -12,81 +12,130 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 import com.tbptb_b.k16_dosen.models.Listlogbook;
+import com.tbptb_b.k16_dosen.models.LogbooksItem;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Adapter3 extends RecyclerView.Adapter<Adapter3.ListLogbook> {
+public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
 
+    private List<LogbooksItem> itemList = new ArrayList<>();
 
-    ArrayList<Listlogbook> listlb = new ArrayList<>();
-    ListLogbookClickListener listener;
-
-    public Adapter3(ArrayList<Listlogbook> listlb) {
-        this.listlb = listlb;
-    }
-
-    public Adapter3(ArrayList<Listlogbook> listlb, ListLogbookClickListener listener) {
-        this.listlb = listlb;
-        this.listener = listener;
-    }
-
-    public void setListlb(ArrayList<Listlogbook> listlb) {
-        this.listlb = listlb;
-    }
-
-    public void setListener(ListLogbookClickListener listener){
-        this.listener = listener;
+    public void setItemList(List<LogbooksItem> itemList) {
+        this.itemList = itemList;
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public Adapter3.ListLogbook onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.listlogbook, parent, false);
-        return new Adapter3.ListLogbook(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListLogbook holder, int position) {
-        Listlogbook Listlb= listlb.get(position);
-        holder.textTglListLb.setText(Listlb.getTanggallb());
-        holder.textDeskripsiListLb.setText(Listlb.getDeskripsilb());
-        if(Listlb.getStatuslb() == 1){
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        LogbooksItem logbook = itemList.get(position);
+        holder.textTglListLb.setText(logbook.getDate());
+        holder.textDeskripsiListLb.setText(logbook.getProgress());
+        if(logbook.getStatus() == 1){
             holder.imageViewCheklb.setImageResource(R.drawable.bx_checksquare);
         } else {
             holder.imageViewCheklb.setImageResource(R.drawable.bx_nonesquare);
         }
     }
 
-    public interface ListLogbookClickListener{
-        void onListLogbookClick(Listlogbook listlogbook);
-    }
-
     @Override
     public int getItemCount() {
-        return listlb.size();
+        return itemList.size();
     }
-    public class ListLogbook extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textTglListLb, textDeskripsiListLb;
         public ImageView imageViewCheklb;
 
-        public ListLogbook(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textDeskripsiListLb = itemView.findViewById(R.id.textDeskripsiListLb);
             textTglListLb = itemView.findViewById(R.id.textTglListLb);
             imageViewCheklb = itemView.findViewById(R.id.imageViewCheklb);
 
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View view) {
-            Listlogbook listlogbook = listlb.get(getAdapterPosition());
-            listener.onListLogbookClick(listlogbook);
         }
     }
+
+
+//    private ArrayList<Listlogbook> logbooks = new ArrayList<>();
+//    ListLogbookClickListener listener;
+//
+//    public Adapter3(ArrayList<Listlogbook> logbooks) {
+//        this.logbooks = logbooks;
+//    }
+////
+//    public Adapter3(ArrayList<Listlogbook> logbooks, ListLogbookClickListener listener) {
+//        this.logbooks = logbooks;
+//        this.listener = listener;
+//    }
+//
+//    public void setlogbooks(ArrayList<Listlogbook> logbooks) {
+//        this.logbooks = logbooks;
+//        notifyDataSetChanged();
+//    }
+//
+//    public void setListener(ListLogbookClickListener listener){
+//        this.listener = listener;
+//    }
+//
+//    @NonNull
+//    @Override
+//    public Adapter3.ListLogbook onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(parent.getContext())
+//                .inflate(R.layout.listlogbook, parent, false);
+//        return new Adapter3.ListLogbook(view);
+//    }
+//
+//    @Override
+//    public void onBindViewHolder(@NonNull ListLogbook holder, int position) {
+//        LogbooksItem logbooksItem= logbooks.get(position);
+//        holder.textTglListLb.setText(logbooksItem.getDate());
+//        holder.textDeskripsiListLb.setText(logbooksItem.getProgress());
+//        if(logbooksItem.getStatus() == 1){
+//            holder.imageViewCheklb.setImageResource(R.drawable.bx_checksquare);
+//        } else {
+//            holder.imageViewCheklb.setImageResource(R.drawable.bx_nonesquare);
+//        }
+//    }
+//
+//    public interface ListLogbookClickListener{
+//        void onListLogbookClick(Listlogbook listlogbook);
+//    }
+//
+//    @Override
+//    public int getItemCount() {
+//        return logbooks.size();
+//    }
+//    public class ListLogbook extends RecyclerView.ViewHolder implements View.OnClickListener{
+//
+//        public TextView textTglListLb, textDeskripsiListLb;
+//        public ImageView imageViewCheklb;
+//
+//        public ListLogbook(@NonNull View itemView) {
+//            super(itemView);
+//            textDeskripsiListLb = itemView.findViewById(R.id.textDeskripsiListLb);
+//            textTglListLb = itemView.findViewById(R.id.textTglListLb);
+//            imageViewCheklb = itemView.findViewById(R.id.imageViewCheklb);
+//
+//            itemView.setOnClickListener(this);
+//        }
+//
+//        @Override
+//        public void onClick(View view) {
+//            Listlogbook listlogbook = logbooks.get(getAdapterPosition());
+//            listener.onListLogbookClick(listlogbook);
+//        }
+//    }
 
 
 }
