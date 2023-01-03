@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.tbptb_b.k16_dosen.models.LogoutResponse;
+import com.tbptb_b.k16_dosen.retrofit.LogoutResponse;
 import com.tbptb_b.k16_dosen.retrofit.RetrofitClient;
 import com.tbptb_b.k16_dosen.retrofit.StoryClient;
 

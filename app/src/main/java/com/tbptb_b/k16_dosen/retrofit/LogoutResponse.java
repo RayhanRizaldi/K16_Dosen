@@ -1,4 +1,4 @@
-package com.tbptb_b.k16_dosen.models;
+package com.tbptb_b.k16_dosen.retrofit;
 
 import com.google.gson.annotations.SerializedName;
 
