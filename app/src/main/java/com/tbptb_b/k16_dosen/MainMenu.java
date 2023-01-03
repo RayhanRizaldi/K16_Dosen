@@ -4,28 +4,37 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
-import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
+import com.tbptb_b.k16_dosen.adapter.AdapterListMahasiswaMenu;
+import com.tbptb_b.k16_dosen.retrofit.ListMhsMenuResponse;
+import com.tbptb_b.k16_dosen.retrofit.RetrofitClient;
+import com.tbptb_b.k16_dosen.retrofit.StoryClient;
+import com.tbptb_b.k16_dosen.retrofit.ThesesItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganClickListener {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class MainMenu extends AppCompatActivity implements AdapterListMahasiswaMenu.MhsBimbinganClickListener {
 
     Button setujubbmTA, JadwalSem, JadwalSid;
     //    private Boolean isLoggedIn = false;
-    private RecyclerView rvListmaba;
+    private RecyclerView rvListmahasiswa;
 //    private Boolean isLoggedIn = false;
+    private AdapterListMahasiswaMenu adapter;
+    String tokenboi, token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +42,40 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         setContentView(R.layout.activity_main_menu);
 
 
-        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
-        String token = sharedPref.getString("TOKEN","");
+//        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+//        String token = sharedPref.getString("TOKEN","");
 
-        rvListmaba = findViewById(R.id.rv_listbbm);
+        rvListmahasiswa = findViewById(R.id.rv_listbbm);
+        rvListmahasiswa.setLayoutManager(new LinearLayoutManager(this));
 
-        Adapter adapter = new Adapter(getListNamaMahasiswa());
-        adapter.setListener(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        adapter = new AdapterListMahasiswaMenu();
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        rvListmahasiswa.setAdapter(adapter);
 
-        rvListmaba.setLayoutManager(layoutManager);
-        rvListmaba.setAdapter(adapter);
+        StoryClient mainInterface = RetrofitClient.getService();
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("prefs",MODE_PRIVATE);
+        tokenboi = sharedPreferences.getString("TOKEN","");
+        token = "Bearer" + tokenboi;
+//        Toast.makeText(MainMenu.this, token, Toast.LENGTH_SHORT).show();
 
+        Call<ListMhsMenuResponse> call = mainInterface.menuListmahasiswa(token);
+        call.enqueue(new Callback<ListMhsMenuResponse>() {
+            @Override
+            public void onResponse(Call<ListMhsMenuResponse> call, Response<ListMhsMenuResponse> response) {
+                Log.d("menuListmahasiswa-Debug",response.toString());
+                ListMhsMenuResponse listmhsM = response.body();
+                if (listmhsM != null) {
+                    List<ThesesItem> tesis = listmhsM.getTheses();
+                    adapter.setListMahasiswa((ArrayList<ThesesItem>) tesis);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<ListMhsMenuResponse> call, Throwable t) {
+
+            }
+        });
 
         setujubbmTA = findViewById(R.id.more_bimbingan);
         setujubbmTA.setOnClickListener(new View.OnClickListener() {
@@ -97,32 +128,32 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         startActivity(intentseminar);
     }
 
-    public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa() {
-        ArrayList<ListNamaMahasiswa> listnamamhs = new ArrayList<>();
-        listnamamhs.add(new ListNamaMahasiswa(
-                null,
-                "Budy Bahahahaha",
-                2011623912
-        ));
-        listnamamhs.add(new ListNamaMahasiswa(
-                null,
-                "Alfred Alfonso",
-                98303928
-        ));
-        listnamamhs.add(new ListNamaMahasiswa(
-                null,
-                "Xavier the Third",
-                33333333
-        ));
-        listnamamhs.add(new ListNamaMahasiswa(
-                null,
-                "Nadila Saraswati",
-                2011521004
-        ));
-        return listnamamhs;
-
-
-    }
+//    public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa() {
+//        ArrayList<ListNamaMahasiswa> listnamamhs = new ArrayList<>();
+//        listnamamhs.add(new ListNamaMahasiswa(
+//                null,
+//                "Budy Bahahahaha",
+//                2011623912
+//        ));
+//        listnamamhs.add(new ListNamaMahasiswa(
+//                null,
+//                "Alfred Alfonso",
+//                98303928
+//        ));
+//        listnamamhs.add(new ListNamaMahasiswa(
+//                null,
+//                "Xavier the Third",
+//                33333333
+//        ));
+//        listnamamhs.add(new ListNamaMahasiswa(
+//                null,
+//                "Nadila Saraswati",
+//                2011521004
+//        ));
+//        return listnamamhs;
+//
+//
+//    }
 
 
 
@@ -153,11 +184,11 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
     }
 
     @Override
-    public void ClickMhsBimbingan(ListNamaMahasiswa mhsbb) {
+    public void ClickMhsBimbingan(ThesesItem mhsbb) {
         Intent intentdetailta = new Intent(this, DetailTAActivity.class);
-        intentdetailta.putExtra("NMHSBB", mhsbb.getNamamhs());
-        intentdetailta.putExtra("NIMMHSBB", Integer.toString(mhsbb.getNimmhs()));
-        intentdetailta.putExtra("FMHS", mhsbb.getFotomhs());
+//        intentdetailta.putExtra("NMHSBB", mhsbb.getNamamhs());
+//        intentdetailta.putExtra("NIMMHSBB", Integer.toString(mhsbb.getNimmhs()));
+//        intentdetailta.putExtra("FMHS", mhsbb.getFotomhs());
         startActivity(intentdetailta);
     }
 
