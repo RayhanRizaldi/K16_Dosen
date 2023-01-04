@@ -1,14 +1,11 @@
 package com.tbptb_b.k16_dosen;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
 
 import com.tbptb_b.k16_dosen.adapter.psid_adapter;
 import com.tbptb_b.k16_dosen.models.psid_model;

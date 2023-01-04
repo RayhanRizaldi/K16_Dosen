@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/profilins"
-        android:layout_width="64dp"
-        android:layout_height="54dp"
+        android:layout_width="131dp"
+        android:layout_height="107dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="150dp"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/namains"
@@ -51,48 +51,49 @@
         app:layout_constraintTop_toBottomOf="@+id/namains" />
 
 
+    //Judul Tugas Akhir
+
     <Button
         android:id="@+id/Bterima_jsid"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="31dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/oren"
         android:text="@string/btn_terima"
         android:textSize="8sp"
-        app:layout_constraintEnd_toStartOf="@+id/Btolak_jsid"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/namains"
+        app:layout_constraintBottom_toTopOf="@+id/JudulTAins"
+        app:layout_constraintStart_toStartOf="@+id/nimins"
         app:layout_constraintTop_toBottomOf="@+id/nimins"
         tools:ignore="SmallSp,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/Btolak_jsid"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="31dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/button"
         android:backgroundTint="#E3A211"
         android:text="@string/btn_tolak"
         android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="@+id/namains"
+        app:layout_constraintEnd_toEndOf="@+id/nimins"
+        app:layout_constraintStart_toEndOf="@+id/Bterima_jsid"
         app:layout_constraintTop_toBottomOf="@+id/nimins"
         tools:ignore="SmallSp,TouchTargetSizeCheck" />
-
-    //Judul Tugas Akhir
 
     <TextView
         android:id="@+id/JudulTAins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/JudulTA"
-        android:textColor="@color/black"
+        android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bterima_jsid" />
+        tools:layout_editor_absoluteY="290dp" />
 
     <EditText
         android:id="@+id/isiJTAins"

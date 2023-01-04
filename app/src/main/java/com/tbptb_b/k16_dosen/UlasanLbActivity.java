@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 
+import com.tbptb_b.k16_dosen.adapter.Adapter4;
 import com.tbptb_b.k16_dosen.models.ListUlasan;
-import com.tbptb_b.k16_dosen.models.Listlogbook;
 
 import java.util.ArrayList;
 

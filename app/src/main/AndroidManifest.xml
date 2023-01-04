@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tbptb_b.k16_dosen">
+    package="com.tbptb_b.k16_dosen" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,15 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.K16_Dosen"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".menusemsidActivity"
+            android:exported="false" />
         <activity
             android:name=".TambahnilaiSidangActivity"
             android:exported="false" />
 
         <service
-            android:name=".FirebaseMessagingTappsService"
+            android:name=".firebase.FirebaseMessagingTappsService"
             android:enabled="true"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -103,7 +106,7 @@
         <activity
             android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.K16_Dosen.NoActionBar.">
+            android:theme="@style/Theme.K16_Dosen.NoActionBar." >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

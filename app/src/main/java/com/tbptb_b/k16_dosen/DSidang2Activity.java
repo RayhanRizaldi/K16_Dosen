@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.tbptb_b.k16_dosen.R;
+
 public class DSidang2Activity extends AppCompatActivity {
 
     TextView namains, nimins;

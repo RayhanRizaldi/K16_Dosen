@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tbptb_b.k16_dosen.R;
+
 public class DetailSidangActivity extends AppCompatActivity  {
     TextView textNim3,textNama3;
     ImageView imageAvatar;

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "719396945940",
-    "project_id": "k16-dosen-ptb-b",
-    "storage_bucket": "k16-dosen-ptb-b.appspot.com"
+    "project_number": "904841370759",
+    "project_id": "kel16-ptbb",
+    "storage_bucket": "kel16-ptbb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:719396945940:android:f90b51f219530bc9692701",
+        "mobilesdk_app_id": "1:904841370759:android:1993e8a8fa32a06af8ec22",
         "android_client_info": {
           "package_name": "com.tbptb_b.k16_dosen"
         }
       },
       "oauth_client": [
         {
-          "client_id": "719396945940-spf14vs6809n6paiso1ulkspu0rpj1aa.apps.googleusercontent.com",
+          "client_id": "904841370759-corle3gl9jak2jvq3mm7f3oeo268n85n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDsighRkz9D5OvgyY2gLY_TNrIhYytnSWw"
+          "current_key": "AIzaSyD6r6NWCsUDQDxJbYXPOO8o4sX03qcUw2s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "719396945940-spf14vs6809n6paiso1ulkspu0rpj1aa.apps.googleusercontent.com",
+              "client_id": "904841370759-corle3gl9jak2jvq3mm7f3oeo268n85n.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

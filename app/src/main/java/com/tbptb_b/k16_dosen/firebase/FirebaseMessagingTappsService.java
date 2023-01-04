@@ -1,4 +1,4 @@
-package com.tbptb_b.k16_dosen;
+package com.tbptb_b.k16_dosen.firebase;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -18,6 +18,8 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.tbptb_b.k16_dosen.R;
+import com.tbptb_b.k16_dosen.SetujuBbmTA;
 
 public class FirebaseMessagingTappsService extends FirebaseMessagingService {
     private static final String CHANNEL_ID = "notif_setujubbmta";

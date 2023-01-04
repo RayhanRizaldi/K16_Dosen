@@ -13,9 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import android.widget.ImageButton;
-import android.widget.Toast;
-
+import com.tbptb_b.k16_dosen.adapter.Adapter;
 import com.tbptb_b.k16_dosen.models.ListNamaMahasiswa;
 
 import java.util.ArrayList;
@@ -53,20 +51,21 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
                 openBimbinganta();
             }
         });
-        JadwalSem = findViewById(R.id.more_seminar);
-        JadwalSem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSeminar();
-            }
-        });
-        JadwalSid = findViewById(R.id.more_sidang);
-        JadwalSid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSidang();
-            }
-        });
+
+//        JadwalSem = findViewById(R.id.more_seminar);
+//        JadwalSem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openSeminar();
+//            }
+//        });
+//        JadwalSid = findViewById(R.id.more_sidang);
+//        JadwalSid.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openSidang();
+//            }
+//        });
 //        if(isLoggedIn == false){
 //            Intent loginintent = new Intent(this, LoginActivity.class);
 //            startActivity(loginintent);
@@ -87,15 +86,21 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
         Intent intentbbmta = new Intent(this, SetujuBbmTA.class);
         startActivity(intentbbmta);
     }
-    private void openSidang() {
-        Intent intentsidang = new Intent(this, SidangjActivity.class);
-        startActivity(intentsidang);
+
+    public void moreSemsid(View view){
+        Intent moreSemsid = new Intent(this, menusemsidActivity.class);
+        startActivity(moreSemsid );
     }
 
-    private void openSeminar() {
-        Intent intentseminar = new Intent(this, JseminarActivity.class);
-        startActivity(intentseminar);
-    }
+//    private void openSidang() {
+//        Intent intentsidang = new Intent(this, SidangjActivity.class);
+//        startActivity(intentsidang);
+//    }
+//
+//    private void openSeminar() {
+//        Intent intentseminar = new Intent(this, JseminarActivity.class);
+//        startActivity(intentseminar);
+//    }
 
     public ArrayList<ListNamaMahasiswa> getListNamaMahasiswa() {
         ArrayList<ListNamaMahasiswa> listnamamhs = new ArrayList<>();
