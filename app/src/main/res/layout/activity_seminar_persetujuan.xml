@@ -7,7 +7,7 @@
     tools:context=".SeminarPersetujuanActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_persetujuansem"
+        android:id="@+id/rvssem"
         android:layout_width="384dp"
         android:layout_height="698dp"
         app:layout_constraintBottom_toBottomOf="parent"

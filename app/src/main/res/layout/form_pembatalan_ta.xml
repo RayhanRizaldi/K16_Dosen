@@ -193,6 +193,7 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/isiLokasimahasiswabatalta"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/isiLokasimahasiswabatalta"
         app:layout_constraintTop_toBottomOf="@+id/isiLokasimahasiswabatalta" />
 

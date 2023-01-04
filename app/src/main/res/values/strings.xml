@@ -39,10 +39,13 @@
     <string name="dospeng">Dosen Penguji :</string>
     <string name="btn_innilai">Input Penilaian</string>
     <string name="btn_rekomendasi">Rekomendasi</string>
+    <string name="update_profile">Update Profile</string>
     <string name="tanggal">21/09/2022</string>
     <string name="akademikdospem">Dosen Pembimbing Akademik :</string>
     <string name="title_activity_profile">Profile</string>
     <string name="startbimbingan">Mulai Bimbingan :</string>
+    <string name="rekomendasii">Rekomendasi</string>
+    <string name="catatann">Catatan</string>
     <string name="wait_persetujuam_bimbingan">Menunggu Persetujuan Bimbingan</string>
     <string name="list_jadwal">List Jadwal Seminar dan Sidang</string>
     <string name="large_text">
@@ -144,5 +147,21 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_profiledosen">activity_profiledosen</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
 

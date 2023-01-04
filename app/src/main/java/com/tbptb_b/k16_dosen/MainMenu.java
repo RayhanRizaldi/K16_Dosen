@@ -93,7 +93,7 @@ public class MainMenu extends AppCompatActivity implements Adapter.MhsBimbinganC
     }
 
     private void openSeminar() {
-        Intent intentseminar = new Intent(this, JseminarActivity.class);
+        Intent intentseminar = new Intent(this, list_seminar.class);
         startActivity(intentseminar);
     }
 

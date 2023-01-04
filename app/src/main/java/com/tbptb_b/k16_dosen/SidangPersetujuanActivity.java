@@ -34,7 +34,7 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
         rvpsid.setLayoutManager(layoutManager);
         rvpsid.setAdapter(psidadapter);
 
-        CrdJsem = findViewById(R.id.card_jsid);
+        CrdJsem = findViewById(R.id.card_jseminar);
         CrdJsem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

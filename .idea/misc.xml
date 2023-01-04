@@ -55,6 +55,41 @@
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_main.xml" value="0.25" />
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_popup.xml" value="0.5975" />
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_profile.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_d2_seminar.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_logbook.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_ri.xml" value="0.136" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_sem.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_seminar.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_sidang.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_detail_ta.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_dsidang2.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_inputnilaisidang.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_jseminar.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_list_seminar.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_logbook.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_main_menu.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_pembatalan_ta.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_profile_dosen.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_rekomendasi_input.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_seminar_persetujuan.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/form_pembatalan_ta.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/layout_popup.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/list_jadwalseminar.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/list_setujuseminar.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/listlogbook.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/listmahasiswabimb.xml" value="0.29108910891089107" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/listpersetujuanseminar.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/listperstjuanmhsbbm.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/listulasan.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/layout/settings_activity.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/menu/menu_popup.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/menu/menu_profile.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/K16_Dosen/app/src/main/res/menu/ri_popup.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tbptb_b.k16_dosen">
+    package="com.tbptb_b.k16_dosen" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -15,11 +14,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.K16_Dosen"
-        tools:targetApi="31">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31" >
+        <activity
+            android:name=".list_seminar"
+            android:exported="false" />
+        <activity
+            android:name=".detail_sem"
+            android:exported="false" />
+        <activity
+            android:name=".detail_ri"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+
         <service
             android:name=".FirebaseMessagingTappsService"
             android:enabled="true"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -99,7 +112,7 @@
         <activity
             android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.K16_Dosen.NoActionBar.">
+            android:theme="@style/Theme.K16_Dosen.NoActionBar." >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
