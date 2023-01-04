@@ -1,4 +1,4 @@
-package com.tbptb_b.k16_dosen.retrofit;
+package com.tbptb_b.k16_dosen.retrofit.listmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 

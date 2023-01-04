@@ -10,24 +10,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tbptb_b.k16_dosen.R;
-import com.tbptb_b.k16_dosen.retrofit.ThesesItem;
+import com.tbptb_b.k16_dosen.retrofit.listmahasiswa.ThesesItem;
 
 import java.util.ArrayList;
 
 
 public class AdapterListMahasiswaMenu extends RecyclerView.Adapter<AdapterListMahasiswaMenu.ListMahasiswa> {
 
-
+    private MhsBimbinganClickListener clickMahasswa;
     private ArrayList<ThesesItem> listnmmhs = new ArrayList<>();
     MhsBimbinganClickListener listener ;
+    ThesesItem  mhasiswaResponse;
 
     public void setListMahasiswa(ArrayList<ThesesItem> listnmmhs) {
         this.listnmmhs = listnmmhs;
         notifyDataSetChanged();
     }
 
-    public AdapterListMahasiswaMenu() {
-
+    public AdapterListMahasiswaMenu(MhsBimbinganClickListener listener) {
+        this.listener = listener;
     }
 
     public AdapterListMahasiswaMenu(ArrayList<ThesesItem> listnmmhs) {
@@ -59,6 +60,7 @@ public class AdapterListMahasiswaMenu extends RecyclerView.Adapter<AdapterListMa
         ThesesItem listNamamhs = listnmmhs.get(position);
         holder.textNamaListMabimb.setText(listNamamhs.getStudent().getName());
         holder.textNimListMabimb.setText(listNamamhs.getStudent().getNim());
+//        holder.textIdMaba.setText(listNamamhs.getStudent().getNim());
 //        holder.imageAvatarListmabim.setImageResource(R.drawable.avatar);
     }
 
@@ -68,13 +70,14 @@ public class AdapterListMahasiswaMenu extends RecyclerView.Adapter<AdapterListMa
     }
 
     public interface MhsBimbinganClickListener{
-        void ClickMhsBimbingan(ThesesItem mhsbb);
+        void ClickMhsBimbingan(ThesesItem mhasiswaResponse);
     }
 
-    public class ListMahasiswa extends RecyclerView.ViewHolder /*implements View.OnClickListener*/{
+    public class ListMahasiswa extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageAvatarListmabim;
         public TextView textNamaListMabimb,textNimListMabimb;
+        public String textIdMaba;
 
         public ListMahasiswa(@NonNull View itemView) {
             super(itemView);
@@ -82,19 +85,13 @@ public class AdapterListMahasiswaMenu extends RecyclerView.Adapter<AdapterListMa
             textNamaListMabimb = itemView.findViewById(R.id.textNamaListMabimb);
             textNimListMabimb = itemView.findViewById(R.id.textNimListMabimb);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ThesesItem mahasiswa = listnmmhs.get(getAdapterPosition());
-                    listener.ClickMhsBimbingan(mahasiswa);
-                }
-            });
+            itemView.setOnClickListener(this);
         }
 
-//        @Override
-//        public void onClick(View view) {
-//            ThesesItem namamhs = listnmmhs.get(getAdapterPosition());
-//            listener.ClickMhsBimbingan(namamhs);
-//        }
+        @Override
+        public void onClick(View view) {
+            ThesesItem namamhs = listnmmhs.get(getAdapterPosition());
+            listener.ClickMhsBimbingan(namamhs);
+        }
     }
 }

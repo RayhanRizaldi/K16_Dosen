@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,10 +16,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.tbptb_b.k16_dosen.adapter.AdapterListMahasiswaMenu;
-import com.tbptb_b.k16_dosen.retrofit.ListMhsMenuResponse;
+import com.tbptb_b.k16_dosen.retrofit.listmahasiswa.ListMhsMenuResponse;
 import com.tbptb_b.k16_dosen.retrofit.RetrofitClient;
 import com.tbptb_b.k16_dosen.retrofit.StoryClient;
-import com.tbptb_b.k16_dosen.retrofit.ThesesItem;
+import com.tbptb_b.k16_dosen.retrofit.listmahasiswa.ThesesItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,8 +49,8 @@ public class MainMenu extends AppCompatActivity implements AdapterListMahasiswaM
         rvListmahasiswa = findViewById(R.id.rv_listbbm);
         rvListmahasiswa.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterListMahasiswaMenu();
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        adapter = new AdapterListMahasiswaMenu(this::ClickMhsBimbingan);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvListmahasiswa.setAdapter(adapter);
 
         StoryClient mainInterface = RetrofitClient.getService();
@@ -67,6 +68,18 @@ public class MainMenu extends AppCompatActivity implements AdapterListMahasiswaM
                 if (listmhsM != null) {
                     List<ThesesItem> tesis = listmhsM.getTheses();
                     adapter.setListMahasiswa((ArrayList<ThesesItem>) tesis);
+//                    adapter.getItemId()
+//
+//                    String name = tesis.toString();
+//                    String usernamewei = loginResponse.getUser().getUsername();
+//                    String email = loginResponse.getUser().getEmail();
+//
+//                    SharedPreferences sharedPref = getSharedPreferences("detailmhs", Context.MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPref.edit();
+//                    editor.putString("name",name);
+//                    editor.putString("usernamewei",usernamewei);
+//                    editor.putString("email",email);
+//                    editor.apply();
                 }
 
             }
@@ -186,8 +199,11 @@ public class MainMenu extends AppCompatActivity implements AdapterListMahasiswaM
     @Override
     public void ClickMhsBimbingan(ThesesItem mhsbb) {
         Intent intentdetailta = new Intent(this, DetailTAActivity.class);
-//        intentdetailta.putExtra("NMHSBB", mhsbb.getNamamhs());
-//        intentdetailta.putExtra("NIMMHSBB", Integer.toString(mhsbb.getNimmhs()));
+        intentdetailta.putExtra("ID", mhsbb.getId());
+//        int id = mhsbb.getId();
+//        String id2 = Integer.toString(id);
+//        Toast.makeText(MainMenu.this, id2, Toast.LENGTH_SHORT).show();
+//        intentdetailta.putExtra("NIMMHSBB", mhsbb.getStudent().getNim());
 //        intentdetailta.putExtra("FMHS", mhsbb.getFotomhs());
         startActivity(intentdetailta);
     }
