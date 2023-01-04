@@ -21,6 +21,16 @@ import java.util.List;
 public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
 
     private List<LogbooksItem> itemList = new ArrayList<>();
+    ItemLogbookClickListener listener;
+
+    public Adapter3() {
+          this.itemList = itemList;
+          this.listener = listener;
+          }
+
+    public void setListener(ItemLogbookClickListener listener) {
+        this.listener = listener;
+    }
 
     public void setItemList(List<LogbooksItem> itemList) {
         this.itemList = itemList;
@@ -52,8 +62,12 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
         return itemList.size();
     }
 
+    public interface ItemLogbookClickListener{
+        void onItemLogbookClick(LogbooksItem logbooksItem);
+    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView textTglListLb, textDeskripsiListLb;
         public ImageView imageViewCheklb;
 
@@ -63,6 +77,13 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
             textTglListLb = itemView.findViewById(R.id.textTglListLb);
             imageViewCheklb = itemView.findViewById(R.id.imageViewCheklb);
 
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            LogbooksItem logbooksItem = itemList.get(getAdapterPosition());
+            listener.onItemLogbookClick(logbooksItem);
         }
     }
 

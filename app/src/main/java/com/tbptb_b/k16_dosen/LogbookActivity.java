@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.tbptb_b.k16_dosen.models.Listlogbook;
 import com.tbptb_b.k16_dosen.models.LogbookResponse;
@@ -27,7 +28,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class LogbookActivity extends AppCompatActivity {
+public class LogbookActivity extends AppCompatActivity implements Adapter3.ItemLogbookClickListener  {
 Button buttondetaillb;
 
 private RecyclerView rvLogbook;
@@ -49,6 +50,7 @@ private Adapter3 adapter;
 
         rvLogbook.setLayoutManager(layoutManager);
         adapter = new Adapter3();
+        adapter.setListener(this); 
         rvLogbook.setAdapter(adapter);
 
         //Minta data ke server
@@ -89,6 +91,16 @@ private Adapter3 adapter;
 //                openDetailLogbook();
 //            }
 //        });
+    }
+
+    @Override
+    public void onItemLogbookClick(LogbooksItem logbooksItem) {
+        Intent intentdetaillb = new Intent(this,DetailLogbookActivity.class);
+        intentdetaillb.putExtra("tanggallb", logbooksItem.getDate());
+        intentdetaillb.putExtra("progreslb", logbooksItem.getProgress());
+        intentdetaillb.putExtra("problemlb", logbooksItem.getProblem());
+        intentdetaillb.putExtra("fileprogreslb", logbooksItem.getFileProgress());
+        startActivity(intentdetaillb);
     }
 //     public ArrayList<Listlogbook> getLislogbook(){
 //        ArrayList<Listlogbook> ListLogbook = new ArrayList<>();

@@ -12,11 +12,10 @@ import android.widget.TextView;
 
 public class DetailLogbookActivity extends AppCompatActivity {
 
-    Button buttonUlasanLogbook;
+//    Button buttonUlasanLogbook;
 
-    TextView textViewTanggalLogbook;
-    EditText editTextKegiatanLogbook;
-    String tanggallb, deskripsilb;
+    TextView textViewTanggalLogbook, textViewJudultgsakhir, editTextKegiatanLogbook,TextRincianKegiatanLogbook;
+    String tanggallb, progresslb, problemlb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,27 +24,37 @@ public class DetailLogbookActivity extends AppCompatActivity {
 
         Intent intentdetaillb = getIntent();
         if(intentdetaillb != null){
-            tanggallb = intentdetaillb.getStringExtra("TGLLB");
-            deskripsilb = intentdetaillb.getStringExtra("DSKRLB");
+            tanggallb = intentdetaillb.getStringExtra("tanggallb");
+            progresslb = intentdetaillb.getStringExtra("progreslb");
+            problemlb = intentdetaillb.getStringExtra("problemlb");
             textViewTanggalLogbook = findViewById(R.id.textViewTanggalLogbook);
-            textViewTanggalLogbook.setText(tanggallb);
+            textViewTanggalLogbook.setText((tanggallb));
             editTextKegiatanLogbook = findViewById(R.id.editTextKegiatanLogbook);
-            editTextKegiatanLogbook.setText(deskripsilb);
+            editTextKegiatanLogbook.setText(progresslb);
+            TextRincianKegiatanLogbook = findViewById(R.id.TextRincianKegiatanLogbook);
+            TextRincianKegiatanLogbook.setText(problemlb);
+
+//            tanggallb = intentdetaillb.getStringExtra("TGLLB");
+//            deskripsilb = intentdetaillb.getStringExtra("DSKRLB");
+//            textViewTanggalLogbook = findViewById(R.id.textViewTanggalLogbook);
+//            textViewTanggalLogbook.setText(tanggallb);
+//            editTextKegiatanLogbook = findViewById(R.id.editTextKegiatanLogbook);
+//            editTextKegiatanLogbook.setText(deskripsilb);
         }
 
-        buttonUlasanLogbook = findViewById(R.id.buttonUlasanLogbook);
-        buttonUlasanLogbook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openUlasan();
-            }
-        });
+//        buttonUlasanLogbook = findViewById(R.id.buttonUlasanLogbook);
+//        buttonUlasanLogbook.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openUlasan();
+//            }
+//        });
     }
 
-    public void openUlasan(){
-        Intent intentulasan = new Intent(this,UlasanLbActivity.class);
-        startActivity(intentulasan);
-    }
+//    public void openUlasan(){
+//        Intent intentulasan = new Intent(this,UlasanLbActivity.class);
+//        startActivity(intentulasan);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
