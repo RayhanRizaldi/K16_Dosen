@@ -9,4 +9,6 @@
         android:title="Detail Sidang"/>
     <item android:id="@+id/buttonPilihanPembatalan"
         android:title="Pembatalan Tugas Akhir"/>
+    <item android:id="@+id/buttoninputnilaita"
+        android:title="Input Nilai TA"/>
 </menu>

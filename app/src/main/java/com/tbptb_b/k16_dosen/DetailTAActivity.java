@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
@@ -74,6 +73,10 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
                 intentpembatalanTa.putExtra("NMHSBB", namaMhs);
                 intentpembatalanTa.putExtra("NIMMHSBB", nimMhs);
                 startActivity(intentpembatalanTa);
+                return true;
+            case R.id.buttoninputnilaita:
+                Intent intentnilaita = new Intent(this, NilTaActivity.class);
+                startActivity(intentnilaita);
                 return true;
             default:
                 return false;

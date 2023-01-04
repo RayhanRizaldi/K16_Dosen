@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.tbptb_b.k16_dosen.models.Listlogbook;
 import com.tbptb_b.k16_dosen.models.LogbookResponse;
 import com.tbptb_b.k16_dosen.models.LogbooksItem;
+import com.tbptb_b.k16_dosen.retrofit.RetrofitClient;
 import com.tbptb_b.k16_dosen.retrofit.StoryClient;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LogbookActivity extends AppCompatActivity implements Adapter3.ItemLogbookClickListener  {
-Button buttondetaillb;
+//Button buttondetaillb;
 
 private RecyclerView rvLogbook;
 private Adapter3 adapter;
@@ -54,17 +55,10 @@ private Adapter3 adapter;
         rvLogbook.setAdapter(adapter);
 
         //Minta data ke server
-        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(API_BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(new OkHttpClient.Builder().build())
-                .build();
+        StoryClient storyClient = RetrofitClient.getService();
 
-        StoryClient client = retrofit.create(StoryClient.class);
-
-        Call<LogbookResponse> call = client.getLogbook("Bearer " + token);
+        Call<LogbookResponse> call = storyClient.getLogbook(309,"Bearer " + token);
         call.enqueue(new Callback<LogbookResponse>() {
             @Override
             public void onResponse(Call<LogbookResponse> call, Response<LogbookResponse> response) {
@@ -188,15 +182,15 @@ private Adapter3 adapter;
 //        Intent intentdetaillogbook = new Intent(this,DetailLogbookActivity.class);
 //        startActivity(intentdetaillogbook);
 //    }
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
-//        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
-//        getSupportActionBar().setDisplayShowTitleEnabled(true);
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_profile, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_gradient));
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        return true;
+    }
 
 
 }

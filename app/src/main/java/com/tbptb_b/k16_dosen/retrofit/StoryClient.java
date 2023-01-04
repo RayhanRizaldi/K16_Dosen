@@ -9,7 +9,9 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface StoryClient {
 
@@ -22,7 +24,9 @@ public interface StoryClient {
             @Header("Authorization") String token
     );
 
-    @GET("api/theses/309/logbooks")
-    Call<LogbookResponse> getLogbook(@Header("Authorization")String token);
+    @GET("api/theses/{id}/logbooks")
+    Call<LogbookResponse> getLogbook(
+            @Path("id") Integer idTheses,
+            @Header("Authorization")String token);
 
 }
