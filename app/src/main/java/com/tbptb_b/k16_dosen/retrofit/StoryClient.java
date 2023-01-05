@@ -2,9 +2,12 @@ package com.tbptb_b.k16_dosen.retrofit;
 
 import com.tbptb_b.k16_dosen.models.LogbookResponse;
 import com.tbptb_b.k16_dosen.models.LogoutResponse;
+import com.tbptb_b.k16_dosen.models.Nilaitareq;
+import com.tbptb_b.k16_dosen.models.Nilaitaresponse;
 import com.tbptb_b.k16_dosen.models.Response;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -27,6 +30,13 @@ public interface StoryClient {
     @GET("api/theses/{id}/logbooks")
     Call<LogbookResponse> getLogbook(
             @Path("id") Integer idTheses,
+            @Header("Authorization")String token);
+
+    @FormUrlEncoded
+    @PATCH("api/thesis/grades/{id}")
+    Call<Nilaitaresponse> patchnilai(
+            @Path("id") Integer idTheses,
+            @Field("grade") String grade,
             @Header("Authorization")String token);
 
 }

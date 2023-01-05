@@ -94,11 +94,11 @@
             android:name=".DetailTAActivity"
             android:exported="false"
             android:label="Detail Tugas Akhir" />
-        <activity
-            android:name=".NilTaActivity"
-            android:exported="false"
-            android:label="Detail Tugas Akhir"
-            tools:ignore="DuplicateActivity" />
+<!--        <activity-->
+<!--            android:name=".NilTaActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="Detail Tugas Akhir"-->
+<!--            tools:ignore="DuplicateActivity" />-->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
