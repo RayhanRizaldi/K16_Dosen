@@ -47,6 +47,7 @@ public class inputnilaisidangActivity extends AppCompatActivity {
 
         Intent intentinNSid = getIntent();
         if (intentinNSid != null) {
+
             jadwalSid = intentinNSid.getStringExtra("Jadwalsid");
             namaMhs = intentinNSid.getStringExtra("Namasid");
             nimMhs = intentinNSid.getStringExtra("Nimsid");
