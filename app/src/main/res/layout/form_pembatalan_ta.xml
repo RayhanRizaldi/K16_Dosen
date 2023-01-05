@@ -203,6 +203,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/button"
+        android:onClick="batalTA"
         android:text="@string/btn_batal"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="@+id/isipembatalanta"

@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PembatalanTaActivity extends AppCompatActivity {
-    TextView textNim3,textNama3;
+    TextView textNim3, textNama3;
     ImageView imageAvatar;
     String namaMhs, nimMhs;
 
@@ -40,4 +41,10 @@ public class PembatalanTaActivity extends AppCompatActivity {
         return true;
     }
 
+    public void batalTA(View view) {
+        Intent DetailTAIntent = new Intent(this, DetailTAActivity.class);
+        DetailTAIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(DetailTAIntent);
+        finish();
+    }
 }

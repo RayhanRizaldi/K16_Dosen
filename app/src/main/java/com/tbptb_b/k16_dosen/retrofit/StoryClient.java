@@ -1,5 +1,6 @@
 package com.tbptb_b.k16_dosen.retrofit;
 
+import com.tbptb_b.k16_dosen.models.BatalTaResponse;
 import com.tbptb_b.k16_dosen.models.DSemResponse;
 import com.tbptb_b.k16_dosen.models.Response;
 
@@ -18,4 +19,7 @@ public interface StoryClient {
 
     @GET ("api/thesis/advisors")
     Call<DSemResponse> getdetailSmr(@Header("Authorization")String token);
+
+    @GET("api/theses/277/trials")
+    Call<BatalTaResponse> batalTA(@Header("Authorization") String token);
 }
