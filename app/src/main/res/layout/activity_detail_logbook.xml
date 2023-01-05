@@ -31,45 +31,32 @@
 <!--        app:layout_constraintTop_toTopOf="@+id/buttonSetujuiLogbook"-->
 <!--        app:layout_constraintVertical_bias="0.0" />-->
 
-    <TextView
-        android:id="@+id/textViewJudultgsakhir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:text="judul"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonSetujuiLogbook"
-        android:layout_width="101dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/oren"
-        android:text="Setujui"
-        android:textSize="8dp"
-        app:icon="@drawable/betul"
-        app:layout_constraintEnd_toEndOf="@+id/textViewJudultgsakhir"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toStartOf="@+id/textViewJudultgsakhir"
-        app:layout_constraintTop_toBottomOf="@+id/textViewJudultgsakhir" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonSetujuiLogbook"-->
+<!--        android:layout_width="101dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:backgroundTint="@color/oren"-->
+<!--        android:text="Setujui"-->
+<!--        android:textSize="8dp"-->
+<!--        app:icon="@drawable/betul"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.238"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTanggalLogbook" />-->
 
     <TextView
         android:id="@+id/textKegiatanLogbook"
         android:layout_width="370dp"
         android:layout_height="24dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@color/hijau"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/hijau"
         android:text="Progress :"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSetujuiLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTanggalLogbook" />
 
     <TextView
         android:id="@+id/editTextKegiatanLogbook"
@@ -125,26 +112,20 @@
         app:layout_constraintStart_toStartOf="@+id/TextRincianKegiatanLogbook"
         app:layout_constraintTop_toBottomOf="@+id/TextRincianKegiatanLogbook" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="140dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHasilLogbook"
-        app:srcCompat="@drawable/detailtaunduh" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="59dp"
-        android:layout_height="49dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
-        app:srcCompat="@drawable/unduh" />
+    <TextView
+        android:id="@+id/Textjudulpdfprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/black"
+        android:ellipsize="end"
+        android:maxLines="10"
+        android:singleLine="false"
+        android:text="pdf
+"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/textHasilLogbook"
+        app:layout_constraintTop_toBottomOf="@+id/textHasilLogbook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

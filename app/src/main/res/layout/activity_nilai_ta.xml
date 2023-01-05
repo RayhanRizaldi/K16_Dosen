@@ -41,13 +41,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Editnilaita" />
 
-    <TextView
-        android:id="@+id/textViewGrade"
-        android:layout_width="56dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="96dp"
-        android:text="Grade : "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonnilaita" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewGrade"-->
+<!--        android:layout_width="56dp"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="96dp"-->
+<!--        android:text="Grade : "-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonnilaita" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

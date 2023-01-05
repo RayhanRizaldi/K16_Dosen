@@ -14,8 +14,9 @@ public class DetailLogbookActivity extends AppCompatActivity {
 
 //    Button buttonUlasanLogbook;
 
-    TextView textViewTanggalLogbook, textViewJudultgsakhir, editTextKegiatanLogbook,TextRincianKegiatanLogbook;
-    String tanggallb, progresslb, problemlb;
+    TextView textViewTanggalLogbook, textViewJudultgsakhir, editTextKegiatanLogbook,TextRincianKegiatanLogbook, Textjudulpdfprogress;
+    String tanggallb, progresslb, problemlb, judulfile;
+    Button setujulb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,17 @@ public class DetailLogbookActivity extends AppCompatActivity {
             tanggallb = intentdetaillb.getStringExtra("tanggallb");
             progresslb = intentdetaillb.getStringExtra("progreslb");
             problemlb = intentdetaillb.getStringExtra("problemlb");
+            judulfile = intentdetaillb.getStringExtra("fileprogreslb");
+
             textViewTanggalLogbook = findViewById(R.id.textViewTanggalLogbook);
             textViewTanggalLogbook.setText((tanggallb));
             editTextKegiatanLogbook = findViewById(R.id.editTextKegiatanLogbook);
             editTextKegiatanLogbook.setText(progresslb);
             TextRincianKegiatanLogbook = findViewById(R.id.TextRincianKegiatanLogbook);
             TextRincianKegiatanLogbook.setText(problemlb);
+            Textjudulpdfprogress = findViewById(R.id.Textjudulpdfprogress);
+            Textjudulpdfprogress.setText(judulfile);
+
 
 //            tanggallb = intentdetaillb.getStringExtra("TGLLB");
 //            deskripsilb = intentdetaillb.getStringExtra("DSKRLB");
@@ -42,6 +48,15 @@ public class DetailLogbookActivity extends AppCompatActivity {
 //            editTextKegiatanLogbook.setText(deskripsilb);
         }
 
+
+//        setujulb = findViewById(R.id.buttonSetujuiLogbook);
+//        setujulb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//            }
+//        });
 //        buttonUlasanLogbook = findViewById(R.id.buttonUlasanLogbook);
 //        buttonUlasanLogbook.setOnClickListener(new View.OnClickListener() {
 //            @Override

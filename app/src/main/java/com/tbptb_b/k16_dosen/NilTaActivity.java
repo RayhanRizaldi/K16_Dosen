@@ -3,6 +3,7 @@ package com.tbptb_b.k16_dosen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,7 +27,6 @@ public class NilTaActivity extends AppCompatActivity {
 
     Button savenilai;
     EditText nilaita;
-    TextView gradess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,6 @@ public class NilTaActivity extends AppCompatActivity {
 
         savenilai = findViewById(R.id.buttonnilaita);
         nilaita = (EditText) findViewById(R.id.Editnilaita);
-        gradess = findViewById(R.id.textViewGrade);
 
         cekInput();
 
@@ -67,6 +66,8 @@ public class NilTaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Nilaitaresponse> call, Response<Nilaitaresponse> response) {
                 Log.d("TesPost", response.body().toString());
+                Toast.makeText(NilTaActivity.this, "Input Nilai Berhasil, Grade : " +grade, Toast.LENGTH_SHORT).show();
+                back();
             }
 
             @Override
@@ -74,6 +75,11 @@ public class NilTaActivity extends AppCompatActivity {
                 Log.d("TestPost", t.getMessage().toString());
             }
         });
+    }
+
+    private void back() {
+        Intent intent = new Intent(NilTaActivity.this, DetailTAActivity.class);
+        startActivity(intent);
     }
 
 //
