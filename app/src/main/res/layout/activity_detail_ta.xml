@@ -199,16 +199,16 @@
         app:layout_constraintStart_toStartOf="@+id/textDospem"
         app:layout_constraintTop_toBottomOf="@+id/textMulaiBimb2" />
 
-    <Button
-        android:id="@+id/buttondMahasiswa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
-        android:text="Detail Mahasiswa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAbstrak" />
+<!--    <Button-->
+<!--        android:id="@+id/buttondMahasiswa"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="158dp"-->
+<!--        android:layout_marginEnd="159dp"-->
+<!--        android:text="Detail Mahasiswa"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textAbstrak" />-->
 
     <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:id="@+id/Inputnilaifinal"-->

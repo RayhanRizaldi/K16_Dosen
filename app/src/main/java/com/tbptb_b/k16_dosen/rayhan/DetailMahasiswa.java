@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -91,14 +92,14 @@ public class DetailMahasiswa extends AppCompatActivity {
             });
 
 
-//            buttonDetailta = findViewById(R.id.buttondetailta);
-//            buttonDetailta.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent detailta = new Intent(DetailMahasiswa.this,DetailTAActivity.class);
-//                    startActivity(detailta);
-//                }
-//            });
+            buttonDetailta = findViewById(R.id.buttondetailta);
+            buttonDetailta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent detailta = new Intent(DetailMahasiswa.this,DetailTAActivity.class);
+                    startActivity(detailta);
+                }
+            });
 
         }
 //        Toast.makeText(DetailMahasiswa.this, iD, Toast.LENGTH_SHORT).show();

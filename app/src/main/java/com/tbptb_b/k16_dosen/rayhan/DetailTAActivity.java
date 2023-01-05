@@ -46,6 +46,7 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
     String TitleTa, MulaiBbing, abstrak;
     SupervisorsItem namaDosen;
     String tokenboi, token;
+    int iD;
 
     private AdapterSupervisors adapterDosen;
 
@@ -66,7 +67,7 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
 
         Intent intentdetailta = getIntent();
         if (intentdetailta != null) {
-            int iD = intentdetailta.getIntExtra("ID",0);
+             iD = intentdetailta.getIntExtra("ID",0);
 //            nimMhs = intentdetailta.getStringExtra("NIMMHSBB");
 //            textNamaMhs = findViewById(R.id.textNamaMhs);
 //            textNamaMhs.setText(namaMhs);
@@ -173,17 +174,17 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
                 }
             });
 
-            buttonDetailmahasiswa = findViewById(R.id.buttondMahasiswa);
-            buttonDetailmahasiswa.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intentdetailMahasiswa = new Intent(DetailTAActivity.this,DetailMahasiswa.class);
-                    int bungtolonglah = iD;
-                    intentdetailMahasiswa.putExtra("IDToast", bungtolonglah);
-                    startActivity(intentdetailMahasiswa);
-
-                }
-            });
+//            buttonDetailmahasiswa = findViewById(R.id.buttondMahasiswa);
+//            buttonDetailmahasiswa.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intentdetailMahasiswa = new Intent(DetailTAActivity.this,DetailMahasiswa.class);
+//                    int bungtolonglah = iD;
+//                    intentdetailMahasiswa.putExtra("IDToast", bungtolonglah);
+//                    startActivity(intentdetailMahasiswa);
+//
+//                }
+//            });
         }
 
 
@@ -200,11 +201,12 @@ public class DetailTAActivity extends AppCompatActivity implements PopupMenu.OnM
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
-//            case R.id.buttonDetailMahasiswa:
-//                Intent intentdetailMahasiswa = new Intent(this, DetailMahasiswa.class);
-//                startActivity(intentdetailMahasiswa);
-////                intentdetailMahasiswa.putExtra("IDToast", iD);
-//                return true;
+            case R.id.buttonDetailMahasiswa:
+                Intent intentdetailMahasiswa = new Intent(DetailTAActivity.this,DetailMahasiswa.class);
+                int bungtolonglah = iD;
+                intentdetailMahasiswa.putExtra("IDToast", bungtolonglah);
+                startActivity(intentdetailMahasiswa);
+                return true;
             case R.id.buttonPilihanLogbook:
                 Intent intentlogbook = new Intent(this, LogbookActivity.class);
                 startActivity(intentlogbook);
