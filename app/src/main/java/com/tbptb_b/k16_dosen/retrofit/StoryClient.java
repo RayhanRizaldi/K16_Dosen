@@ -23,7 +23,7 @@ public interface StoryClient {
     Call<GetListSidangResponse> getThesis(@Header("Authorization") String token);
 
     @PATCH ("/api/thesis/grades/277")
-    Call<GetInputNSResponse> patchnilai(
+    Call<GetInputNSResponse> grade(
             @Path("id") Integer idTheses,
             @Field("grade") String grade,
             @Header("Authorization")String token);

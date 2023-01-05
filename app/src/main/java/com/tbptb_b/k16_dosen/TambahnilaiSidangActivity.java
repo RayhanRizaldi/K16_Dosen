@@ -26,6 +26,9 @@ public class TambahnilaiSidangActivity extends AppCompatActivity {
     TextView jadwalTNS,namaTNS, nimTNS,JTATNS;
     String jadwaltns,namatns, nimtns,JTAtns;
     Button buttonTNS;
+    int idThesis;
+    SharedPreferences sharedPreferences;
+    String getToken, token, grade;
     EditText isigradeTNS;
 
     @Override
@@ -41,45 +44,66 @@ public class TambahnilaiSidangActivity extends AppCompatActivity {
     }
 
     private void cekInput() {
-        buttonTNS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(TextUtils.isEmpty(isigradeTNS.getText().toString())){
-                    Toast.makeText(TambahnilaiSidangActivity.this,"Inputkan Nilai",Toast.LENGTH_SHORT).show();
-                }else{
-                    save();
-                }
-            }
-        });
-    }
-
-    private void save() {
-        String grade = isigradeTNS.getText().toString();
+        grade = isigradeTNS.getText().toString();
+        sharedPreferences = getSharedPreferences("com.example.dosenklp1.SHARED_KEY", Context.MODE_PRIVATE);
+        getToken = sharedPreferences.getString("token", "");
+        token = "Bearer " + getToken;
 
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         String token = sharedPref.getString("TOKEN", "");
 
         StoryClient storyClient = RetrofitClient.getService();
-        Call<GetInputNSResponse> call = storyClient.patchnilai(277, grade , "Bearer " + token);
+        Call<GetInputNSResponse> call = storyClient.grade(277, grade , "Bearer " + token);
+        Log.d("idthes", idThesis + token );
         call.enqueue(new Callback<GetInputNSResponse>() {
             @Override
             public void onResponse(Call<GetInputNSResponse> call, Response<GetInputNSResponse> response) {
-                Log.d("TesPost", response.body().toString());
-                Toast.makeText(TambahnilaiSidangActivity.this, "Input Nilai Berhasil, Grade : " +grade, Toast.LENGTH_SHORT).show();
-                back();
+                GetInputNSResponse getInputNSResponse = response.body();
+                if(getInputNSResponse.getStatus().equals("success")) {
+                    Intent intent = new Intent(getApplication(), inputnilaisidangActivity.class);
+                    intent.putExtra("id", idThesis);
+                    startActivity(intent);
+                }
             }
-
             @Override
             public void onFailure(Call<GetInputNSResponse> call, Throwable t) {
-                Log.d("TestPost", t.getMessage().toString());
+
             }
         });
     }
 
-    private void back() {
-        Intent intent = new Intent(TambahnilaiSidangActivity.this, inputnilaisidangActivity.class);
-        startActivity(intent);
+    public void InputNilai(View view) {
+        grade = isigradeTNS.getText().toString();
+        sharedPreferences = getSharedPreferences("com.example.dosenklp1.SHARED_KEY", Context.MODE_PRIVATE);
+        getToken = sharedPreferences.getString("token", "");
+        token = "Bearer " + getToken;
+
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        String token = sharedPref.getString("TOKEN", "");
+
+        StoryClient storyClient = RetrofitClient.getService();
+        Call<GetInputNSResponse> call = storyClient.grade(277, grade , "Bearer " + token);
+        Log.d("idthes", idThesis + token );
+        call.enqueue(new Callback<GetInputNSResponse>() {
+            @Override
+            public void onResponse(Call<GetInputNSResponse> call, Response<GetInputNSResponse> response) {
+                GetInputNSResponse getInputNSResponse = response.body();
+                if(getInputNSResponse.getStatus().equals("success")) {
+                    Intent intent = new Intent(getApplication(),inputnilaisidangActivity.class);
+                    intent.putExtra("id", idThesis);
+                    startActivity(intent);
+                }
+            }
+            @Override
+            public void onFailure(Call<GetInputNSResponse> call, Throwable t) {
+
+            }
+        });
     }
+//    private void back() {
+//        Intent intent = new Intent(TambahnilaiSidangActivity.this, inputnilaisidangActivity.class);
+//        startActivity(intent);
+//    }
 
 //    public void buttonTNS(View view){
 //        Intent buttonTNS = new Intent(TambahnilaiSidangActivity.this, inputnilaisidangActivity.class);

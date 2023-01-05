@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.tbptb_b.k16_dosen.adapter.jsid_adapter;
+import com.tbptb_b.k16_dosen.datamodels.GetDetailTAResponse;
 import com.tbptb_b.k16_dosen.datamodels.GetListSidangResponse;
 import com.tbptb_b.k16_dosen.datamodels.SeminarsItem;
 import com.tbptb_b.k16_dosen.models.jsid_model;
@@ -157,93 +158,6 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         startActivity(intentssid);
     }
 
-    //3. tambahkan method untuk membuat arraylist-> ganti ner arraylist... pada oncreat dengan getjsem_model()
-    public ArrayList<jsid_model> getjsid_model(){
-        ArrayList<jsid_model> listjsid_model = new ArrayList<>();
-
-        //3.1 tambahkan data yang akan dimasukkan pada list ->lanjut ke adapter
-        listjsid_model.add(new jsid_model(
-                null,
-                "Rabu, 21 Desember 2022",
-                "Winanda afrilia harisya",
-                "2011522016",
-                "Perancangan SPK pemilihan cafe terbaik disekitar unand"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "rabu, 12 oktober 2022",
-                "Nadilla sarawati",
-                "2011523012",
-                "Perancangan Sistem informasi TA"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "kamis, 13 oktober 2022",
-                "Yupiko",
-                "2011521001",
-                "Perancangan SPK pemilihan makanan kucing terbaik"
-
-        ));
-        listjsid_model.add(new jsid_model(
-                null,
-                "selasa, 11 oktober 2022",
-                "Winanda afrilia harisya",
-                "2011522016",
-                "Perancangan SPK pemilihan cafe terbaik disekitar unand"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "rabu, 12 oktober 2022",
-                "Nadilla sarawati",
-                "2011523012",
-                "Perancangan Sistem informasi TA"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "kamis, 13 oktober 2022",
-                "Yupiko",
-                "2011521001",
-                "Perancangan SPK pemilihan makanan kucing terbaik"
-
-        ));
-        listjsid_model.add(new jsid_model(
-                null,
-                "selasa, 11 oktober 2022",
-                "Winanda afrilia harisya",
-                "2011522016",
-                "Perancangan SPK pemilihan cafe terbaik disekitar unand"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "rabu, 12 oktober 2022",
-                "Nadilla sarawati",
-                "2011523012",
-                "Perancangan Sistem informasi TA"
-
-        ));
-
-        listjsid_model.add(new jsid_model(
-                null,
-                "kamis, 13 oktober 2022",
-                "Yupiko",
-                "2011521001",
-                "Perancangan SPK pemilihan makanan kucing terbaik"
-
-        ));
-
-        return listjsid_model;
-    }
-
     @Override
     public void onItemjsidClick(SeminarsItem jsidmodel) {
         Intent intentins = new Intent(this, inputnilaisidangActivity.class);
@@ -253,6 +167,8 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         intentins.putExtra("JTAsid", jsidmodel.getThesis().getTitle());
         intentins.putExtra("Id Thesis", jsidmodel.getThesisId());
         startActivity(intentins);
+
+
 
 
     }
