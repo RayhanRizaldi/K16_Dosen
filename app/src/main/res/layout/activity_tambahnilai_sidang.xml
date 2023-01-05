@@ -8,15 +8,13 @@
     android:background="@drawable/gradienthijauoren">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/CardpresenTNS"
-        android:layout_width="match_parent"
+        android:id="@+id/CardgradeTNS"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="300dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -27,131 +25,33 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/jpresenTSN"
-                android:layout_width="match_parent"
+                android:id="@+id/jgradeTSN"
+                android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:enabled="false"
                 android:gravity="start|top"
                 android:inputType="none"
-                android:text="Presentasi (10%)"
+                android:text="GRADE : "
                 android:textColor="#000000"
-                android:textStyle="bold"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
-                android:id="@+id/inpresenTSN"
+                android:id="@+id/igradeTSN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:background="@null"
-                android:hint="Nilai angka"
+                android:hint="..."
                 android:inputType="number"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/CardmateriTNS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="30dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CardpresenTNS">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/jmateriTSN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:enabled="false"
-                android:gravity="start|top"
-                android:inputType="none"
-                android:text="Pemahaman Materi (70%)"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/imateriTSN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:hint="Nilai Angka"
-                android:inputType="number"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="@null" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/CardsikapTNS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="30dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CardmateriTNS">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/jsikapTSN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:enabled="false"
-                android:gravity="start|top"
-                android:inputType="none"
-                android:text="Sikap (10%)"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/isikapTSN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:hint="Nilai Angka"
-                android:inputType="number"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="@null" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -159,12 +59,12 @@
         android:id="@+id/CardnilaiTNS"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="200dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CardsikapTNS">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,13 +77,13 @@
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="none"
-                android:text="Nilai Penguji"
-                android:textColor="#000000"
-                android:textStyle="bold"
                 android:enabled="false"
                 android:gravity="start|top"
+                android:inputType="none"
+                android:text="SCORE : "
+                android:textColor="#000000"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -193,12 +93,13 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:background="@null"
                 android:hint="..."
                 android:inputType="number"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:background="@null"/>
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -206,13 +107,14 @@
         android:id="@+id/buttonTNS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="@color/gray"
+        android:onClick="buttonTNS"
         android:text="Simpan"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/CardnilaiTNS"
-        app:layout_constraintEnd_toEndOf="@+id/CardsikapTNS"
-        app:layout_constraintTop_toTopOf="@+id/CardnilaiTNS"
-        android:onClick="buttonTNS"/>
+        app:layout_constraintBottom_toBottomOf="@+id/CardgradeTNS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CardnilaiTNS" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

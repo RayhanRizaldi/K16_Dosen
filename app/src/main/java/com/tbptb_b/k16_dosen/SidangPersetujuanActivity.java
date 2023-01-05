@@ -4,40 +4,80 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.tbptb_b.k16_dosen.adapter.jsid_adapter;
 import com.tbptb_b.k16_dosen.adapter.psid_adapter;
+import com.tbptb_b.k16_dosen.datamodels.GetListSidangResponse;
+import com.tbptb_b.k16_dosen.datamodels.SeminarsItem;
 import com.tbptb_b.k16_dosen.models.psid_model;
+import com.tbptb_b.k16_dosen.retrofit.StoryClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SidangPersetujuanActivity extends AppCompatActivity implements psid_adapter.ItempsidClickListener{
 
-    private RecyclerView rvpsid;
-//    CardView card_psid;
+    private RecyclerView rv_psid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sidang_persetujuan);
 
-        rvpsid = findViewById(R.id.rvpsid);
+        //recycle view
+        rv_psid = findViewById(R.id.rv_psid);
+        psid_adapter psidadapter = new psid_adapter();
 
-        psid_adapter psidadapter = new psid_adapter(getpsid_model());
-        psidadapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        rv_psid.setLayoutManager(layoutManager);
+        rv_psid.setAdapter(psidadapter);
 
-        rvpsid.setLayoutManager(layoutManager);
-        rvpsid.setAdapter(psidadapter);
+        //API
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        String token = sharedPref.getString("TOKEN","");
 
-//        card_psid = findViewById(R.id.card_psid);
-//        card_psid.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SetujuSidang();
-//            }
-//        });
+        //minta data ke server
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<GetListSidangResponse> call = client.getThesis("Bearer" + token);
+        call.enqueue(new Callback<GetListSidangResponse>() {
+            @Override
+            public void onResponse(Call<GetListSidangResponse> call, Response<GetListSidangResponse> response) {
+                Log.d("psid-Debug", response.toString());
+
+                GetListSidangResponse getListSidangResponse = response.body();
+                if(getListSidangResponse != null){
+                    List<SeminarsItem> listThesis = getListSidangResponse.getSeminars();
+                    Log.d("psid-Debug", String.valueOf(listThesis.size()));
+                    psidadapter.setitemSetuju(listThesis);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetListSidangResponse> call, Throwable t) {
+//                Toast.makeText(.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void SetujuSidang() {
@@ -121,12 +161,16 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
         return listpsid_model;
     }
 
-
     @Override
-    public void onitempsidClick(psid_model psidmodel) {
-        Intent dpsidIntent = new Intent(this, DSidang2Activity.class);
-        startActivity(dpsidIntent);
+    public void onitempsidClick(SeminarsItem psidmodel) {
+
     }
 
-
+//    @Override
+//    public void onitempsidClick(SeminarsItem psidmodel) {
+//        Intent intentpsid = new Intent(this, inputnilaisidangActivity.class);
+//        intentpsid.putExtra("Peserta Sidang", psidmodel.getThesis().getStudent().getName());
+//        intentpsid.putExtra("Id Thesis", psidmodel.getThesisId());
+//        startActivity(intentpsid);
+//    }
 }

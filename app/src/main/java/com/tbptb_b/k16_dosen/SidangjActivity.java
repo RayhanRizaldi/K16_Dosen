@@ -247,7 +247,10 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
     @Override
     public void onItemjsidClick(SeminarsItem jsidmodel) {
         Intent intentins = new Intent(this, inputnilaisidangActivity.class);
-        intentins.putExtra("Peserta Sidang", jsidmodel.getThesis().getStudent().getName());
+        intentins.putExtra("Namasid", jsidmodel.getThesis().getStudent().getName());
+        intentins.putExtra("Nimsid", jsidmodel.getThesis().getStudent().getNim());
+        intentins.putExtra("Jadwalsid", jsidmodel.getThesis().getStartAt());
+        intentins.putExtra("JTAsid", jsidmodel.getThesis().getTitle());
         intentins.putExtra("Id Thesis", jsidmodel.getThesisId());
         startActivity(intentins);
     }

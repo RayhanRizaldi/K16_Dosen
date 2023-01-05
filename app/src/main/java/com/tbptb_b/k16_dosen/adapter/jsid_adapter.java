@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.tbptb_b.k16_dosen.R;
 import com.tbptb_b.k16_dosen.datamodels.SeminarsItem;
 import com.tbptb_b.k16_dosen.models.jsid_model;
@@ -46,12 +47,11 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
     public void onBindViewHolder(@NonNull jsid_viewholder holder, int position) {
 
         SeminarsItem jsidmodel = itemThesis.get(position);
-//        holder.imageMhs.setImageResource((R.drawable.logo_unand));
         String str1= jsidmodel.getThesis().getStudent().getName();
         String str2 = str1.toLowerCase();
         holder.Mnama_jsid.setText(jsid_adapter.StringFormatter.capitalizeWord(str2));
         holder.nim_jsid.setText(jsidmodel.getThesis().getStudent().getNim());
-        holder.JTA_jsid.setText(jsidmodel.getThesis().getTitle());
+        holder.jadwal_jsid.setText(jsidmodel.getThesis().getStartAt());
 
     }
 
@@ -68,18 +68,16 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
 
     public class jsid_viewholder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
-        //5.1
-        public ImageView profil_jsid;
-        public TextView jadwal_jsid, Mnama_jsid,nim_jsid, JTA_jsid;
+//        //5.1
+//        public ImageView profil_jsid;
+        public TextView jadwal_jsid, Mnama_jsid,nim_jsid;
 
         public jsid_viewholder(@NonNull View itemView) {
             super(itemView);
 
-//            profil_jsid = itemView.findViewById(R.id.profil_jsid);
-//            jadwal_jsid = itemView.findViewById(R.id.jadwal_jsid);
             Mnama_jsid = itemView.findViewById(R.id.Mnama_jsid);
             nim_jsid = itemView.findViewById(R.id.nim_jsid);
-            JTA_jsid = itemView.findViewById(R.id.JTA_jsid);
+            jadwal_jsid = itemView.findViewById(R.id.jadwal_jsid);
 
             itemView.setOnClickListener(this);
         }

@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@string/jadwalSem"
+            android:text="05-09-2022"
             android:textColor="#000000"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -105,6 +105,18 @@
             app:layout_constraintStart_toEndOf="@+id/Bterima_psid"
             app:layout_constraintTop_toTopOf="@+id/Bterima_psid"
             tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/lokasi_psid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Ruang seminar DSI"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/jadwal_psid"
+            app:layout_constraintTop_toTopOf="@+id/jadwal_psid" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
