@@ -5,7 +5,7 @@
     android:id="@+id/card_psid"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
+    android:layout_marginBottom="5dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="2dp">
 
@@ -16,13 +16,13 @@
 
         <ImageView
             android:id="@+id/profil_psid"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_person_24"
             android:layout_width="52dp"
             android:layout_height="49dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <TextView
             android:id="@+id/jadwal_psid"
@@ -58,19 +58,37 @@
             app:layout_constraintStart_toStartOf="@+id/Mnama_psid"
             app:layout_constraintTop_toBottomOf="@+id/Mnama_psid" />
 
+        <EditText
+            android:id="@+id/JTA_psid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="start|top"
+            android:inputType="none"
+            android:text="@string/isiTA"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profil_psid"
+            app:layout_constraintTop_toBottomOf="@+id/nim_psid" />
+
         <Button
             android:id="@+id/Bterima_psid"
             android:layout_width="70dp"
             android:layout_height="31dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/button"
-            android:backgroundTint="@color/oren"
+            android:background="@drawable/btn_green"
+            android:backgroundTint="@color/hijau"
+            android:onClick="Bterima_psid"
             android:text="@string/btn_terima"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/nim_psid"
-            app:layout_constraintTop_toBottomOf="@+id/nim_psid"
+            app:layout_constraintStart_toStartOf="@+id/JTA_psid"
+            app:layout_constraintTop_toBottomOf="@+id/JTA_psid"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="SmallSp,TouchTargetSizeCheck" />
 
         <Button
@@ -79,7 +97,8 @@
             android:layout_height="31dp"
             android:layout_marginStart="4dp"
             android:background="@drawable/button"
-            android:backgroundTint="#E3A211"
+            android:backgroundTint="@color/red"
+            android:onClick="Btolak_psid"
             android:text="@string/btn_tolak"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="@+id/Bterima_psid"

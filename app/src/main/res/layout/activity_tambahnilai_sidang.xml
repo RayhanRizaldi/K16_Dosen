@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TambahnilaiSidangActivity"
-    android:background="@drawable/gradientbackground">
+    android:background="@drawable/gradienthijauoren">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/CardpresenTNS"
@@ -47,12 +47,13 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:background="@null"
                 android:hint="Nilai angka"
                 android:inputType="number"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:background="@null"/>
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

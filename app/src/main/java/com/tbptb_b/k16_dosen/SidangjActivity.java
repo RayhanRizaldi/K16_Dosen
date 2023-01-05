@@ -11,7 +11,9 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,9 +26,20 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.tbptb_b.k16_dosen.adapter.jsid_adapter;
+import com.tbptb_b.k16_dosen.datamodels.GetListSidangResponse;
+import com.tbptb_b.k16_dosen.datamodels.SeminarsItem;
 import com.tbptb_b.k16_dosen.models.jsid_model;
+import com.tbptb_b.k16_dosen.retrofit.StoryClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SidangjActivity extends AppCompatActivity implements jsid_adapter.ItemjsidClickListener{
 
@@ -37,7 +50,6 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
     private RecyclerView rvjsid;
     private static final String TAG = "SidangjActivity-Debug";
-//    Button SetujuSid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +58,8 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
 
         //recycle view
         rvjsid = findViewById(R.id.rv_jsid);
-        jsid_adapter jsidadapter = new jsid_adapter(getjsid_model());
-        jsidadapter.setListner(this);
+        jsid_adapter jsidadapter = new jsid_adapter();
+        jsidadapter.setListener(this);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvjsid.setLayoutManager(layoutManager);
@@ -102,6 +114,41 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         });
         notificationManagerJsid = NotificationManagerCompat.from(this);
         createNotificationChannel();
+
+        //API
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        String token = sharedPref.getString("TOKEN","");
+
+        //minta data ke server
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<GetListSidangResponse> call = client.getThesis("Bearer" + token);
+        call.enqueue(new Callback<GetListSidangResponse>() {
+            @Override
+            public void onResponse(Call<GetListSidangResponse> call, Response<GetListSidangResponse> response) {
+                Log.d("SidangjActivity-Debug", response.toString());
+
+                GetListSidangResponse getListSidangResponse = response.body();
+                if(getListSidangResponse != null){
+                    List<SeminarsItem> listThesis = getListSidangResponse.getSeminars();
+                    Log.d("SidangjActivity-Debug", String.valueOf(listThesis.size()));
+                    jsidadapter.setItemThesis(listThesis);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetListSidangResponse> call, Throwable t) {
+//                Toast.makeText(.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -198,14 +245,13 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
     }
 
     @Override
-    public void onItemjsidClick(jsid_model jsidmodel) {
+    public void onItemjsidClick(SeminarsItem jsidmodel) {
         Intent intentins = new Intent(this, inputnilaisidangActivity.class);
-        intentins.putExtra("jadwalsid",jsidmodel.getJadwal_jsid());
-        intentins.putExtra("NMHSJSID", jsidmodel.getMnama_jsid());
-        intentins.putExtra("NIMMHSJSID", jsidmodel.getNim_jsid());
-
+        intentins.putExtra("Peserta Sidang", jsidmodel.getThesis().getStudent().getName());
+        intentins.putExtra("Id Thesis", jsidmodel.getThesisId());
         startActivity(intentins);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
@@ -227,10 +273,4 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         }
     }
 
-
-
-//    public void profil_jsid(View view){
-//        Intent profil_jsid = new Intent(SidangjActivity.this, TambahnilaiSidangActivity.class);
-//        startActivity(profil_jsid);
-//    }
 }

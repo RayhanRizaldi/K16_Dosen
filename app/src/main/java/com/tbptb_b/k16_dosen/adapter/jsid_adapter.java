@@ -10,40 +10,27 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tbptb_b.k16_dosen.R;
+import com.tbptb_b.k16_dosen.datamodels.SeminarsItem;
 import com.tbptb_b.k16_dosen.models.jsid_model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewholder>{
 
-    //1. tambah arraylist
-    ArrayList <jsid_model> listjsid = new ArrayList<>();
+    private List<SeminarsItem> itemThesis = new ArrayList<>();
+    ItemjsidClickListener listener;
 
-    //8.
-    ItemjsidClickListener listner;
-
-    //1.1 generate constructor arraylist
-    public jsid_adapter(ArrayList<jsid_model> listjsid) {
-        this.listjsid = listjsid;
-    }
-    //10. generate constructor listener
-    public jsid_adapter(ArrayList<jsid_model> listjsid, ItemjsidClickListener listner) {
-        this.listjsid = listjsid;
-        this.listner = listner;
+    public void setItemThesis(List<SeminarsItem> itemThesis) {
+        this.itemThesis = itemThesis;
+        notifyDataSetChanged();
     }
 
-    //1.2 generate setter arraylist
-    public void setListjsid(ArrayList<jsid_model> listjsid) {
-        this.listjsid = listjsid;
-    }
-
-    //9.generate setter dari listener
-    public void setListner(ItemjsidClickListener listner) {
-        this.listner = listner;
+    public void setListener(ItemjsidClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
-    //3.
     @Override
     public jsid_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
@@ -58,13 +45,13 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
     @Override
     public void onBindViewHolder(@NonNull jsid_viewholder holder, int position) {
 
-        //6. setelah semua holder selesai -> dilanjutkan ke file JsidangActivity
-        jsid_model jsidmodel = listjsid.get(position);
-        holder.profil_jsid.setImageResource(R.drawable.avatar);
-        holder.jadwal_jsid.setText(jsidmodel.getJadwal_jsid());
-        holder.Mnama_jsid.setText(jsidmodel.getMnama_jsid());
-        holder.nim_jsid.setText(jsidmodel.getNim_jsid());
-        holder.JTA_jsid.setText(jsidmodel.getJTA_jsid());
+        SeminarsItem jsidmodel = itemThesis.get(position);
+//        holder.imageMhs.setImageResource((R.drawable.logo_unand));
+        String str1= jsidmodel.getThesis().getStudent().getName();
+        String str2 = str1.toLowerCase();
+        holder.Mnama_jsid.setText(jsid_adapter.StringFormatter.capitalizeWord(str2));
+        holder.nim_jsid.setText(jsidmodel.getThesis().getStudent().getNim());
+        holder.JTA_jsid.setText(jsidmodel.getThesis().getTitle());
 
     }
 
@@ -72,16 +59,13 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
     @Override
     public int getItemCount() {
 
-        return listjsid.size();
+        return itemThesis.size();
     }
-
     //7.membuat interface
     public interface ItemjsidClickListener{
-        void onItemjsidClick (jsid_model jsidmodel);
+        void onItemjsidClick(SeminarsItem jsidmodel);
     }
 
-    //5.
-    //11. tambahkan implements View.OnClickListener agar view holder dapat diklik
     public class jsid_viewholder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
         //5.1
@@ -91,23 +75,32 @@ public class jsid_adapter extends RecyclerView.Adapter <jsid_adapter.jsid_viewho
         public jsid_viewholder(@NonNull View itemView) {
             super(itemView);
 
-            //5.2 binding semua komponen yang ada
-            //jika ada yang dalam bentuk maka Integer to String
-            profil_jsid = itemView.findViewById(R.id.profil_jsid);
-            jadwal_jsid = itemView.findViewById(R.id.jadwal_jsid);
+//            profil_jsid = itemView.findViewById(R.id.profil_jsid);
+//            jadwal_jsid = itemView.findViewById(R.id.jadwal_jsid);
             Mnama_jsid = itemView.findViewById(R.id.Mnama_jsid);
             nim_jsid = itemView.findViewById(R.id.nim_jsid);
             JTA_jsid = itemView.findViewById(R.id.JTA_jsid);
 
-            //12.
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            //13. setelah selesai ->pindah ke jsidangActivity
-            jsid_model jsidmodel = listjsid.get(getAdapterPosition());
-            listner.onItemjsidClick(jsidmodel);
+            SeminarsItem jsidmodel = itemThesis.get(getAdapterPosition());
+            listener.onItemjsidClick(jsidmodel);
+        }
+    }
+
+    public static class StringFormatter {
+        public static String capitalizeWord(String str){
+            String words[]=str.split("\\s");
+            String capitalizeWord="";
+            for(String w:words){
+                String first=w.substring(0,1);
+                String afterfirst=w.substring(1);
+                capitalizeWord+=first.toUpperCase()+afterfirst+" ";
+            }
+            return capitalizeWord.trim();
         }
     }
 }

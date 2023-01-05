@@ -55,15 +55,21 @@
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_main.xml" value="0.25" />
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_popup.xml" value="0.5975" />
         <entry key="..\:/Hell`sContract/K16_Dosen/app/src/main/res/menu/menu_profile.xml" value="0.25" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/drawable/btn_green.xml" value="0.1715" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/drawable/btn_red.xml" value="0.1715" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/drawable/button.xml" value="0.1715" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/drawable/gradientbackground.xml" value="0.1715" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/drawable/gradienthijauoren.xml" value="0.1715" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_dsidang2.xml" value="0.25" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_inputnilaisidang.xml" value="0.33" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_menusemsid.xml" value="0.25" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_sidang_persetujuan.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_sidangj.xml" value="0.25" />
         <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_splashscreen.xml" value="0.19746376811594202" />
-        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/list_psid.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/activity_tambahnilai_sidang.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/list_jadwalsidang.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/winanda/K16_Dosen/app/src/main/res/layout/list_psid.xml" value="0.25" />
       </map>
     </option>
   </component>
