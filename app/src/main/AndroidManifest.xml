@@ -65,14 +65,15 @@
             android:name=".inputnilaisidangActivity"
             android:exported="false" />
         <activity
-            android:name=".MainMenu"
+            android:name=".rayhan.MainMenu"
             android:exported="false" />
         <activity
             android:name=".DSidang2Activity"
             android:exported="false" />
         <activity
-            android:name=".DetailMahasiswa"
-            android:exported="false" />
+            android:name=".rayhan.DetailMahasiswa"
+            android:exported="false"
+            android:label="Detail Mahasiswa"/>
         <activity
             android:name=".UserProfile"
             android:exported="false"
@@ -90,12 +91,9 @@
             android:exported="false"
             android:label="Detail Seminar" />
         <activity
-            android:name=".DetailTAActivity"
+            android:name=".rayhan.DetailTAActivity"
             android:exported="false"
             android:label="Detail Tugas Akhir" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
         <activity
             android:name=".Splashscreen"
             android:exported="true"

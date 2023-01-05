@@ -1,8 +1,8 @@
 package com.tbptb_b.k16_dosen.retrofit;
 
 import com.tbptb_b.k16_dosen.models.Response;
+import com.tbptb_b.k16_dosen.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.tbptb_b.k16_dosen.retrofit.detailta.DetailTAResponse;
-import com.tbptb_b.k16_dosen.retrofit.detailta.SupervisorsItem;
 import com.tbptb_b.k16_dosen.retrofit.listmahasiswa.ListMhsMenuResponse;
 
 import retrofit2.Call;
@@ -35,9 +35,10 @@ public interface StoryClient {
             ,@Path("id") int IdMhs
     );
 
-    @GET("api/theses/309")
-    Call<SupervisorsItem> detailSv (
+    @GET("api/theses/{id}")
+    Call<DetailMahasiswaResponse> detailMahasiswa(
             @Header("Authorization") String token
+            ,@Path("id") int IdMhs
     );
 
 }

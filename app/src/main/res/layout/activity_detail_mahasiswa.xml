@@ -4,25 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailMahasiswa">
+    tools:context=".rayhan.DetailMahasiswa">
 
     <ImageView
         android:id="@+id/mahasiswa_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="116dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="143dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/nama_mahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:padding="10dp"
+        android:padding="3dp"
+        android:textSize="25sp"
         android:text="Nama Mahasiswa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,10 +33,11 @@
 
     <TextView
         android:id="@+id/smtawal_mahasiswa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Ganjil 2020"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:padding="0dp"
+        android:text="Tahun"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,60 +59,63 @@
             android:id="@+id/nim_mahasiswa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:hint="NIP"
             android:orientation="vertical"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:textColor="#4C4C4C" />
 
         <EditText
-            android:id="@+id/email_mahasiswa"
+            android:id="@+id/tgllahir_mahasiswa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-Mail"
+            android:enabled="false"
+            android:hint="Tanggal Lahir"
             android:orientation="vertical"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:textColor="#4C4C4C" />
 
         <EditText
-            android:id="@+id/telp_mahasiswa"
+            android:id="@+id/tempatlahir_mahasiswa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="No. Telp"
+            android:enabled="false"
+            android:hint="Tempat Lahir"
             android:orientation="vertical"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:textColor="#4C4C4C" />
 
         <EditText
             android:id="@+id/gender_mahasiswa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:hint="Jenis Kelamin"
             android:orientation="vertical"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:textColor="#4C4C4C" />
 
         <EditText
-            android:id="@+id/fakultas_mahasiswa"
+            android:id="@+id/telp_mahasiswa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fakultas"
+            android:enabled="false"
+            android:hint="Nomor Telepon"
             android:orientation="vertical"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:textColor="#4C4C4C" />
 
-        <EditText
-            android:id="@+id/studi_mahasiswa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Program Studi"
-            android:orientation="vertical"
-            android:padding="20dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttondetailta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="Detail Tugas Akhir"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+<!--    <Button-->
+<!--        android:id="@+id/buttondetailta"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="7dp"-->
+<!--        android:text="Detail Tugas Akhir"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,64 +5,93 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailTAActivity">
+    tools:context=".rayhan.DetailTAActivity">
 
-
-    <ImageView
-        android:id="@+id/imageAvatar"
-        android:layout_width="87dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="300dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/avatar" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textNamaMhs"
-        android:layout_width="218dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:text="Nadilla Saraswati"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/black"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/imageAvatar"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar" />
 
-    <TextView
-        android:id="@+id/textNimMhs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2011521004"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textNamaMhs"
-        app:layout_constraintTop_toBottomOf="@+id/textNamaMhs" />
+        <TextView
+            android:id="@+id/textNamaMhs"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:text="MANUSIA"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+
+            app:autoSizeTextType="uniform"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="96dp" />
+
+        <TextView
+            android:id="@+id/textNimMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="150dp"
+            android:text="2011521004"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textNamaMhs"
+            app:layout_constraintTop_toBottomOf="@+id/textNamaMhs" />
+
+        <ImageButton
+            android:id="@+id/iconList"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="262dp"
+            android:baselineAlignBottom="false"
+            android:onClick="popUpDetailTA"
+            app:srcCompat="@drawable/iconlist" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textJudul"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="276dp"
         android:text="Judul Tugas Akhir :"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/imageAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/imageAvatar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <EditText
         android:id="@+id/editTextJudul"
-        android:layout_width="403dp"
-        android:layout_height="75dp"
+        android:layout_width="363dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:enabled="false"
-        android:gravity="start|top"
+        android:gravity="start|center"
         android:inputType="none"
-        android:text="Rancang Bangun Mobile Commerce Berbasis Android Pada Toko Duta Buku Semarang"
+        android:text="Judul Tidak Ada"
         android:textColor="#373636"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Dosen Pembimbing :"
+        android:text="Dosen Pembimbing : "
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/editTextJudul"
         app:layout_constraintTop_toBottomOf="@+id/editTextJudul" />
@@ -88,7 +117,7 @@
         android:gravity="start|top"
         android:inputType="none"
         android:enabled="false"
-        android:text="Husnil Kamil, M.T"
+        android:text="-"
         android:textColor="#373636"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,20 +130,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Dosen Pembimbing  Akademik:"
+        android:text="Dosen Pembimbing 2 :"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/editTextDospem"
         app:layout_constraintTop_toBottomOf="@+id/editTextDospem" />
 
     <EditText
-        android:id="@+id/editTextDospemAk"
+        android:id="@+id/editTextDospem2"
         android:layout_width="363dp"
         android:layout_height="48dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="none"
         android:enabled="false"
-        android:text="Ricky Akbar, M.T"
+        android:text="-"
         android:textColor="#373636"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,21 +155,33 @@
         android:id="@+id/textMulaiBimb2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:text="Mulai Bimbingan :"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/editTextDospem"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDospemAk" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDospem2" />
 
     <TextView
         android:id="@+id/textDetailTa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Detail Tugas Akhir :"
+        android:text="Abstrak Tugas Akhir :"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/editTextDospem"
         app:layout_constraintTop_toBottomOf="@+id/editTextMulaiBimb" />
+
+    <TextView
+        android:id="@+id/textAbstrak"
+        android:layout_width="360dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="11dp"
+        android:text="Abstrak"
+        android:textColor="#707070"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMulaiBimb"
+        app:layout_constraintStart_toStartOf="@+id/editTextDospem"
+        app:layout_constraintTop_toBottomOf="@+id/textDetailTa" />
 
     <EditText
         android:id="@+id/editTextMulaiBimb"
@@ -150,7 +191,7 @@
         android:enabled="false"
         android:gravity="start|top"
         android:inputType="none"
-        android:text="03/09/2022"
+        android:text="HARI/BULAN/TAHUN"
         android:textColor="#373636"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,39 +199,18 @@
         app:layout_constraintStart_toStartOf="@+id/textDospem"
         app:layout_constraintTop_toBottomOf="@+id/textMulaiBimb2" />
 
-    <ImageButton
-        android:id="@+id/imageViewDetailTA"
-        android:layout_width="140dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextMulaiBimb"
-        app:layout_constraintStart_toStartOf="@+id/textDetailTa"
-        app:layout_constraintTop_toBottomOf="@+id/textDetailTa"
-        app:srcCompat="@drawable/detailtaunduh" />
-
-    <ImageButton
-        android:id="@+id/iconList"
+    <Button
+        android:id="@+id/buttondMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:onClick="popUpDetailTA"
-        app:layout_constraintBottom_toBottomOf="@+id/textNimMhs"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="159dp"
+        android:text="Detail Mahasiswa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textNamaMhs"
-        app:layout_constraintVertical_bias="0.6"
-        app:srcCompat="@drawable/iconlist" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAbstrak" />
 
-    <ImageView
-        android:id="@+id/imageViewunduhta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailTA"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewDetailTA"
-        app:layout_constraintStart_toStartOf="@+id/imageViewDetailTA"
-        app:layout_constraintTop_toTopOf="@+id/imageViewDetailTA"
-        app:srcCompat="@drawable/unduh" />
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:id="@+id/Inputnilaifinal"-->
 <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
 <!--        android:layout_width="wrap_content"-->

@@ -3,7 +3,6 @@ package com.tbptb_b.k16_dosen;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-import androidx.core.text.TextUtilsCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,24 +12,18 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tbptb_b.k16_dosen.models.Response;
+import com.tbptb_b.k16_dosen.rayhan.MainMenu;
 import com.tbptb_b.k16_dosen.retrofit.RetrofitClient;
 import com.tbptb_b.k16_dosen.retrofit.StoryClient;
 
-import java.util.Objects;
-
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String CHANNEL_ID = "notif_login";
