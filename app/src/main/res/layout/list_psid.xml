@@ -89,7 +89,7 @@
             app:layout_constraintStart_toStartOf="@+id/JTA_psid"
             app:layout_constraintTop_toBottomOf="@+id/JTA_psid"
             app:layout_constraintVertical_bias="1.0"
-            tools:ignore="SmallSp,TouchTargetSizeCheck" />
+            tools:ignore="SmallSp,TouchTargetSizeCheck"/>
 
         <Button
             android:id="@+id/Btolak_psid"

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.tbptb_b.k16_dosen.adapter.jsid_adapter;
 import com.tbptb_b.k16_dosen.adapter.psid_adapter;
@@ -164,6 +165,16 @@ public class SidangPersetujuanActivity extends AppCompatActivity implements psid
     @Override
     public void onitempsidClick(SeminarsItem psidmodel) {
 
+    }
+
+    public void Bterima_psid(View view){
+        Intent Bterima_psid = new Intent(SidangPersetujuanActivity.this, SidangPersetujuanActivity.class);
+        startActivity(Bterima_psid);
+    }
+
+    public void Btolak_psid(View view){
+        Intent Btolak_psid = new Intent(SidangPersetujuanActivity.this, SidangPersetujuanActivity.class);
+        startActivity(Btolak_psid);
     }
 
 //    @Override

@@ -253,6 +253,8 @@ public class SidangjActivity extends AppCompatActivity implements jsid_adapter.I
         intentins.putExtra("JTAsid", jsidmodel.getThesis().getTitle());
         intentins.putExtra("Id Thesis", jsidmodel.getThesisId());
         startActivity(intentins);
+
+
     }
 
     @Override

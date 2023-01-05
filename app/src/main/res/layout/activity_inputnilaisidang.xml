@@ -53,17 +53,16 @@
 
     <Button
         android:id="@+id/buttonINS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_width="149dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/oren"
-        android:text="INPUT NILAI"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/isigradeins"
-        app:layout_constraintStart_toEndOf="@+id/isigradeins"
-        app:layout_constraintTop_toTopOf="@+id/isigradeins"
-        app:layout_constraintVertical_bias="0.428"
+        android:drawableLeft="@drawable/input"
+        android:text="Inputkan nilai"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/nimins"
+        app:layout_constraintTop_toBottomOf="@+id/nimins"
         tools:ignore="TouchTargetSizeCheck"
         android:onClick="buttonINS"/>
 
@@ -161,6 +160,7 @@
         android:gravity="start|top"
         android:inputType="none"
         android:minHeight="?attr/actionBarSize"
+        android:text="Ruang Sidang departemen Sistem Informasi"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,44 +171,17 @@
 
 
     <TextView
-        android:id="@+id/jnilaiins"
+        android:id="@+id/jgradeins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="Nilai :"
+        android:text="Grade :"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/isiLokasiins"
         app:layout_constraintTop_toBottomOf="@+id/isiLokasiins" />
-
-    <EditText
-        android:id="@+id/isinilaiins"
-        android:layout_width="59dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/jnilaiins"
-        app:layout_constraintStart_toStartOf="@+id/jnilaiins"
-        app:layout_constraintTop_toBottomOf="@+id/jnilaiins"
-        app:cardElevation="2dp"/>
-
-    <TextView
-        android:id="@+id/jgradeins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:text="Grade :"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/jnilaiins"
-        app:layout_constraintTop_toTopOf="@+id/jnilaiins" />
 
     <EditText
         android:id="@+id/isigradeins"
@@ -217,52 +190,14 @@
         android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="text"
+        android:hint="Nilai Huruf"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="@+id/jgradeins"
         app:layout_constraintStart_toStartOf="@+id/jgradeins"
-        app:layout_constraintTop_toBottomOf="@+id/jgradeins" />
-
-    <!--    //Detail TA-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/DetailTAins"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="@string/file_dta"-->
-<!--        android:textColor="#000000"-->
-<!--        android:textSize="12sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/dospengins"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/isidospengins" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/fileins"-->
-<!--        android:layout_width="79dp"-->
-<!--        android:layout_height="96dp"-->
-<!--        android:layout_marginStart="152dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/DetailTAins"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/DetailTAins"-->
-<!--        app:srcCompat="@drawable/pdf" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/fileins"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/fileins"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/fileins"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/fileins"-->
-<!--        app:srcCompat="@drawable/unduh" />-->
+        app:layout_constraintTop_toBottomOf="@+id/jgradeins"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
